@@ -1,7 +1,7 @@
 # Личный проект «Погнали» [![Build status][travis-image]][travis-url] [![Dependency status][dependency-image]][dependency-url]
 
 * Студент: [Илья Фокин](https://up.htmlacademy.ru/adaptive/17/user/508873).
-* Наставник: `Неизвестно`.
+* Наставник: [Дмитрий Мирошниченко](https://up.htmlacademy.ru/adaptive/17/user/591417).
 
 ---
 
