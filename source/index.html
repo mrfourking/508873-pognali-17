@@ -1,12 +1,270 @@
 <!DOCTYPE html>
 <html lang="ru">
-  <head>
-    <meta charset="utf-8">
-    <title>HTML Academy: Погнали</title>
-  </head>
-  <body>
 
-    <p>Репозиторий создан для обучения на профессиональном онлайн‑курсе «<a href="https://htmlacademy.ru/intensive/adaptive">HTML и CSS, уровень 2</a>».</p>
+<head>
+  <meta charset="utf-8">
+  <title>HTML Academy: Погнали</title>
+</head>
 
-  </body>
+<body>
+  <header class="header">
+    <span class="header__logo">Погнали?</span>
+    <button class="header__menu-button" type="button">Главное меню</button>
+    <nav class="main-menu">
+      <h3 class="header__logo main-menu__logo">Погнали?</h3>
+      <button class="header__menu-button main-menu__close-button" type="button">Закрыть меню</button>
+      <ul class="main-menu__list">
+        <li class="main-menu__item"><a href="#">О сервисе</a></li>
+        <li class="main-menu__item"><a href="form.html">Направления</a></li>
+        <li class="main-menu__item"><a href="catalog.html">Попутчики</a></li>
+      </ul>
+      <a class="button main-menu__button" href="#">Авторизация</a>
+      <p class="contacts main-menu__contacts">
+        <span class="contacts__phone">8 800 555-86-28</span>
+        <span class="contacts__email">mail@htmlacademy.ru</span>
+      </p>
+      <ul class="social-list">
+        <li class="social-list__item main-menu__social-item"><a href="#">Facebook</a></li>
+        <li class="social-list__item main-menu__social-item"><a href="#">Vkontakte</a></li>
+        <li class="social-list__item main-menu__social-item"><a href="#">Instagram</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <h1 class="visually-hidden">Погнали?</h1>
+
+    <section class="intro">
+      <h2 class="intro__title">В путешествие с крутыми попутчиками!</h2>
+      <img class="intro__logo" src="http://placehold.it/192x255" width="192" height="255" alt="Попутчик">
+      <div class="intro__button-wrap">
+        <button class="button button--phone" type="button">Позвонить</button>
+        <button class="button button--mail" type="button">Написать</button>
+        <a class="button" href="#">Авторизация</a>
+      </div>
+      <blockquote class="quote intro__quote">
+        <p class="quote__content">«Лучшее приложение, что я видел в жизни!»</p>
+        <cite class="quote__author">Мурат Эльтазин главный редактор газеты «гаджетлайф»</cite>
+      </blockquote>
+      <ol class="instruction-list intro__instructions">
+        <li class="instruction-list__item">Выберите направление</li>
+        <li class="instruction-list__item">Изучите идеи путешественников</li>
+        <li class="instruction-list__item">Находите тех, кто похож на вас</li>
+        <li class="instruction-list__item">Путешествуйте вместе!</li>
+      </ol>
+    </section>
+
+    <section class="about">
+      <h2 class="title about__title">О сервисе</h2>
+      <p class="text-content about__text-content">
+        Любое путешествие веселее
+        с попутчиками, которые на одной волне с тобой!
+        Делитесь своими идеями путешествий и
+        черпайте вдохновение в чужих.
+        <b class="text-content__bold">
+          А если найдете кого-то
+          близкого по духу — скорее
+          зовите в совместный трип!
+        </b>
+      </p>
+    </section>
+
+    <section class="countries">
+      <h2 class="title countries__title">Направления</h2>
+      <header class="countries__header">
+        <p>
+          Мы не продаем туры
+          и ничего не рекламируем.
+          Люди сами пишут о странах, куда хотели бы отправиться
+          и чем можно там заняться.
+        </p>
+      </header>
+      <ul class="countries__list">
+        <li class="countries__item">
+          <img class="countries__image" src="http://placehold.it/270x110" width="270" height="110"
+            alt="Море в Тайланде">
+          <span class="countries__icon">Флаг Тайланда</span>
+          <p class="countries__info">
+            <span class="countries__name">Тайланд</span>
+            <span class="countries__call">Джунги зовут!</span>
+            <span class="countries__counter">18321</span>
+          </p>
+        </li>
+        <li class="countries__item">
+          <img class="countries__image" src="http://placehold.it/270x110" width="270" height="110"
+            alt="Французская улочка">
+          <span class="countries__icon">Флаг Франции</span>
+          <p class="countries__info">
+            <span class="countries__name">Франция</span>
+            <span class="countries__call">Трэ бьен, манифик!</span>
+            <span class="countries__counter">12518</span>
+          </p>
+        </li>
+        <li class="countries__item">
+          <img class="countries__image" src="http://placehold.it/270x110" width="270" height="110" alt="Река в Чехии">
+          <span class="countries__icon">Флаг Чехии</span>
+          <p class="countries__info">
+            <span class="countries__name">Чехия</span>
+            <span class="countries__call">Закоулки старой Европы</span>
+            <span class="countries__counter">5326</span>
+          </p>
+        </li>
+      </ul>
+      <a class="button countries__button">Показать все</a>
+    </section>
+
+    <section class="travelmates">
+      <h2 class="title travelmates__title">Попутчики</h2>
+      <header class="travelmates__header">
+        <p class="text-content">
+          Все мы индивидуальны и у каждого свой взгляд на идеальный отдых.
+          Одному нужен пляж и коктейль, а другому маршрут для хайкинга.
+          <b class="text-content__bold">
+            Теперь можно легко найти единомышленников!
+          </b>
+        </p>
+      </header>
+      <ul class="travelmates-list">
+        <li class="travelmates-list__item">
+          <span class="travelmates-list__level">level 99</span>
+          <img class="travelmates-list__image" src="http://placehold.it/270x270" width="270" height="270"
+            alt="Таня Фирсова">
+          <ul class="travelmates-list__countries-list">
+            <li class="travelmates-list__countries-item">
+              <img class="travelmates-list__countries-icon" src="http://placehold.it/35x24" width="35" height="24"
+                alt="Шри-Ланка">
+            </li>
+            <li class="travelmates-list__countries-item">
+              <img class="travelmates-list__countries-icon" src="http://placehold.it/35x24" width="35" height="24"
+                alt="Тайланд">
+            </li>
+            <li class="travelmates-list__countries-item">
+              <img class="travelmates-list__countries-icon" src="http://placehold.it/35x24" width="35" height="24"
+                alt="Сейшелы">
+            </li>
+          </ul>
+          <h3 class="travelmates-list__name">
+            <span class="travelmates-list__online-status--offline"></span>
+            Таня Фирсова
+          </h3>
+          <p class="travelmates-list__hashtag">
+            #ЗОЖ #ПП #Фитнес #пляж #авокадо #смузи
+          </p>
+          <ul class="transport-list travelmates-list__transport">
+            <li class="transport-list__item">
+              <img class="transport-list__icon transport-list__icon--active" src="http://placehold.it/24x21" width="24"
+                height="21" alt="plane">
+            </li>
+            <li class="transport-list__item">
+              <img class="transport-list__icon" src="http://placehold.it/24x21" width="24" height="21" alt="bus">
+            </li>
+            <li class="transport-list__item">
+              <img class="transport-list__icon" src="http://placehold.it/24x21" width="24" height="21" alt="bike">
+            </li>
+            <li class="transport-list__item">
+              <img class="transport-list__icon" src="http://placehold.it/24x21" width="24" height="21" alt="run">
+            </li>
+          </ul>
+        </li>
+        <li class="travelmates-list__item">
+          <span class="travelmates-list__level">level 80</span>
+          <img class="travelmates-list__image" src="http://placehold.it/270x270" width="270" height="270"
+            alt="Петя Демин">
+          <ul class="travelmates-list__countries-list">
+            <li class="travelmates-list__countries-item">
+              <img class="travelmates-list__countries-icon" src="http://placehold.it/35x24" width="35" height="24"
+                alt="Бельгия">
+            </li>
+            <li class="travelmates-list__countries-item">
+              <img class="travelmates-list__countries-icon" src="http://placehold.it/35x24" width="35" height="24"
+                alt="Чехия">
+            </li>
+          </ul>
+          <h3 class="travelmates-list__name">
+            <span class="travelmates-list__online-status--online"></span>
+            Петя Демин
+          </h3>
+          <p class="travelmates-list__hashtag">
+            #бургер #бар #футбол #концерт #крафт
+          </p>
+          <ul class="transport-list travelmates-list__transport">
+            <li class="transport-list__item">
+              <img class="transport-list__icon transport-list__icon--active" src="http://placehold.it/24x21" width="24"
+                height="21" alt="plane">
+            </li>
+            <li class="transport-list__item">
+              <img class="transport-list__icon transport-list__icon--active" src="http://placehold.it/24x21" width="24"
+                height="21" alt="bus">
+            </li>
+            <li class="transport-list__item">
+              <img class="transport-list__icon" src="http://placehold.it/24x21" width="24" height="21" alt="bike">
+            </li>
+            <li class="transport-list__item">
+              <img class="transport-list__icon transport-list__icon--active" src="http://placehold.it/24x21" width="24"
+                height="21" alt="run">
+            </li>
+          </ul>
+        </li>
+      </ul>
+      <a class="button travelmates__button" href="#">Показать всех</a>
+    </section>
+    <section class="rates">
+      <h2 class="visually-hidden">Тарифы</h2>
+      <p class="title rates__title">Добавьте свой профиль</p>
+      <span class="rates__logo"></span>
+      <ol class="rates__list">
+        <li class="rates__item">
+          <p>Базовое размещение</p>
+          <span class="rates__price">Бесплатно</span>
+        </li>
+        <li class="rates__item">
+          <p>Вывод на первых позициях</p>
+          <span class="rates__price">99 руб./мес</span>
+        </li>
+        <li class="rates__item">
+          <p>Кастомный цвет карточки</p>
+          <span class="rates__price">59 руб./мес</span>
+        </li>
+      </ol>
+      <a class="rates__button" href="#">Показать тарифы для бизнеса</a>
+
+      <section class="rates__business">
+        <h3 class="title rates__title">Бизнес-тарифы</h3>
+        <ul class="rates__list">
+          <li class="rates__item">
+            <p>Реклама у блоггера</p>
+            <span class="rates__price">300 000 руб./пост</span>
+          </li>
+          <li class="rates__item">
+            <p>Накрутка подписчиков</p>
+            <span class="rates__price">от 1 руб./шт.</span>
+          </li>
+          <li class="rates__item">
+            <p>Лайки от ботов</p>
+            <span class="rates__price">от 20 коп./лайк</span>
+          </li>
+          <li class="rates__item">
+            <p>Ваш продакт-плейсмент</p>
+            <span class="rates__price">Индивидуально</span>
+          </li>
+        </ul>
+        <button class="rates__button">Закрыть окно</button>
+      </section>
+    </section>
+    <footer class="footer">
+      <span class="footer__logo">Погнали?</span>
+      <ul class="social-list footer__social-list">
+        <li class="social-list__item footer__social-item"><a href="#">Facebook</a></li>
+        <li class="social-list__item footer__social-item"><a href="#">Vkontakte</a></li>
+        <li class="social-list__item footer__social-item"><a href="#">Instagram</a></li>
+      </ul>
+      <p class="footer__copyright">
+        Разработано
+        <a class="footer__copyright-link" href="https://htmlacademy.ru/intensive/adaptive">
+          <img src="http://placehold.it/27x34" width="27" height="34" alt="HTML Academy">
+        </a>
+      </p>
+    </footer>
+  </main>
+</body>
+
 </html>
