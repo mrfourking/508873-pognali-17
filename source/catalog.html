@@ -32,17 +32,18 @@
   </header>
   <main>
     <h1 class="title page-title">Попутчики</h1>
+
     <section class="country-filter">
       <h2 class="title country-filter__title">Фильтрация по странам</h2>
       <button class="country-filter__button" type="button">Открыть фильтр</button>
-      <div class="country-filter__wrap">
-        <ul class="continents contry-filter__continents">
+      <div class="choose-country country-filter__wrap">
+        <ul class="continents choose-country__continents">
           <li><a class="continents__link" href="#">Европа</a></li>
           <li><a class="continents__link" href="#">Азия</a></li>
           <li><a class="continents__link" href="#">Америка</a></li>
           <li><a class="continents__link" href="#">Острова</a></li>
         </ul>
-        <table class="alphbet-table country-filter__table">
+        <table class="alphbet-table choose-country__table">
           <tr>
             <td class="alphbet-table__item"><a class="alphbet-table__link" href="#">А</a></td>
             <td class="alphbet-table__item"><a class="alphbet-table__link" href="#">Б</a></td>
@@ -86,41 +87,42 @@
             <td class="alphbet-table__item"><a class="alphbet-table__link" href="#">Я</a></td>
           </tr>
         </table>
-        <ul class="country-filter__list">
-          <li class="country-filter__list-item">
-            <a class="country-filter__link" href="#">Афганистан</a>
+        <ul class="countries__list choose-country__list">
+          <li class="countries__item">
+            <a class="countries__link" href="#">Афганистан</a>
           </li>
-          <li class="country-filter__list-item">
-            <a class="country-filter__link" href="#">Албания</a>
+          <li class="countries__item">
+            <a class="countries__link" href="#">Албания</a>
           </li>
-          <li class="country-filter__list-item">
-            <a class="country-filter__link" href="#">Алгерия</a>
+          <li class="countries__item">
+            <a class="countries__link" href="#">Алгерия</a>
           </li>
-          <li class="country-filter__list-item">
-            <a class="country-filter__link" href="#">Андорра</a>
+          <li class="countries__item">
+            <a class="countries__link" href="#">Андорра</a>
           </li>
-          <li class="country-filter__list-item">
-            <a class="country-filter__link" href="#">Аргентина</a>
+          <li class="countries__item">
+            <a class="countries__link" href="#">Аргентина</a>
           </li>
-          <li class="country-filter__list-item">
-            <a class="country-filter__link" href="#">Армения</a>
+          <li class="countries__item">
+            <a class="countries__link" href="#">Армения</a>
           </li>
-          <li class="country-filter__list-item">
-            <a class="country-filter__link" href="#">Австралия</a>
+          <li class="countries__item">
+            <a class="countries__link" href="#">Австралия</a>
           </li>
-          <li class="country-filter__list-item">
-            <a class="country-filter__link" href="#">Австрия</a>
+          <li class="countries__item">
+            <a class="countries__link" href="#">Австрия</a>
           </li>
-          <li class="country-filter__list-item">
-            <a class="country-filter__link" href="#">Азербайджан</a>
+          <li class="countries__item">
+            <a class="countries__link" href="#">Азербайджан</a>
           </li>
         </ul>
-        <button class="button country-filter__button-close" href="#" type="button">Свернуть</button>
+        <button class="button choose-country__button-close" type="button">Свернуть</button>
       </div>
     </section>
+
     <section class="travelmate-filter">
       <h2 class="title travelmate-filter__title">Подберите идеального попутчика</h2>
-      <form class="filter travelmate-filter">
+      <form class="filter travelmate-filter" action="https://echo.htmlacademy.ru" method="POST">
         <fieldset class="filter__wrap filter__wrap--hobby">
           <legend class="filter__wrap-name">Хобби</legend>
         </fieldset>
@@ -162,7 +164,7 @@
         <fieldset class="filter__wrap filter__wrap--level">
           <legend class="filter__wrap-name">Левел</legend>
           <label class="visually-hidden" for="min-level">Минимальная цена</label>
-          <input class="filter__textfield" id="min-checkbox" type="text" value="30">
+          <input class="filter__textfield" id="min-level" type="text" value="30">
           <label class="visually-hidden" for="max-level">Максимальная цена</label>
           <input class="filter__textfield" id="max-level" type="text" value="100">
           <span>руб.</span>
@@ -179,6 +181,7 @@
         <a class="button filter__button" href="#">Показать</a>
       </form>
     </section>
+
     <section class="travelmates">
       <h2 class="visually-hidden">Список попутчиков</h2>
       <ul class="travelmates-list">
@@ -381,6 +384,7 @@
       <a class="travelmates__button--back" href="#">Назад</a>
       <a class="travelmates__button--forward" href="#">Вперед</a>
     </section>
+
   </main>
   <footer class="footer">
     <a class="footer__link">
