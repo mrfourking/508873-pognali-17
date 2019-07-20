@@ -31,7 +31,7 @@
     </nav>
   </header>
   <main>
-    <h1 class="title page-title">Направления</h1>
+    <h1 class="page-title">Направления</h1>
 
     <section class="info">
       <h2 class="visually-hidden">Информация обо мне</h2>
@@ -39,16 +39,14 @@
         <span class="travelmate-card__level">Level 80</span>
         <img class="travelmate-card__image travelmate-card__image--small" src="http://placehold.it/100x100" width="100"
           height="100" alt="Петя Демин">
-        <a class="button travelmate-card__button travelmate-card__button--change-photo" href="#">Сменить фото</a>
+        <label class="button travelmate-card__button travelmate-card__button--change-photo" for="photo-upload">Сменить
+          фото</label>
+        <input class="visually-hidden" id="photo-upload" type="file" name="photo-upload">
         <fieldset class="travelmate-card__wrap">
           <legend class="travelmate-card__wrap-name">Тэги</legend>
-          <ul class="travelmate-card__hashtag-list">
-            <li><a class="travelmate-card__hashtag-link" href="#">#бургер</a></li>
-            <li><a class="travelmate-card__hashtag-link" href="#">#бар</a></li>
-            <li><a class="travelmate-card__hashtag-link" href="#">#футбол</a></li>
-            <li><a class="travelmate-card__hashtag-link" href="#">#концерт</a></li>
-            <li><a class="travelmate-card__hashtag-link" href="#">#крафт</a></li>
-          </ul>
+          <textarea class="travelmate-card__hashtag-list travelmate-card__hashtag-list--editable">
+              #бургер #бар #футбол #концерт #крафт
+          </textarea>
         </fieldset>
         <fieldset class="travelmate-card__wrap">
           <legend class="travelmate-card__wrap-name">Транспорт</legend>
@@ -76,17 +74,17 @@
     <section class="plans">
       <h2 class="title plans__title">Мои планы:</h2>
       <ol class="plans__list">
-        <li class="plans__item">
-          <h3 class="plans__item-title">Франция, Италия</h3>
-          <p class="plans__travelmates-number">3 попутчика</p>
-          <p class="plans__dates">26 мар — 29 мар</p>
-          <a class="plans__link" href="#">Изменить</a>
+        <li class="plan-card plans__item">
+          <h3 class="plan-card__item-title">Франция, Италия</h3>
+          <p class="plan-card__travelmates-number">3 попутчика</p>
+          <p class="plan-card__dates">26 мар — 29 мар</p>
+          <a class="plan-card__link" href="#">Изменить</a>
         </li>
-        <li class="plans__item">
-          <h3 class="plans__item-title">Тайланд, Индонезия</h3>
-          <p class="plans__travelmates-number">1 попутчик</p>
-          <p class="plans__dates">1 июл — 15 июл</p>
-          <a class="plans__link" href="#">Изменить</a>
+        <li class="plan-card plans__item">
+          <h3 class="plan-card__item-title">Тайланд, Индонезия</h3>
+          <p class="plan-card__travelmates-number">1 попутчик</p>
+          <p class="plan-card__dates">1 июл — 15 июл</p>
+          <a class="plan-card__link" href="#">Изменить</a>
         </li>
       </ol>
     </section>
@@ -101,34 +99,40 @@
               Укажите предпочтительное количество попутчиков, которых
               вы хотели бы позвать в поездку и ее предполагаемую длительность.
             </p>
-            <label class="steps-list__textfield-name" for="travelmate-number">Ищу попутчиков:</label>
-            <span class="steps-list__short">Чел.</span>
-            <button class="steps-list__textfield-button steps-list__textfield-button--decrease" type="button">
-              <span class="visually-hidden">Уменьшить на 1</span>
-            </button>
-            <input class="steps-list__textfield" id="travelmate-number" type="number" name="travelmate-number" min="0"
-              value="2">
-            <button class="steps-list__textfield-button steps-list__textfield-button--increase" type="button">
-              <span class="visually-hidden">Увеличить на 1</span>
-            </button>
-            <label class="steps-list__textfield-name" for="day-number">Длительность:</label>
-            <span class="steps-list__short">Дн.</span>
-            <button class="steps-list__textfield-button steps-list__textfield-button--decrease" type="button">
-              <span class="visually-hidden">Уменьшить на 1</span>
-            </button>
-            <input class="steps-list__textfield" id="day-number" type="number" name="day-number" min="0" value="2">
-            <button class="steps-list__textfield-button steps-list__textfield-button--increase" type="button">
-              <span class="visually-hidden">Увеличить на 1</span>
-            </button>
+            <div class="find-textfield steps-list__textfield">
+              <label class="find-textfield__textfield-name" for="travelmate-number">Ищу попутчиков:</label>
+              <span class="find-textfield__short">Чел.</span>
+              <button class="find-textfield__textfield-button find-textfield__textfield-button--decrease" type="button">
+                <span class="visually-hidden">Уменьшить на 1</span>
+              </button>
+              <input class="find-textfield__textfield" id="travelmate-number" type="number" name="travelmate-number"
+                min="0" value="2">
+              <button class="find-textfield__textfield-button find-textfield__textfield-button--increase" type="button">
+                <span class="visually-hidden">Увеличить на 1</span>
+              </button>
+            </div>
+            <div class="find-textfield steps-list__textfield">
+              <label class="find-textfield__textfield-name" for="day-number">Длительность:</label>
+              <span class="find-textfield__short">Дн.</span>
+              <button class="find-textfield__textfield-button find-textfield__textfield-button--decrease" type="button">
+                <span class="visually-hidden">Уменьшить на 1</span>
+              </button>
+              <input class="find-textfield__textfield" id="day-number" type="number" name="day-number" min="0" value="2">
+              <button class="find-textfield__textfield-button find-textfield__textfield-button--increase" type="button">
+                <span class="visually-hidden">Увеличить на 1</span>
+              </button>
+            </div>
             <input class="steps-list__checkbox" id="kids-toggle" type="checkbox" name="kids">
             <label class="steps-list__checkbox-name" for="kids-toggle">Можно с детьми</label>
-            <button class="steps-list__datefield-button steps-list__datefield-button--decrease" type="button">
-              <span class="visually-hidden">Уменьшить на 1</span>
-            </button>
-            <input class="steps-list__datefield" id="date" type="text" name="date" value="Март 2019">
-            <button class="steps-list__datefield-button steps-list__datefield-button--increase" type="button">
-              <span class="visually-hidden">Увеличить на 1</span>
-            </button>
+            <div class="find-textfield steps-list__textfield">
+              <button class="find-textfield__datefield-button find-textfield__datefield-button--decrease" type="button">
+                <span class="visually-hidden">Уменьшить на 1</span>
+              </button>
+              <input class="find-textfield__datefield" id="date" type="text" name="date" value="Март 2019">
+              <button class="find-textfield__datefield-button find-textfield__datefield-button--increase" type="button">
+                <span class="visually-hidden">Увеличить на 1</span>
+              </button>
+            </div>
             <table class="calendar steps-list__calendar">
               <tr>
                 <th class="calendar__title-item">П</th>
