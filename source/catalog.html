@@ -31,7 +31,157 @@
     </nav>
   </header>
   <main>
-    <h1 class="title page-title">Попутчики</h1>
+    <h1 class="page-title">Попутчики</h1>
+
+    <section class="country-filter">
+      <h2 class="title country-filter__title">Фильтрация по странам</h2>
+      <button class="country-filter__button" type="button">Открыть фильтр</button>
+      <div class="choose-country country-filter__wrap">
+        <ul class="continents choose-country__continents">
+          <li><a class="continents__link" href="#">Европа</a></li>
+          <li><a class="continents__link" href="#">Азия</a></li>
+          <li><a class="continents__link" href="#">Америка</a></li>
+          <li><a class="continents__link" href="#">Острова</a></li>
+        </ul>
+        <table class="alphbet-table choose-country__table">
+          <tr>
+            <td class="alphbet-table__item"><a class="alphbet-table__link" href="#">А</a></td>
+            <td class="alphbet-table__item"><a class="alphbet-table__link" href="#">Б</a></td>
+            <td class="alphbet-table__item"><a class="alphbet-table__link" href="#">В</a></td>
+            <td class="alphbet-table__item"><a class="alphbet-table__link" href="#">Г</a></td>
+            <td class="alphbet-table__item"><a class="alphbet-table__link" href="#">Д</a></td>
+          </tr>
+          <tr>
+            <td class="alphbet-table__item"><a class="alphbet-table__link" href="#">Е</a></td>
+            <td class="alphbet-table__item"><a class="alphbet-table__link" href="#">Ё</a></td>
+            <td class="alphbet-table__item"><a class="alphbet-table__link" href="#">Ж</a></td>
+            <td class="alphbet-table__item"><a class="alphbet-table__link" href="#">З</a></td>
+            <td class="alphbet-table__item"><a class="alphbet-table__link" href="#">И</a></td>
+          </tr>
+          <tr>
+            <td class="alphbet-table__item"><a class="alphbet-table__link" href="#">Й</a></td>
+            <td class="alphbet-table__item"><a class="alphbet-table__link" href="#">К</a></td>
+            <td class="alphbet-table__item"><a class="alphbet-table__link" href="#">Л</a></td>
+            <td class="alphbet-table__item"><a class="alphbet-table__link" href="#">М</a></td>
+            <td class="alphbet-table__item"><a class="alphbet-table__link" href="#">Н</a></td>
+          </tr>
+          <tr>
+            <td class="alphbet-table__item"><a class="alphbet-table__link" href="#">О</a></td>
+            <td class="alphbet-table__item"><a class="alphbet-table__link" href="#">П</a></td>
+            <td class="alphbet-table__item"><a class="alphbet-table__link" href="#">Р</a></td>
+            <td class="alphbet-table__item"><a class="alphbet-table__link" href="#">С</a></td>
+            <td class="alphbet-table__item"><a class="alphbet-table__link" href="#">Т</a></td>
+          </tr>
+          <tr>
+            <td class="alphbet-table__item"><a class="alphbet-table__link" href="#">У</a></td>
+            <td class="alphbet-table__item"><a class="alphbet-table__link" href="#">Ф</a></td>
+            <td class="alphbet-table__item"><a class="alphbet-table__link" href="#">Х</a></td>
+            <td class="alphbet-table__item"><a class="alphbet-table__link" href="#">Ц</a></td>
+            <td class="alphbet-table__item"><a class="alphbet-table__link" href="#">Ч</a></td>
+          </tr>
+          <tr>
+            <td class="alphbet-table__item"><a class="alphbet-table__link" href="#">Ш</a></td>
+            <td class="alphbet-table__item"><a class="alphbet-table__link" href="#">Щ</a></td>
+            <td class="alphbet-table__item"><a class="alphbet-table__link" href="#">Э</a></td>
+            <td class="alphbet-table__item"><a class="alphbet-table__link" href="#">Ю</a></td>
+            <td class="alphbet-table__item"><a class="alphbet-table__link" href="#">Я</a></td>
+          </tr>
+        </table>
+        <ul class="countries__list choose-country__list">
+          <li class="countries__item">
+            <a class="countries__link" href="#">Афганистан</a>
+          </li>
+          <li class="countries__item">
+            <a class="countries__link" href="#">Албания</a>
+          </li>
+          <li class="countries__item">
+            <a class="countries__link" href="#">Алгерия</a>
+          </li>
+          <li class="countries__item">
+            <a class="countries__link" href="#">Андорра</a>
+          </li>
+          <li class="countries__item">
+            <a class="countries__link" href="#">Аргентина</a>
+          </li>
+          <li class="countries__item">
+            <a class="countries__link" href="#">Армения</a>
+          </li>
+          <li class="countries__item">
+            <a class="countries__link" href="#">Австралия</a>
+          </li>
+          <li class="countries__item">
+            <a class="countries__link" href="#">Австрия</a>
+          </li>
+          <li class="countries__item">
+            <a class="countries__link" href="#">Азербайджан</a>
+          </li>
+        </ul>
+        <button class="button choose-country__button-close" type="button">Свернуть</button>
+      </div>
+    </section>
+
+    <section class="travelmate-filter">
+      <h2 class="title travelmate-filter__title">Подберите идеального попутчика</h2>
+      <form class="filter travelmate-filter" action="https://echo.htmlacademy.ru" method="POST">
+        <fieldset class="filter__wrap filter__wrap--hobby">
+          <legend class="filter__wrap-name">Хобби</legend>
+        </fieldset>
+        <fieldset class="filter__wrap filter__wrap--music">
+          <legend class="filter__wrap-name">Музыка</legend>
+          <input class="filter__checkbox" id="hardrock" type="checkbox" name="hardrock">
+          <label class="filter_input-name" for="hardrock">Тяжелый рок</label>
+          <input class="filter__checkbox" id="russianrap" type="checkbox" name="russianrap">
+          <label class="filter_input-name" for="russianrap">Русский рэп</label>
+          <input class="filter__checkbox" id="eurodance" type="checkbox" name="eurodance">
+          <label class="filter_input-name" for="eurodance">Евроденс</label>
+        </fieldset>
+        <fieldset class="filter__wrap filter__wrap--food">
+          <legend class="filter__wrap-name">Еда</legend>
+        </fieldset>
+        <fieldset class="transport-list filter__wrap filter__wrap--transport">
+          <legend class="filter__wrap-name">Транспорт</legend>
+          <input class="transport-list__input visually-hidden" id="plane" type="checkbox" name="plane">
+          <label class="transport-list__item" for="plane">
+            <img class="transport-list__icon transport-list__icon--active" src="http://placehold.it/24x21" width="24"
+              height="21" alt="plane">
+          </label>
+          <input class="transport-list__input visually-hidden" id="bus" type="checkbox" name="bus">
+          <label class="transport-list__item" for="bus">
+            <img class="transport-list__icon transport-list__icon--active" src="http://placehold.it/24x21" width="24"
+              height="21" alt="bus">
+          </label>
+          <input class="transport-list__input visually-hidden" id="bike" type="checkbox" name="bike">
+          <label class="transport-list__item" for="bike">
+            <img class="transport-list__icon transport-list__icon--active" src="http://placehold.it/24x21" width="24"
+              height="21" alt="bike">
+          </label>
+          <input class="transport-list__input visually-hidden" id="run" type="checkbox" name="run">
+          <label class="transport-list__item" for="run">
+            <img class="transport-list__icon transport-list__icon--active" src="http://placehold.it/24x21" width="24"
+              height="21" alt="run">
+          </label>
+        </fieldset>
+        <fieldset class="filter__wrap filter__wrap--level">
+          <legend class="filter__wrap-name">Левел</legend>
+          <label class="visually-hidden" for="min-level">Минимальный уровень</label>
+          <input class="filter__textfield" id="min-level" type="text" value="30">
+          <label class="visually-hidden" for="max-level">Максимальный уровень</label>
+          <input class="filter__textfield" id="max-level" type="text" value="100">
+          <span>руб.</span>
+          <div class="level-range filter__sliders">
+            <div class="level-range__scale">
+              <div class="level-range__filled-scale"></div>
+              <div class="level-range__slider level-range__slider--left" tabindex="0" aria-label="Минимальный уровень">
+              </div>
+              <div class="level-range__slider level-range__slider--right" tabindex="0"
+                aria-label="Максимальный уровень"></div>
+            </div>
+          </div>
+        </fieldset>
+        <a class="button filter__button" href="#">Показать</a>
+      </form>
+    </section>
+
     <section class="travelmates">
       <h2 class="visually-hidden">Список попутчиков</h2>
       <ul class="travelmates-list">
@@ -234,15 +384,16 @@
       <a class="travelmates__button--back" href="#">Назад</a>
       <a class="travelmates__button--forward" href="#">Вперед</a>
     </section>
+
   </main>
   <footer class="footer">
-    <a class="footer__link" href="index.html">
+    <a class="footer__link">
       <img class="footer__logo" src="http://placehold.it/100x19" width="100" height="19" alt="Логотип Погнали?">
     </a>
     <ul class="social-list footer__social-list">
-      <li class="social-list__item footer__social-item"><a href="#">Facebook</a></li>
-      <li class="social-list__item footer__social-item"><a href="#">Vkontakte</a></li>
-      <li class="social-list__item footer__social-item"><a href="#">Instagram</a></li>
+      <li class="social-list__item social-list__item--facebook footer__social-item"><a href="#">Facebook</a></li>
+      <li class="social-list__item social-list__item--vkontakte footer__social-item"><a href="#">Vkontakte</a></li>
+      <li class="social-list__item social-list__item--instagram footer__social-item"><a href="#">Instagram</a></li>
     </ul>
     <p class="footer__copyright">
       Разработано
