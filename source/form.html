@@ -7,13 +7,15 @@
   <link href="css/style.css" rel="stylesheet">
 </head>
 
-<body>
-  <header class="header">
-    <a class="header__link" href="index.html">
-      <img class="header__logo" src="http://placehold.it/100x19" width="100" height="19" alt="Логотип Погнали?">
-    </a>
-    <button class="header__menu-button" type="button">Главное меню</button>
-    <nav class="main-menu">
+<body class="page">
+  <header class="header container">
+    <div class="header__wrap">
+      <a class="header__link" href="index.html">
+        <img class="header__logo" src="http://placehold.it/100x19" width="100" height="19" alt="Логотип Погнали?">
+      </a>
+      <button class="header__menu-button" type="button">Главное меню</button>
+    </div>
+    <nav class="main-menu header__wrap">
       <ul class="main-menu__list">
         <li class="main-menu__item"><a href="#">О сервисе</a></li>
         <li class="main-menu__item"><a href="form.html">Направления</a></li>
@@ -21,20 +23,20 @@
       </ul>
       <a class="button main-menu__button" href="#">Авторизация</a>
       <p class="contacts main-menu__contacts">
-        <a class="contacts__link--phone">8 800 555-86-28</a>
-        <a class="contacts__link--email">mail@htmlacademy.ru</a>
+        <a class="contacts__link contacts__link--phone">8 800 555-86-28</a>
+        <a class="contacts__link contacts__link--email">mail@htmlacademy.ru</a>
       </p>
       <ul class="social-list">
-        <li class="social-list__item--facebook main-menu__social-item"><a href="#">Facebook</a></li>
-        <li class="social-list__item--vkontakte main-menu__social-item"><a href="#">Vkontakte</a></li>
-        <li class="social-list__item--instagram main-menu__social-item"><a href="#">Instagram</a></li>
+        <li class="social-list__item social-list__item--facebook main-menu__social-item"><a href="#">Facebook</a></li>
+        <li class="social-list__item social-list__item--vkontakte main-menu__social-item"><a href="#">Vkontakte</a></li>
+        <li class="social-list__item social-list__item--instagram main-menu__social-item"><a href="#">Instagram</a></li>
       </ul>
     </nav>
   </header>
   <main>
-    <h1 class="page-title">Направления</h1>
+    <h1 class="page-title container">Направления</h1>
 
-    <section class="info">
+    <section class="info container">
       <h2 class="visually-hidden">Информация обо мне</h2>
       <div class="travelmate-card info__card">
         <span class="travelmate-card__level">Level 80</span>
@@ -72,7 +74,7 @@
       </div>
     </section>
 
-    <section class="plans">
+    <section class="plans container">
       <h2 class="title plans__title">Мои планы:</h2>
       <ol class="plans__list">
         <li class="plan-card plans__item">
@@ -90,7 +92,7 @@
       </ol>
     </section>
 
-    <section class="create-plan">
+    <section class="create-plan container">
       <h2 class="title create-plan__title">Добавить план:</h2>
       <form class="plan-form create-plan__form">
         <ol class="steps-list plan-form__list">
@@ -118,7 +120,8 @@
               <button class="find-textfield__textfield-button find-textfield__textfield-button--decrease" type="button">
                 <span class="visually-hidden">Уменьшить на 1</span>
               </button>
-              <input class="find-textfield__textfield" id="day-number" type="number" name="day-number" min="0" value="2">
+              <input class="find-textfield__textfield" id="day-number" type="number" name="day-number" min="0"
+                value="2">
               <button class="find-textfield__textfield-button find-textfield__textfield-button--increase" type="button">
                 <span class="visually-hidden">Увеличить на 1</span>
               </button>
@@ -681,7 +684,7 @@
       </form>
     </section>
   </main>
-  <footer class="footer">
+  <footer class="footer container">
     <a class="footer__link">
       <img class="footer__logo" src="http://placehold.it/100x19" width="100" height="19" alt="Логотип Погнали?">
     </a>

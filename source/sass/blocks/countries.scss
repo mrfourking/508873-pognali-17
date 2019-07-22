@@ -2,7 +2,7 @@
   @include section-padding(30px);
   padding-top: 72px;
 
-  background-color: $light-background;
+  background-color: $bg-light;
 
   @include section-border-radius();
 }

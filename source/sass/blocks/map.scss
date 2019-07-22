@@ -2,7 +2,7 @@
   @include section-padding(35px);
   padding-top: 32px;
 
-  background-color: $yellow-for-button;
+  background-color: $bg-button;
 
   @include section-border-radius();
 }

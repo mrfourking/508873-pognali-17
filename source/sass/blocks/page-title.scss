@@ -1,0 +1,8 @@
+.page-title {
+  @include section-padding(20px);
+  padding-top: 30px;
+
+  background-color: $bg-dark;
+
+  @include section-border-radius();
+}

@@ -1,11 +1,11 @@
 .call-to-action {
   @include section-padding(29px);
 
-  background-color: $dark-blue-back;
+  background-color: $bg-dark-light;
 
   @include section-border-radius();
 }
 
 .call-to-action__contacts-link {
-  color: $yellow-for-button;
+  color: $bg-button;
 }

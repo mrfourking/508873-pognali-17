@@ -4,12 +4,12 @@
     font-weight: 700;
   }
   &--font-dark {
-    color: $light-grey;
+    color: $text-dark;
   }
 }
 
 .section-intro__link {
   font: inherit;
-  color: $yellow-for-button;
+  color: $bg-button;
   text-decoration: underline;
 }
