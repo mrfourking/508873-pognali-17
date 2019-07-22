@@ -1,0 +1,24 @@
+.rates {
+  @include section-padding(18px);
+  padding-top: 37px;
+
+  font-size: 16px;
+  line-height: 22px;
+  font-weight: 300;
+  color: $text-dark;
+
+  background-color: $bg-light;
+
+  @include section-border-radius();
+}
+
+.rates__business {
+  background-color: #ffffff;
+
+  border-radius: 18px;
+}
+
+.rates__business-wrap {
+  @include section-padding(34px);
+  padding-top: 34px;
+}

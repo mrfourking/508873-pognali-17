@@ -1,0 +1,17 @@
+.section-intro {
+  margin: 0;
+
+  &--bold {
+    font-weight: 700;
+  }
+
+  &--font-dark {
+    color: $text-dark;
+  }
+}
+
+.section-intro__link {
+  font: inherit;
+  color: $bg-button;
+  text-decoration: underline;
+}

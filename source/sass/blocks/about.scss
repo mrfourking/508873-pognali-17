@@ -1,0 +1,11 @@
+.about {
+  @include section-padding(34px);
+  padding-bottom: 85px;
+
+  background-color: $bg-dark-light;
+  background-image: url("../../img/about-mobile@1x.png");
+  background-repeat: no-repeat;
+  background-position: 50% 0;
+
+  @include section-border-radius();
+}
