@@ -1,0 +1,28 @@
+.alphabet-table {
+  background-color: #ffffff;
+
+  border-collapse: collapse;
+}
+
+.alphabet-table__item {
+  padding: 16px 20px;
+
+  border: 1px solid #cbced9;
+
+  &--current {
+    background-color: $title-dark;
+
+    border-color: $title-dark;
+  }
+}
+
+.alphabet-table__link {
+  font-size: 14px;
+  line-height: 18px;
+  font-weight: 600;
+  color: $title-dark;
+
+  &--current {
+    color: #ffffff;
+  }
+}

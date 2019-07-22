@@ -1,0 +1,16 @@
+.country-filter {
+  @include section-padding(27px);
+  padding-top: 20px;
+
+  background-color: $bg-light-grey;
+
+  @include section-border-radius();
+}
+
+.country-filter__title {
+  font-size: 16px;
+  line-height: 22px;
+  font-weight: 700;
+  color: $bg-dark-light;
+  text-transform: uppercase;
+}

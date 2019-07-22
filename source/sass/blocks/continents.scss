@@ -1,0 +1,18 @@
+.continents {
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+.continents__link {
+  font-size: 16px;
+  line-height: 22px;
+  font-weight: 700;
+  color: rgba($bg-dark-light, 0.3);
+  text-transform: uppercase;
+
+  &--active {
+    color: $bg-dark-light;
+  }
+}
