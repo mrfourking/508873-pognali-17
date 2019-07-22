@@ -1,0 +1,17 @@
+.country {
+  background-color: #ffffff;
+}
+
+.country__name {
+  font-size: 21px;
+  line-height: 21px;
+  font-weight: 700;
+  color: $dark-blue;
+}
+
+.country__call,
+.country__counter {
+  font-size: 16px;
+  font-weight: 600;
+  color: rgba($light-grey, 0.3);
+}

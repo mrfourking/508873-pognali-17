@@ -1,0 +1,14 @@
+.countries {
+  @include section-padding(30px);
+  padding-top: 72px;
+
+  background-color: $light-background;
+
+  @include section-border-radius();
+}
+
+.countries__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}

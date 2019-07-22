@@ -1,0 +1,8 @@
+.map__contacts-wrap {
+  @include section-padding(35px);
+  padding-top: 32px;
+
+  background-color: $yellow-for-button;
+
+  @include section-border-radius();
+}

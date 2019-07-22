@@ -1,0 +1,10 @@
+.header {
+  margin-bottom: 54px;
+  padding-top: 27px;
+
+  background-color: $dark-blue;
+}
+
+.header__wrap {
+  @include section-padding();
+}

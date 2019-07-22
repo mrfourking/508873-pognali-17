@@ -1,0 +1,19 @@
+.intro {
+  @include section-padding();
+  padding-bottom: 39px;
+
+  background-color: $dark-blue;
+  background-image: url("../../img/traveller-illustration-mobile@1x.png"),
+    url("../../img/globe-back-mobile@1x.jpg");
+  background-repeat: no-repeat, no-repeat;
+  background-position: 50% 73%, 0 0;
+}
+
+.intro__title {
+  margin: 0;
+  margin-bottom: 253px;
+
+  font-size: 36px;
+  line-height: 40px;
+  text-align: center;
+}

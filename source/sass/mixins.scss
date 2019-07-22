@@ -1,0 +1,9 @@
+@mixin section-padding($top-bottom:0, $left-right:25px) {
+  padding: $top-bottom $left-right;
+  padding-top: 73px;
+}
+
+@mixin section-border-radius($radius:25px) {
+  border-bottom-left-radius: $radius;
+  border-bottom-right-radius: $radius;
+}

@@ -1,0 +1,17 @@
+.travelmates {
+  @include section-padding(30px);
+  padding-top: 73px;
+
+  background-color: $dark-blue-back;
+  background-image: url("../../img/rogovaya-back-mobile@1x.png"),
+    url("../../img/smolov-back-desktop@1x.png");
+  background-repeat: no-repeat, no-repeat;
+  background-size: 18%, 45%;
+  background-position: 0 310px, 150px 40px;
+
+  @include section-border-radius();
+}
+
+.travelmates__button {
+  background-color: $yellow-for-button;
+}
