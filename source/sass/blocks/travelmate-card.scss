@@ -12,6 +12,10 @@
 
   background-color: #ffffff;
 
+  &--form {
+    background-color: transparent;
+  }
+
   border-radius: 18px;
 }
 
@@ -47,8 +51,33 @@
   line-height: 18px;
   font-weight: 700;
   color: $title-dark;
+
+  &--form {
+    font-size: 38px;
+    line-height: 38px;
+    color: $bg-dark;
+  }
+
+  span {
+    font-size: 18px;
+    line-height: 22px;
+    font-weight: 400;
+    color: $text-dark;
+  }
 }
 
 .travelmate-card__button {
+  text-transform: uppercase;
+
+  &--change-photo {
+    color: $bg-dark;
+  }
+}
+
+.travelmate-card__wrap-name {
+  font-size: 16px;
+  line-height: 18px;
+  font-weight: 700;
+  color: $title-dark;
   text-transform: uppercase;
 }

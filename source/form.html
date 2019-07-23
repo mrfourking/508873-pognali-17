@@ -38,8 +38,8 @@
 
     <section class="info container">
       <h2 class="visually-hidden">Информация обо мне</h2>
-      <div class="travelmate-card info__card">
-        <span class="travelmate-card__level">Level 80</span>
+      <div class="travelmate-card travelmate-card--form info__card">
+        <span class="travelmate-card__level travelmate-card__level--form"><span>Level</span> 80</span>
         <img class="travelmate-card__image travelmate-card__image--small" src="http://placehold.it/100x100" width="100"
           height="100" alt="Петя Демин">
         <label class="button travelmate-card__button travelmate-card__button--change-photo" for="photo-upload">Сменить
@@ -47,8 +47,7 @@
         <input class="visually-hidden" id="photo-upload" type="file" name="photo-upload">
         <fieldset class="travelmate-card__wrap">
           <legend class="travelmate-card__wrap-name">Тэги</legend>
-          <textarea class="travelmate-card__hashtag-list travelmate-card__hashtag-list--editable">
-              #бургер #бар #футбол #концерт #крафт
+          <textarea class="travelmate-card__hashtag-list travelmate-card__hashtag-list--editable">#бургер #бар #футбол #концерт #крафт
           </textarea>
         </fieldset>
         <fieldset class="travelmate-card__wrap">
@@ -75,7 +74,7 @@
     </section>
 
     <section class="plans container">
-      <h2 class="title plans__title">Мои планы:</h2>
+      <h2 class="title title--dark plans__title">Мои планы:</h2>
       <ol class="plans__list">
         <li class="plan-card plans__item">
           <h3 class="plan-card__item-title">Франция, Италия</h3>
@@ -93,12 +92,12 @@
     </section>
 
     <section class="create-plan container">
-      <h2 class="title create-plan__title">Добавить план:</h2>
+      <h2 class="title title--dark create-plan__title">Добавить план:</h2>
       <form class="plan-form create-plan__form">
         <ol class="steps-list plan-form__list">
           <li class="steps-list__item">
             <h3 class="steps-list__title">Шаг 1. Даты пребывания</h3>
-            <p class="section-intro steps-list__instruction">
+            <p class="section-intro section-intro--font-dark steps-list__instruction">
               Укажите предпочтительное количество попутчиков, которых
               вы хотели бы позвать в поездку и ее предполагаемую длительность.
             </p>
@@ -291,7 +290,7 @@
           </li>
           <li class="steps-list__item">
             <h3 class="steps-list__title">Шаг 2. Маршрут</h3>
-            <p class="section-intro steps-list__instruction">
+            <p class="section-intro section-intro--font-dark steps-list__instruction">
               Укажите страны, которые вы хотели по посетить.
               Это может быть одна или сразу несколько.
             </p>
@@ -663,7 +662,7 @@
           </li>
           <li class="steps-list__item">
             <h3 class="steps-list__title">Шаг 3. Развлечения</h3>
-            <p class="section-intro steps-list__instruction">
+            <p class="section-intro section-intro--font-dark steps-list__instruction">
               Наконец, расскажите о своих планах времяпровождения.
               Можно писать в свободной форме и ставить тэги.
             </p>

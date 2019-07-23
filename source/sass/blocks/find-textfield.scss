@@ -1,0 +1,11 @@
+.find-textfield {
+  font-size: 16px;
+  line-height: 16px;
+  font-weight: 600;
+  color: $title-dark;
+  text-transform: uppercase;
+}
+
+.find-textfield__short {
+  color: rgba($title-dark, 0.3);
+}

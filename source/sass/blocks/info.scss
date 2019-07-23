@@ -1,0 +1,5 @@
+.info {
+  @include section-padding(33px);
+
+  background-color: $bg-light;
+}

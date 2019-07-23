@@ -5,4 +5,8 @@
   line-height: 24px;
   font-weight: 700;
   color: $title-orange;
+
+  &--dark {
+    color: $title-dark;
+  }
 }

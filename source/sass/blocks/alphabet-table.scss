@@ -7,7 +7,7 @@
 .alphabet-table__item {
   padding: 16px 20px;
 
-  border: 1px solid #cbced9;
+  border: 1px solid $border-grey;
 
   &--current {
     background-color: $title-dark;
