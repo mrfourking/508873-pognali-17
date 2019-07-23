@@ -1,0 +1,8 @@
+.create-plan {
+  @include section-padding(283px);
+  padding-top: 30px;
+
+  background-color: $bg-plan-add;
+
+  @include section-top-border-radius();
+}

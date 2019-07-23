@@ -1,0 +1,28 @@
+.steps-list {
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+.steps-list__item {
+  @include section-padding(22px);
+  padding-top: 37px;
+
+  background-color: #ffffff;
+
+  @include section-border-radius(8px);
+  @include section-top-border-radius(8px);
+}
+
+.steps-list__title {
+  color: $title-dark;
+}
+
+.steps-list__checkbox-name {
+  color: $text-dark;
+}
+
+.steps-list__button {
+  text-transform: uppercase;
+}

@@ -1,0 +1,14 @@
+.plans {
+  @include section-padding(30px);
+  padding-top: 30px;
+
+  background-color: $bg-plans;
+
+  border-top-left-radius: 25px;
+  border-top-right-radius: 25px;
+}
+
+.plans__list {
+  margin: 0;
+  padding: 0;
+}

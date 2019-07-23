@@ -1,0 +1,16 @@
+.travelmate-filter {
+  width: 270px;
+
+  @include section-padding(22px);
+  padding-top: 27px;
+
+  background-color: $bg-button;
+
+  border-radius: 16px;
+}
+
+.travelmate-filter__title {
+  font-size: 23px;
+  line-height: 23px;
+  color: $title-dark;
+}

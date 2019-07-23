@@ -1,0 +1,23 @@
+.calendar {
+  font-size: 14px;
+  line-height: 18px;
+  font-weight: 400;
+  text-transform: uppercase;
+  color: $text-dark;
+}
+
+.calendar__title-item {
+  font: inherit;
+
+  &--weekend {
+    color: $text-weekend;
+  }
+}
+
+.calendar__link {
+  font: inherit;
+
+  &--choosen {
+    color: #ffffff;
+  }
+}
