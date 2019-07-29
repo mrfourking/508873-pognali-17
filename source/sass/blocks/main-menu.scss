@@ -1,4 +1,10 @@
 .main-menu {
+  display: none;
+  width: 100%;
+
+  @include section-padding();
+  padding-top: 56px;
+
   font-size: 30px;
   line-height: 36px;
   font-weight: 600;
@@ -7,4 +13,47 @@
   background-color: #ffffff;
 
   list-style: none;
+
+  &--nojs {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &--open {
+    display: flex;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .main-menu {
+
+    &--nojs {
+      order: 2;
+    }
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .main-menu {
+    display: flex;
+    width: auto;
+    padding: 0;
+
+    background-color: transparent;
+  }
+
+  .main-menu__wrap {
+    display: none;
+  }
+
+  .main-menu__list {
+    display: flex;
+
+    list-style: none;
+
+    a {
+      color: #ffffff;
+    }
+  }
+
 }
