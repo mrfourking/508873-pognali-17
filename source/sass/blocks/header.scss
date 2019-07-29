@@ -5,8 +5,6 @@
   justify-content: space-between;
   flex-wrap: wrap;
 
-  background-color: $bg-dark;
-
   @include section-border-radius();
 
   &--main {
@@ -101,6 +99,7 @@
 @media (min-width: $desktop-width) {
   .header {
     @include section-padding(0, 60px);
+    // background-color: transparent;
   }
 
   .header__wrap {
@@ -113,5 +112,11 @@
 
   .header__button-item {
     display: block;
+  }
+
+  .header__title {
+    padding-right: 800px;
+
+    background-color: transparent;
   }
 }
