@@ -27,3 +27,18 @@
     text-transform: uppercase;
   }
 }
+
+@media (min-width: $desktop-width) {
+  .travelmates {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    max-height: 750px;
+  }
+
+  .travelmates__title,
+  .travelmates__intro,
+  .travelmates__button {
+    width: 50%;
+  }
+}

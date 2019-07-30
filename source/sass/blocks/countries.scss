@@ -12,3 +12,31 @@
   padding: 0;
   list-style: none;
 }
+
+@media (min-width: $desktop-width) {
+  .countries {
+    @include section-padding(60px);
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    max-height: 850px;
+  }
+
+  .countries__title {
+    width: 50%;
+  }
+
+  .countries__intro {
+    width: 50%;
+  }
+
+  .countries__list {
+    order: -1;
+    flex: 1 0 90%;
+    width: 50%;
+  }
+
+  .countries__button {
+    width: 50%;
+  }
+}
