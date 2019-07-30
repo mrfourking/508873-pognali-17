@@ -3,6 +3,9 @@
   left: 50%;
   bottom: 0;
 
+  display: flex;
+  flex-direction: column;
+
   margin-left: -160px;
 
   @include section-padding(18px);
@@ -17,4 +20,26 @@
 
   border-top-left-radius: 25px;
   border-top-right-radius: 25px;
+}
+
+.footer__copyright {
+  display: flex;
+  justify-content: space-between;
+}
+
+@media (min-width: $tablet-width) {
+  .footer {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: $tablet-width;
+    margin-left: -$tablet-width/2;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .footer {
+    width: $desktop-width;
+    margin-left: -$desktop-width/2;
+  }
 }
