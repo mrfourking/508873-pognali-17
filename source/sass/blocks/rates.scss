@@ -22,3 +22,9 @@
   @include section-padding(34px);
   padding-top: 34px;
 }
+
+@media (min-width: $tablet-desktop) {
+  .rates__item {
+    display: flex;
+  }
+}
