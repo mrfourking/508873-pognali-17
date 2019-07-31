@@ -1,4 +1,7 @@
 .travelmates {
+  display: flex;
+  flex-direction: column;
+
   @include section-padding(30px);
   padding-top: 73px;
 
@@ -21,6 +24,8 @@
 }
 
 .travelmates__button {
+  order: 2;
+
   background-color: $bg-button;
 
   &--catalog {
@@ -30,10 +35,8 @@
 
 @media (min-width: $desktop-width) {
   .travelmates {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    max-height: 750px;
+    display: block;
+    overflow: hidden;
   }
 
   .travelmates__title,

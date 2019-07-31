@@ -1,4 +1,5 @@
 .travelmates-list {
+  order: 1;
   margin: 0;
   padding: 0;
 
@@ -10,5 +11,11 @@
     display: flex;
     order: 2;
     width: 50%;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .travelmates-list {
+    float: right;
   }
 }

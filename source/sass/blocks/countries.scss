@@ -1,4 +1,6 @@
 .countries {
+  display: flex;
+  flex-direction: column;
   @include section-padding(30px);
   padding-top: 72px;
 
@@ -8,18 +10,21 @@
 }
 
 .countries__list {
+  order: 1;
   margin: 0;
   padding: 0;
   list-style: none;
 }
 
+.countries__button {
+  order: 2;
+}
+
 @media (min-width: $desktop-width) {
   .countries {
     @include section-padding(60px);
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    max-height: 850px;
+    display: block;
+    overflow: hidden;
   }
 
   .countries__title {
@@ -31,9 +36,7 @@
   }
 
   .countries__list {
-    order: -1;
-    flex: 1 0 90%;
-    width: 50%;
+    float: left;
   }
 
   .countries__button {
