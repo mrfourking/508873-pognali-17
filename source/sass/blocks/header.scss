@@ -53,6 +53,7 @@
   text-align: center;
 
   &--secondary {
+    width: 50%;
     margin-bottom: 20px;
   }
 }
@@ -64,6 +65,15 @@
   &--secondary {
     display: none;
   }
+}
+
+.header__back-button {
+  display: none;
+
+  font-size: 20px;
+  line-height: 24px;
+  font-weight: 700;
+  color: #ffffff;
 }
 
 @media (min-width: $tablet-width) {
@@ -96,12 +106,19 @@
   .header__title {
     margin: 0;
   }
+
+  .header__back-button {
+    display: block;
+  }
 }
 
 @media (min-width: $desktop-width) {
   .header {
     @include section-padding(0, 60px);
-    background-color: transparent;
+
+    &--main {
+      background-color: transparent;
+    }
   }
 
   .header__wrap {

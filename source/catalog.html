@@ -53,6 +53,7 @@
       </li>
     </ul>
     <h1 class=" header__title header__title--secondary">Попутчики</h1>
+    <a class="header__back-button" href="index.html">На главную</a>
   </header>
   <main>
 
@@ -208,7 +209,7 @@
 
     <section class="travelmates travelmates--catalog container">
       <h2 class="visually-hidden">Список попутчиков</h2>
-      <ul class="travelmates-list">
+      <ul class="travelmates-list travelmates-list--catalog">
         <li class="travelmate-card travelmates-list__item--catalog">
           <img class="travelmate-card__image--small" src="http://placehold.it/70x70" width="70" height="70"
             alt="Таня Фирсова">
@@ -405,8 +406,18 @@
         </li>
       </ul>
       <a class="travelmates__button--catalog" href="#">Показать еще</a>
-      <a class="travelmates__button--back" href="#">Назад</a>
-      <a class="travelmates__button--forward" href="#">Вперед</a>
+      <div class="travelmates__pagination">
+        <ul class="travelmates__pagination-list">
+          <li><a href="#">1</a></li>
+          <li><a href="#">2</a></li>
+          <li><a href="#">3</a></li>
+          <li><a href="#">4</a></li>
+        </ul>
+        <div class="travelmates__pagination-buttons">
+          <a class="travelmates__button--back" href="#">Назад</a>
+          <a class="travelmates__button--forward" href="#">Вперед</a>
+        </div>
+      </div>
     </section>
 
   </main>

@@ -33,10 +33,34 @@
   }
 }
 
+.travelmates__pagination {
+  display: flex;
+  justify-content: space-between;
+}
+
+.travelmates__pagination-list {
+  display: none;
+
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+@media (min-width: $tablet-width) {
+  .travelmates__pagination-list {
+    display: flex;
+  }
+}
+
 @media (min-width: $desktop-width) {
   .travelmates {
     display: block;
     overflow: hidden;
+
+    &--catalog {
+      display: flex;
+    }
   }
 
   .travelmates__title,
