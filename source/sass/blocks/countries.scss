@@ -1,6 +1,7 @@
 .countries {
   display: flex;
   flex-direction: column;
+
   @include section-padding(30px);
   padding-top: 72px;
 

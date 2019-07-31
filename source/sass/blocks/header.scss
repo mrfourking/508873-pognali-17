@@ -36,11 +36,17 @@
 
 .header__button-list {
   display: flex;
+  order: 2;
   margin: 0;
+  margin-bottom: -20px;
 
   @include section-padding();
 
   list-style: none;
+
+  &--secondary {
+    display: none;
+  }
 }
 
 .header__title {
@@ -58,15 +64,6 @@
   }
 }
 
-.header__button-list {
-  order: 2;
-  margin-bottom: -20px;
-
-  &--secondary {
-    display: none;
-  }
-}
-
 .header__back-button {
   display: none;
 
@@ -80,6 +77,7 @@
   .header {
     flex-direction: row;
     justify-content: space-between;
+
     @include section-padding(0, 40px);
 
     background-image: none;
