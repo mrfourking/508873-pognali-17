@@ -9,3 +9,25 @@
 .call-to-action__contacts-link {
   color: $bg-button;
 }
+
+.call-to-action__button-label {
+  display: none;
+}
+
+@media (min-width: $tablet-width) {
+  .call-to-action__contacts {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .call-to-action__button-label {
+    display: inline;
+  }
+
+  .call-to-action__contacts {
+    flex-direction: row;
+    justify-content: space-around;
+  }
+}
