@@ -18,13 +18,19 @@
   border-radius: 18px;
 }
 
+.rates__item {
+  display: flex;
+  flex-direction: column;
+}
+
 .rates__business-wrap {
   @include section-padding(34px);
   padding-top: 34px;
 }
 
-@media (min-width: $tablet-desktop) {
+@media (min-width: $tablet-width) {
   .rates__item {
-    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
   }
 }
