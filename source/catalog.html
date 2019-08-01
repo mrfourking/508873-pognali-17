@@ -866,280 +866,295 @@
       </div>
     </section>
 
-    <section class="travelmate-filter container">
-      <h2 class="title travelmate-filter__title">Подберите идеального попутчика</h2>
-      <form class="filter travelmate-filter" action="https://echo.htmlacademy.ru" method="POST">
-        <fieldset class="filter__wrap filter__wrap--hobby">
-          <legend class="filter__wrap-name">Хобби</legend>
-        </fieldset>
-        <fieldset class="filter__wrap filter__wrap--music">
-          <legend class="filter__wrap-name">Музыка</legend>
-          <input class="filter__checkbox" id="hardrock" type="checkbox" name="hardrock">
-          <label class="filter_input-name" for="hardrock">Тяжелый рок</label>
-          <input class="filter__checkbox" id="russianrap" type="checkbox" name="russianrap">
-          <label class="filter_input-name" for="russianrap">Русский рэп</label>
-          <input class="filter__checkbox" id="eurodance" type="checkbox" name="eurodance">
-          <label class="filter_input-name" for="eurodance">Евроденс</label>
-        </fieldset>
-        <fieldset class="filter__wrap filter__wrap--food">
-          <legend class="filter__wrap-name">Еда</legend>
-        </fieldset>
-        <fieldset class="transport-list filter__wrap filter__wrap--transport">
-          <legend class="filter__wrap-name">Транспорт</legend>
-          <input class="transport-list__input visually-hidden" id="plane" type="checkbox" name="plane">
-          <label class="transport-list__item" for="plane">
-            <img class="transport-list__icon transport-list__icon--active" src="http://placehold.it/24x21" width="24"
-              height="21" alt="plane">
-          </label>
-          <input class="transport-list__input visually-hidden" id="bus" type="checkbox" name="bus">
-          <label class="transport-list__item" for="bus">
-            <img class="transport-list__icon transport-list__icon--active" src="http://placehold.it/24x21" width="24"
-              height="21" alt="bus">
-          </label>
-          <input class="transport-list__input visually-hidden" id="bike" type="checkbox" name="bike">
-          <label class="transport-list__item" for="bike">
-            <img class="transport-list__icon transport-list__icon--active" src="http://placehold.it/24x21" width="24"
-              height="21" alt="bike">
-          </label>
-          <input class="transport-list__input visually-hidden" id="run" type="checkbox" name="run">
-          <label class="transport-list__item" for="run">
-            <img class="transport-list__icon transport-list__icon--active" src="http://placehold.it/24x21" width="24"
-              height="21" alt="run">
-          </label>
-        </fieldset>
-        <fieldset class="filter__wrap filter__wrap--level">
-          <legend class="filter__wrap-name">Левел</legend>
-          <label class="visually-hidden" for="min-level">Минимальный уровень</label>
-          <input class="filter__textfield" id="min-level" type="text" value="30">
-          <label class="visually-hidden" for="max-level">Максимальный уровень</label>
-          <input class="filter__textfield" id="max-level" type="text" value="100">
-          <span>руб.</span>
-          <div class="level-range filter__sliders">
-            <div class="level-range__scale">
-              <div class="level-range__filled-scale"></div>
-              <div class="level-range__slider level-range__slider--left" tabindex="0" aria-label="Минимальный уровень">
-              </div>
-              <div class="level-range__slider level-range__slider--right" tabindex="0"
-                aria-label="Максимальный уровень"></div>
-            </div>
-          </div>
-        </fieldset>
-        <a class="button filter__button" href="#">Показать</a>
-      </form>
-    </section>
-
-    <section class="travelmates travelmates--catalog container">
-      <h2 class="visually-hidden">Список попутчиков</h2>
-      <ul class="travelmates-list travelmates-list--catalog">
-        <li class="travelmate-card travelmates-list__item--catalog">
-          <img class="travelmate-card__image--small" src="http://placehold.it/70x70" width="70" height="70"
-            alt="Таня Фирсова">
-          <h3 class="travelmate-card__name">Таня Фирсова</h3>
-          <span class="travelmate-card__likes-counter">1,5 M</span>
-          <ul class="travelmate-card__hashtag-list">
-            <li><a class="travelmate-card__hashtag-link" href="#">#ЗОЖ</a></li>
-            <li><a class="travelmate-card__hashtag-link" href="#">#ПП</a></li>
-            <li><a class="travelmate-card__hashtag-link" href="#">#Фитнес</a></li>
-            <li><a class="travelmate-card__hashtag-link" href="#">#пляж</a></li>
-            <li><a class="travelmate-card__hashtag-link" href="#">#авокадо</a></li>
-            <li><a class="travelmate-card__hashtag-link" href="#">#смузи</a></li>
-          </ul>
-          <p>хочет посетить:</p>
-          <ul class="travelmate-card__countries-list">
-            <li class="travelmate-card__countries-item">
-              <img class="travelmate-card__countries-icon" src="http://placehold.it/35x24" width="35" height="24"
-                alt="Шри-Ланка">
-              <span class="travelmate-card__countries-name">Шри-Ланка</span>
-            </li>
-            <li class="travelmate-card__countries-item">
-              <img class="travelmate-card__countries-icon" src="http://placehold.it/35x24" width="35" height="24"
-                alt="Тайланд">
-              <span class="travelmate-card__countries-name">Тайланд</span>
-            </li>
-            <li class="travelmate-card__countries-item">
-              <img class="travelmate-card__countries-icon" src="http://placehold.it/35x24" width="35" height="24"
-                alt="Сейшелы">
-              <span class="travelmate-card__countries-name">Сейшелы</span>
-            </li>
-          </ul>
-          <p>транспорт:</p>
-          <ul class="transport-list travelmate-card__transport">
-            <li class="transport-list__item">
+    <div class="travelmates-catalog-wrap">
+      <section class="travelmate-filter container">
+        <h2 class="title travelmate-filter__title">Подберите идеального попутчика</h2>
+        <form class="filter travelmate-filter" action="https://echo.htmlacademy.ru" method="POST">
+          <fieldset class="filter__wrap filter__wrap--hobby">
+            <legend class="filter__wrap-name">Хобби</legend>
+            <input class="filter__checkbox" id="sport" type="checkbox" name="sport">
+            <label class="filter_input-name" for="sport">Спортзал</label>
+            <input class="filter__checkbox" id="hooka" type="checkbox" name="hooka">
+            <label class="filter_input-name" for="hooka">Кальян</label>
+            <input class="filter__checkbox" id="sofa" type="checkbox" name="sofa">
+            <label class="filter_input-name" for="sofa">Диван</label>
+          </fieldset>
+          <fieldset class="filter__wrap filter__wrap--music">
+            <legend class="filter__wrap-name">Музыка</legend>
+            <input class="filter__checkbox" id="hardrock" type="checkbox" name="hardrock">
+            <label class="filter_input-name" for="hardrock">Тяжелый рок</label>
+            <input class="filter__checkbox" id="russianrap" type="checkbox" name="russianrap">
+            <label class="filter_input-name" for="russianrap">Русский рэп</label>
+            <input class="filter__checkbox" id="eurodance" type="checkbox" name="eurodance">
+            <label class="filter_input-name" for="eurodance">Евроденс</label>
+          </fieldset>
+          <fieldset class="filter__wrap filter__wrap--food">
+            <legend class="filter__wrap-name">Еда</legend>
+            <input class="filter__checkbox" id="meat" type="checkbox" name="meat">
+            <label class="filter_input-name" for="meat">Мясоед</label>
+            <input class="filter__checkbox" id="healthy" type="checkbox" name="healthy">
+            <label class="filter_input-name" for="healthy">Сидит на ПП</label>
+            <input class="filter__checkbox" id="vegan" type="checkbox" name="vegan">
+            <label class="filter_input-name" for="vegan">Веган-сыроед</label>
+          </fieldset>
+          <fieldset class="transport-list filter__wrap filter__wrap--transport">
+            <legend class="filter__wrap-name">Транспорт</legend>
+            <input class="transport-list__input visually-hidden" id="plane" type="checkbox" name="plane">
+            <label class="transport-list__item" for="plane">
               <img class="transport-list__icon transport-list__icon--active" src="http://placehold.it/24x21" width="24"
                 height="21" alt="plane">
-            </li>
-            <li class="transport-list__item">
-              <img class="transport-list__icon" src="http://placehold.it/24x21" width="24" height="21" alt="bus">
-            </li>
-            <li class="transport-list__item">
-              <img class="transport-list__icon" src="http://placehold.it/24x21" width="24" height="21" alt="bike">
-            </li>
-            <li class="transport-list__item">
-              <img class="transport-list__icon" src="http://placehold.it/24x21" width="24" height="21" alt="run">
-            </li>
-          </ul>
-          <p>левел:</p>
-          <span class="travelmate-card__level">99</span>
-          <a class="button travelmate-card__button" href="#">Позвать!</a>
-        </li>
-        <li class="travelmate-card travelmates-list__item--catalog">
-          <img class="travelmate-card__image--small" src="http://placehold.it/70x70" width="70" height="70"
-            alt="Петя Демин">
-          <h3 class="travelmate-card__name">Петя Демин</h3>
-          <span class="travelmate-card__likes-counter">150</span>
-          <ul class="travelmate-card__hashtag-list">
-            <li><a class="travelmate-card__hashtag-link" href="#">#бургер</a></li>
-            <li><a class="travelmate-card__hashtag-link" href="#">#бар</a></li>
-            <li><a class="travelmate-card__hashtag-link" href="#">#футбол</a></li>
-            <li><a class="travelmate-card__hashtag-link" href="#">#концерт</a></li>
-            <li><a class="travelmate-card__hashtag-link" href="#">#крафт</a></li>
-          </ul>
-          <p>хочет посетить:</p>
-          <ul class="travelmate-card__countries-list">
-            <li class="travelmate-card__countries-item">
-              <img class="travelmate-card__countries-icon" src="http://placehold.it/35x24" width="35" height="24"
-                alt="Бельгия">
-              <span class="travelmate-card__countries-name">Бельгия</span>
-            </li>
-            <li class="travelmate-card__countries-item">
-              <img class="travelmate-card__countries-icon" src="http://placehold.it/35x24" width="35" height="24"
-                alt="Чехия">
-              <span class="travelmate-card__countries-name">Чехия</span>
-            </li>
-          </ul>
-          <p>транспорт:</p>
-          <ul class="transport-list travelmate-card__transport">
-            <li class="transport-list__item">
-              <img class="transport-list__icon transport-list__icon--active" src="http://placehold.it/24x21" width="24"
-                height="21" alt="plane">
-            </li>
-            <li class="transport-list__item">
+            </label>
+            <input class="transport-list__input visually-hidden" id="bus" type="checkbox" name="bus">
+            <label class="transport-list__item" for="bus">
               <img class="transport-list__icon transport-list__icon--active" src="http://placehold.it/24x21" width="24"
                 height="21" alt="bus">
-            </li>
-            <li class="transport-list__item">
-              <img class="transport-list__icon" src="http://placehold.it/24x21" width="24" height="21" alt="bike">
-            </li>
-            <li class="transport-list__item">
-              <img class="transport-list__icon transport-list__icon--active" src="http://placehold.it/24x21" width="24"
-                height="21" alt="run">
-            </li>
-          </ul>
-          <p>левел:</p>
-          <span class="travelmate-card__level">80</span>
-          <a class="button travelmate-card__button" href="#">Позвать!</a>
-        </li>
-        <li class="travelmate-card travelmate-card--catalog travelmates-list__item--catalog">
-          <img class="travelmate-card__image--small" src="http://placehold.it/70x70" width="70" height="70"
-            alt="Марк Смолов">
-          <h3 class="travelmate-card__name">Марк Смолов</h3>
-          <span class="travelmate-card__likes-counter">1700</span>
-          <ul class="travelmate-card__hashtag-list">
-            <li><a class="travelmate-card__hashtag-link" href="#">#рэп</a></li>
-            <li><a class="travelmate-card__hashtag-link" href="#">#тату</a></li>
-            <li><a class="travelmate-card__hashtag-link" href="#">#хайпбист</a></li>
-            <li><a class="travelmate-card__hashtag-link" href="#">#кроссовки</a></li>
-            <li><a class="travelmate-card__hashtag-link" href="#">#суприм</a></li>
-          </ul>
-          <p>хочет посетить:</p>
-          <ul class="travelmate-card__countries-list">
-            <li class="travelmate-card__countries-item">
-              <img class="travelmate-card__countries-icon" src="http://placehold.it/35x24" width="35" height="24"
-                alt="США">
-              <span class="travelmate-card__countries-name">США</span>
-            </li>
-            <li class="travelmate-card__countries-item">
-              <img class="travelmate-card__countries-icon" src="http://placehold.it/35x24" width="35" height="24"
-                alt="Австралия">
-              <span class="travelmate-card__countries-name">Австралия</span>
-            </li>
-            <li class="travelmate-card__countries-item">
-              <img class="travelmate-card__countries-icon" src="http://placehold.it/35x24" width="35" height="24"
-                alt="Доминикана">
-              <span class="travelmate-card__countries-name">Доминикана</span>
-            </li>
-          </ul>
-          <p>транспорт:</p>
-          <ul class="transport-list travelmate-card__transport">
-            <li class="transport-list__item">
-              <img class="transport-list__icon transport-list__icon--active" src="http://placehold.it/24x21" width="24"
-                height="21" alt="plane">
-            </li>
-            <li class="transport-list__item">
-              <img class="transport-list__icon" src="http://placehold.it/24x21" width="24" height="21" alt="bus">
-            </li>
-            <li class="transport-list__item">
+            </label>
+            <input class="transport-list__input visually-hidden" id="bike" type="checkbox" name="bike">
+            <label class="transport-list__item" for="bike">
               <img class="transport-list__icon transport-list__icon--active" src="http://placehold.it/24x21" width="24"
                 height="21" alt="bike">
-            </li>
-            <li class="transport-list__item">
-              <img class="transport-list__icon" src="http://placehold.it/24x21" width="24" height="21" alt="run">
-            </li>
-          </ul>
-          <p>левел:</p>
-          <span class="travelmate-card__level">25</span>
-          <a class="button travelmate-card__button" href="#">Позвать!</a>
-        </li>
-        <li class="travelmate-card travelmates-list__item--catalog">
-          <img class="travelmate-card__image--small" src="http://placehold.it/70x70" width="70" height="70"
-            alt="Лариса Роговая">
-          <h3 class="travelmate-card__name">Лариса Роговая</h3>
-          <span class="travelmate-card__likes-counter">23</span>
-          <ul class="travelmate-card__hashtag-list">
-            <li><a class="travelmate-card__hashtag-link" href="#">#образование</a></li>
-            <li><a class="travelmate-card__hashtag-link" href="#">#карьера</a></li>
-            <li><a class="travelmate-card__hashtag-link" href="#">#учеба</a></li>
-            <li><a class="travelmate-card__hashtag-link" href="#">#линкедин</a></li>
-          </ul>
-          <p>хочет посетить:</p>
-          <ul class="travelmate-card__countries-list">
-            <li class="travelmate-card__countries-item">
-              <img class="travelmate-card__countries-icon" src="http://placehold.it/35x24" width="35" height="24"
-                alt="Великобритания">
-              <span class="travelmate-card__countries-name">Великобритания</span>
-            </li>
-            <li class="travelmate-card__countries-item">
-              <img class="travelmate-card__countries-icon" src="http://placehold.it/35x24" width="35" height="24"
-                alt="Германия">
-              <span class="travelmate-card__countries-name">Германия</span>
-            </li>
-          </ul>
-          <p>транспорт:</p>
-          <ul class="transport-list travelmate-card__transport">
-            <li class="transport-list__item">
+            </label>
+            <input class="transport-list__input visually-hidden" id="run" type="checkbox" name="run">
+            <label class="transport-list__item" for="run">
               <img class="transport-list__icon transport-list__icon--active" src="http://placehold.it/24x21" width="24"
-                height="21" alt="plane">
-            </li>
-            <li class="transport-list__item">
-              <img class="transport-list__icon transport-list__icon--active" src="http://placehold.it/24x21" width="24"
-                height="21" alt="bus">
-            </li>
-            <li class="transport-list__item">
-              <img class="transport-list__icon" src="http://placehold.it/24x21" width="24" height="21" alt="bike">
-            </li>
-            <li class="transport-list__item">
-              <img class="transport-list__icon" src="http://placehold.it/24x21" width="24" height="21" alt="run">
-            </li>
-          </ul>
-          <p>левел:</p>
-          <span class="travelmate-card__level">50</span>
-          <a class="button travelmate-card__button" href="#">Позвать!</a>
-        </li>
-      </ul>
-      <a class="travelmates__button--catalog" href="#">Показать еще</a>
-      <div class="travelmates__pagination">
-        <ul class="travelmates__pagination-list">
-          <li><a href="#">1</a></li>
-          <li><a href="#">2</a></li>
-          <li><a href="#">3</a></li>
-          <li><a href="#">4</a></li>
+                height="21" alt="run">
+            </label>
+          </fieldset>
+          <fieldset class="filter__wrap filter__wrap--level">
+            <legend class="filter__wrap-name">Левел</legend>
+            <label class="visually-hidden" for="min-level">Минимальный уровень</label>
+            <input class="filter__textfield" id="min-level" type="text" value="30">
+            <label class="visually-hidden" for="max-level">Максимальный уровень</label>
+            <input class="filter__textfield" id="max-level" type="text" value="100">
+            <span>руб.</span>
+            <div class="level-range filter__sliders">
+              <div class="level-range__scale">
+                <div class="level-range__filled-scale"></div>
+                <div class="level-range__slider level-range__slider--left" tabindex="0"
+                  aria-label="Минимальный уровень">
+                </div>
+                <div class="level-range__slider level-range__slider--right" tabindex="0"
+                  aria-label="Максимальный уровень"></div>
+              </div>
+            </div>
+          </fieldset>
+          <a class="button filter__button" href="#">Показать</a>
+        </form>
+      </section>
+
+      <section class="travelmates travelmates--catalog container">
+        <h2 class="visually-hidden">Список попутчиков</h2>
+        <ul class="travelmates-list travelmates-list--catalog">
+          <li class="travelmate-card travelmates-list__item--catalog">
+            <img class="travelmate-card__image--small" src="http://placehold.it/70x70" width="70" height="70"
+              alt="Таня Фирсова">
+            <h3 class="travelmate-card__name">Таня Фирсова</h3>
+            <span class="travelmate-card__likes-counter">1,5 M</span>
+            <ul class="travelmate-card__hashtag-list">
+              <li><a class="travelmate-card__hashtag-link" href="#">#ЗОЖ</a></li>
+              <li><a class="travelmate-card__hashtag-link" href="#">#ПП</a></li>
+              <li><a class="travelmate-card__hashtag-link" href="#">#Фитнес</a></li>
+              <li><a class="travelmate-card__hashtag-link" href="#">#пляж</a></li>
+              <li><a class="travelmate-card__hashtag-link" href="#">#авокадо</a></li>
+              <li><a class="travelmate-card__hashtag-link" href="#">#смузи</a></li>
+            </ul>
+            <p>хочет посетить:</p>
+            <ul class="travelmate-card__countries-list">
+              <li class="travelmate-card__countries-item">
+                <img class="travelmate-card__countries-icon" src="http://placehold.it/35x24" width="35" height="24"
+                  alt="Шри-Ланка">
+                <span class="travelmate-card__countries-name">Шри-Ланка</span>
+              </li>
+              <li class="travelmate-card__countries-item">
+                <img class="travelmate-card__countries-icon" src="http://placehold.it/35x24" width="35" height="24"
+                  alt="Тайланд">
+                <span class="travelmate-card__countries-name">Тайланд</span>
+              </li>
+              <li class="travelmate-card__countries-item">
+                <img class="travelmate-card__countries-icon" src="http://placehold.it/35x24" width="35" height="24"
+                  alt="Сейшелы">
+                <span class="travelmate-card__countries-name">Сейшелы</span>
+              </li>
+            </ul>
+            <p>транспорт:</p>
+            <ul class="transport-list travelmate-card__transport">
+              <li class="transport-list__item">
+                <img class="transport-list__icon transport-list__icon--active" src="http://placehold.it/24x21"
+                  width="24" height="21" alt="plane">
+              </li>
+              <li class="transport-list__item">
+                <img class="transport-list__icon" src="http://placehold.it/24x21" width="24" height="21" alt="bus">
+              </li>
+              <li class="transport-list__item">
+                <img class="transport-list__icon" src="http://placehold.it/24x21" width="24" height="21" alt="bike">
+              </li>
+              <li class="transport-list__item">
+                <img class="transport-list__icon" src="http://placehold.it/24x21" width="24" height="21" alt="run">
+              </li>
+            </ul>
+            <p>левел:</p>
+            <span class="travelmate-card__level">99</span>
+            <a class="button travelmate-card__button" href="#">Позвать!</a>
+          </li>
+          <li class="travelmate-card travelmates-list__item--catalog">
+            <img class="travelmate-card__image--small" src="http://placehold.it/70x70" width="70" height="70"
+              alt="Петя Демин">
+            <h3 class="travelmate-card__name">Петя Демин</h3>
+            <span class="travelmate-card__likes-counter">150</span>
+            <ul class="travelmate-card__hashtag-list">
+              <li><a class="travelmate-card__hashtag-link" href="#">#бургер</a></li>
+              <li><a class="travelmate-card__hashtag-link" href="#">#бар</a></li>
+              <li><a class="travelmate-card__hashtag-link" href="#">#футбол</a></li>
+              <li><a class="travelmate-card__hashtag-link" href="#">#концерт</a></li>
+              <li><a class="travelmate-card__hashtag-link" href="#">#крафт</a></li>
+            </ul>
+            <p>хочет посетить:</p>
+            <ul class="travelmate-card__countries-list">
+              <li class="travelmate-card__countries-item">
+                <img class="travelmate-card__countries-icon" src="http://placehold.it/35x24" width="35" height="24"
+                  alt="Бельгия">
+                <span class="travelmate-card__countries-name">Бельгия</span>
+              </li>
+              <li class="travelmate-card__countries-item">
+                <img class="travelmate-card__countries-icon" src="http://placehold.it/35x24" width="35" height="24"
+                  alt="Чехия">
+                <span class="travelmate-card__countries-name">Чехия</span>
+              </li>
+            </ul>
+            <p>транспорт:</p>
+            <ul class="transport-list travelmate-card__transport">
+              <li class="transport-list__item">
+                <img class="transport-list__icon transport-list__icon--active" src="http://placehold.it/24x21"
+                  width="24" height="21" alt="plane">
+              </li>
+              <li class="transport-list__item">
+                <img class="transport-list__icon transport-list__icon--active" src="http://placehold.it/24x21"
+                  width="24" height="21" alt="bus">
+              </li>
+              <li class="transport-list__item">
+                <img class="transport-list__icon" src="http://placehold.it/24x21" width="24" height="21" alt="bike">
+              </li>
+              <li class="transport-list__item">
+                <img class="transport-list__icon transport-list__icon--active" src="http://placehold.it/24x21"
+                  width="24" height="21" alt="run">
+              </li>
+            </ul>
+            <p>левел:</p>
+            <span class="travelmate-card__level">80</span>
+            <a class="button travelmate-card__button" href="#">Позвать!</a>
+          </li>
+          <li class="travelmate-card travelmate-card--catalog travelmates-list__item--catalog">
+            <img class="travelmate-card__image--small" src="http://placehold.it/70x70" width="70" height="70"
+              alt="Марк Смолов">
+            <h3 class="travelmate-card__name">Марк Смолов</h3>
+            <span class="travelmate-card__likes-counter">1700</span>
+            <ul class="travelmate-card__hashtag-list">
+              <li><a class="travelmate-card__hashtag-link" href="#">#рэп</a></li>
+              <li><a class="travelmate-card__hashtag-link" href="#">#тату</a></li>
+              <li><a class="travelmate-card__hashtag-link" href="#">#хайпбист</a></li>
+              <li><a class="travelmate-card__hashtag-link" href="#">#кроссовки</a></li>
+              <li><a class="travelmate-card__hashtag-link" href="#">#суприм</a></li>
+            </ul>
+            <p>хочет посетить:</p>
+            <ul class="travelmate-card__countries-list">
+              <li class="travelmate-card__countries-item">
+                <img class="travelmate-card__countries-icon" src="http://placehold.it/35x24" width="35" height="24"
+                  alt="США">
+                <span class="travelmate-card__countries-name">США</span>
+              </li>
+              <li class="travelmate-card__countries-item">
+                <img class="travelmate-card__countries-icon" src="http://placehold.it/35x24" width="35" height="24"
+                  alt="Австралия">
+                <span class="travelmate-card__countries-name">Австралия</span>
+              </li>
+              <li class="travelmate-card__countries-item">
+                <img class="travelmate-card__countries-icon" src="http://placehold.it/35x24" width="35" height="24"
+                  alt="Доминикана">
+                <span class="travelmate-card__countries-name">Доминикана</span>
+              </li>
+            </ul>
+            <p>транспорт:</p>
+            <ul class="transport-list travelmate-card__transport">
+              <li class="transport-list__item">
+                <img class="transport-list__icon transport-list__icon--active" src="http://placehold.it/24x21"
+                  width="24" height="21" alt="plane">
+              </li>
+              <li class="transport-list__item">
+                <img class="transport-list__icon" src="http://placehold.it/24x21" width="24" height="21" alt="bus">
+              </li>
+              <li class="transport-list__item">
+                <img class="transport-list__icon transport-list__icon--active" src="http://placehold.it/24x21"
+                  width="24" height="21" alt="bike">
+              </li>
+              <li class="transport-list__item">
+                <img class="transport-list__icon" src="http://placehold.it/24x21" width="24" height="21" alt="run">
+              </li>
+            </ul>
+            <p>левел:</p>
+            <span class="travelmate-card__level">25</span>
+            <a class="button travelmate-card__button" href="#">Позвать!</a>
+          </li>
+          <li class="travelmate-card travelmates-list__item--catalog">
+            <img class="travelmate-card__image--small" src="http://placehold.it/70x70" width="70" height="70"
+              alt="Лариса Роговая">
+            <h3 class="travelmate-card__name">Лариса Роговая</h3>
+            <span class="travelmate-card__likes-counter">23</span>
+            <ul class="travelmate-card__hashtag-list">
+              <li><a class="travelmate-card__hashtag-link" href="#">#образование</a></li>
+              <li><a class="travelmate-card__hashtag-link" href="#">#карьера</a></li>
+              <li><a class="travelmate-card__hashtag-link" href="#">#учеба</a></li>
+              <li><a class="travelmate-card__hashtag-link" href="#">#линкедин</a></li>
+            </ul>
+            <p>хочет посетить:</p>
+            <ul class="travelmate-card__countries-list">
+              <li class="travelmate-card__countries-item">
+                <img class="travelmate-card__countries-icon" src="http://placehold.it/35x24" width="35" height="24"
+                  alt="Великобритания">
+                <span class="travelmate-card__countries-name">Великобритания</span>
+              </li>
+              <li class="travelmate-card__countries-item">
+                <img class="travelmate-card__countries-icon" src="http://placehold.it/35x24" width="35" height="24"
+                  alt="Германия">
+                <span class="travelmate-card__countries-name">Германия</span>
+              </li>
+            </ul>
+            <p>транспорт:</p>
+            <ul class="transport-list travelmate-card__transport">
+              <li class="transport-list__item">
+                <img class="transport-list__icon transport-list__icon--active" src="http://placehold.it/24x21"
+                  width="24" height="21" alt="plane">
+              </li>
+              <li class="transport-list__item">
+                <img class="transport-list__icon transport-list__icon--active" src="http://placehold.it/24x21"
+                  width="24" height="21" alt="bus">
+              </li>
+              <li class="transport-list__item">
+                <img class="transport-list__icon" src="http://placehold.it/24x21" width="24" height="21" alt="bike">
+              </li>
+              <li class="transport-list__item">
+                <img class="transport-list__icon" src="http://placehold.it/24x21" width="24" height="21" alt="run">
+              </li>
+            </ul>
+            <p>левел:</p>
+            <span class="travelmate-card__level">50</span>
+            <a class="button travelmate-card__button" href="#">Позвать!</a>
+          </li>
         </ul>
-        <div class="travelmates__pagination-buttons">
-          <a class="travelmates__button--back" href="#">Назад</a>
-          <a class="travelmates__button--forward" href="#">Вперед</a>
+        <a class="travelmates__button--catalog" href="#">Показать еще</a>
+        <div class="travelmates__pagination">
+          <ul class="travelmates__pagination-list">
+            <li><a href="#">1</a></li>
+            <li><a href="#">2</a></li>
+            <li><a href="#">3</a></li>
+            <li><a href="#">4</a></li>
+          </ul>
+          <div class="travelmates__pagination-buttons">
+            <a class="travelmates__button--back" href="#">Назад</a>
+            <a class="travelmates__button--forward" href="#">Вперед</a>
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
+    </div>
 
   </main>
   <footer class="footer container">
