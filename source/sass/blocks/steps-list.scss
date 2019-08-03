@@ -24,5 +24,19 @@
 }
 
 .steps-list__button {
+  width: 100%;
+
   text-transform: uppercase;
+}
+
+@media (min-width: $tablet-width) {
+  .steps-list__textfield-wrap {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .steps-list__button-wrap {
+    display: flex;
+    justify-content: space-between;
+  }
 }

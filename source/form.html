@@ -126,33 +126,41 @@
               Укажите предпочтительное количество попутчиков, которых
               вы хотели бы позвать в поездку и ее предполагаемую длительность.
             </p>
-            <div class="find-textfield steps-list__textfield">
-              <label class="find-textfield__textfield-name" for="travelmate-number">Ищу попутчиков:</label>
-              <span class="find-textfield__short">Чел.</span>
-              <button class="find-textfield__textfield-button find-textfield__textfield-button--decrease" type="button">
-                <span class="visually-hidden">Уменьшить на 1</span>
-              </button>
-              <input class="find-textfield__textfield" id="travelmate-number" type="number" name="travelmate-number"
-                min="0" value="2">
-              <button class="find-textfield__textfield-button find-textfield__textfield-button--increase" type="button">
-                <span class="visually-hidden">Увеличить на 1</span>
-              </button>
+            <div class="steps-list__textfield-wrap">
+              <div class="find-textfield">
+                <label class="find-textfield__textfield-name" for="travelmate-number">Ищу попутчиков:</label>
+                <span class="find-textfield__short">Чел.</span>
+                <button class="find-textfield__textfield-button find-textfield__textfield-button--decrease"
+                  type="button">
+                  <span class="visually-hidden">Уменьшить на 1</span>
+                </button>
+                <input class="find-textfield__textfield" id="travelmate-number" type="number" name="travelmate-number"
+                  min="0" value="2">
+                <button class="find-textfield__textfield-button find-textfield__textfield-button--increase"
+                  type="button">
+                  <span class="visually-hidden">Увеличить на 1</span>
+                </button>
+              </div>
+              <div class="find-textfield">
+                <label class="find-textfield__textfield-name" for="day-number">Длительность:</label>
+                <span class="find-textfield__short">Дн.</span>
+                <button class="find-textfield__textfield-button find-textfield__textfield-button--decrease"
+                  type="button">
+                  <span class="visually-hidden">Уменьшить на 1</span>
+                </button>
+                <input class="find-textfield__textfield" id="day-number" type="number" name="day-number" min="0"
+                  value="2">
+                <button class="find-textfield__textfield-button find-textfield__textfield-button--increase"
+                  type="button">
+                  <span class="visually-hidden">Увеличить на 1</span>
+                </button>
+              </div>
+              <div class="steps-list__checkbox-wrap">
+                <input class="steps-list__checkbox" id="kids-toggle" type="checkbox" name="kids" checked>
+                <label class="steps-list__checkbox-name" for="kids-toggle">Можно с детьми</label>
+              </div>
             </div>
-            <div class="find-textfield steps-list__textfield">
-              <label class="find-textfield__textfield-name" for="day-number">Длительность:</label>
-              <span class="find-textfield__short">Дн.</span>
-              <button class="find-textfield__textfield-button find-textfield__textfield-button--decrease" type="button">
-                <span class="visually-hidden">Уменьшить на 1</span>
-              </button>
-              <input class="find-textfield__textfield" id="day-number" type="number" name="day-number" min="0"
-                value="2">
-              <button class="find-textfield__textfield-button find-textfield__textfield-button--increase" type="button">
-                <span class="visually-hidden">Увеличить на 1</span>
-              </button>
-            </div>
-            <input class="steps-list__checkbox" id="kids-toggle" type="checkbox" name="kids">
-            <label class="steps-list__checkbox-name" for="kids-toggle">Можно с детьми</label>
-            <div class="find-textfield steps-list__textfield">
+            <div class="find-textfield">
               <button class="find-textfield__datefield-button find-textfield__datefield-button--decrease" type="button">
                 <span class="visually-hidden">Уменьшить на 1</span>
               </button>
@@ -1162,8 +1170,10 @@
                 </div>
               </li>
             </ul>
-            <a class="button steps-list__button" href="#">Следующий шаг</a>
-            <a class="button steps-list__button steps-list__button--back" href="#">На шаг назад</a>
+            <div class="steps-list__button-wrap">
+              <a class="button steps-list__button" href="#">Следующий шаг</a>
+              <a class="button steps-list__button steps-list__button--back" href="#">На шаг назад</a>
+            </div>
           </li>
           <li class="steps-list__item">
             <h3 class="steps-list__title">Шаг 3. Развлечения</h3>
@@ -1181,8 +1191,10 @@
               Пить пиво и лазить по старым замкам,
               наслаждаться аритектурой и вот это все.
             </textarea>
-            <button class="button steps-list__button" type="submit">Отправить</button>
-            <a class="button steps-list__button steps-list__button--back" href="#">На шаг назад</a>
+            <div class="steps-list__button-wrap">
+              <button class="button steps-list__button" type="submit">Отправить</button>
+              <a class="button steps-list__button steps-list__button--back" href="#">На шаг назад</a>
+            </div>
           </li>
         </ol>
       </form>
