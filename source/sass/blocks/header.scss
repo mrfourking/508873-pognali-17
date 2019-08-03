@@ -1,10 +1,139 @@
 .header {
-  margin-bottom: 54px;
-  padding-top: 27px;
+  position: relative;
+
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
 
   background-color: $bg-dark;
+
+  @include section-border-radius();
+
+  &--main {
+    background-image: url("../../img/traveller-illustration-mobile@1x.png"),
+      url("../../img/globe-back-mobile@1x.jpg");
+    background-repeat: no-repeat, no-repeat;
+    background-position: 50% 100%, 100% 100%;
+
+    @include section-border-radius(0);
+  }
+
+  &--menu-open {
+    background-color: #ffffff;
+  }
 }
 
-.header__wrap {
+.header__link {
+  margin-left: 25px;
+  padding-top: 27px;
+  padding-bottom: 22px;
+}
+
+.header__menu-button {
+  align-self: center;
+  margin-right: 25px;
+}
+
+.header__button-list {
+  display: flex;
+  order: 2;
+  margin: 0;
+  margin-bottom: -20px;
+
   @include section-padding();
+
+  list-style: none;
+
+  &--secondary {
+    display: none;
+  }
+}
+
+.header__title {
+  width: 100%;
+  margin: 25px 25px 256px;
+
+  font-size: 36px;
+  line-height: 40px;
+  font-weight: 700;
+  text-align: center;
+
+  &--secondary {
+    width: 50%;
+    margin-bottom: 20px;
+  }
+}
+
+.header__back-button {
+  display: none;
+
+  font-size: 20px;
+  line-height: 24px;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+@media (min-width: $tablet-width) {
+  .header {
+    flex-direction: row;
+    justify-content: space-between;
+
+    @include section-padding(0, 40px);
+
+    background-image: none;
+  }
+
+  .header__button-list {
+    align-self: center;
+    order: 0;
+    margin: 0;
+
+    &--secondary {
+      display: flex;
+    }
+  }
+
+  .header__button-item {
+    display: none;
+
+    &--active {
+      display: block;
+    }
+  }
+
+  .header__title {
+    margin: 0;
+  }
+
+  .header__back-button {
+    display: block;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .header {
+    @include section-padding(0, 60px);
+
+    &--main {
+      background-color: transparent;
+    }
+  }
+
+  .header__wrap {
+    padding: 0;
+  }
+
+  .header__menu-button {
+    display: none;
+  }
+
+  .header__button-item {
+    display: block;
+  }
+
+  .header__title {
+    padding-right: 800px;
+
+    background-color: transparent;
+  }
 }

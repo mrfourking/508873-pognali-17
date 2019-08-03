@@ -1,4 +1,7 @@
 .travelmates {
+  display: flex;
+  flex-direction: column;
+
   @include section-padding(30px);
   padding-top: 73px;
 
@@ -21,9 +24,48 @@
 }
 
 .travelmates__button {
+  order: 2;
+
   background-color: $bg-button;
 
   &--catalog {
     text-transform: uppercase;
+  }
+}
+
+.travelmates__pagination {
+  display: flex;
+  justify-content: space-between;
+}
+
+.travelmates__pagination-list {
+  display: none;
+
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+@media (min-width: $tablet-width) {
+  .travelmates__pagination-list {
+    display: flex;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .travelmates {
+    display: block;
+    overflow: hidden;
+
+    &--catalog {
+      display: flex;
+    }
+  }
+
+  .travelmates__title,
+  .travelmates__intro,
+  .travelmates__button {
+    width: 50%;
   }
 }

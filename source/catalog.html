@@ -4,37 +4,58 @@
 <head>
   <meta charset="utf-8">
   <title>Погнали: Попутчики</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <link href="css/style.css" rel="stylesheet">
 </head>
 
 <body class="page">
+  <!-- <header class="header header--menu-open container"> -->
   <header class="header container">
-    <div class="header__wrap">
-      <a class="header__link" href="index.html">
-        <img class="header__logo" src="http://placehold.it/100x19" width="100" height="19" alt="Логотип Погнали?">
-      </a>
-      <button class="header__menu-button" type="button">Главное меню</button>
-    </div>
-    <nav class="main-menu header__wrap">
+    <a class="header__link" href="index.html">
+      <img class="header__logo" src="http://placehold.it/100x19" width="100" height="19" alt="Логотип Погнали?">
+    </a>
+    <button class="header__menu-button" type="button">Главное меню</button>
+    <!-- <nav class="main-menu main-menu--nojs"> -->
+    <nav class="main-menu">
       <ul class="main-menu__list">
         <li class="main-menu__item"><a href="#">О сервисе</a></li>
         <li class="main-menu__item"><a href="form.html">Направления</a></li>
-        <li class="main-menu__item"><a href="catalog.html">Попутчики</a></li>
+        <li class="main-menu__item"><a>Попутчики</a></li>
       </ul>
-      <a class="button main-menu__button" href="#">Авторизация</a>
-      <p class="contacts main-menu__contacts">
-        <a class="contacts__link contacts__link--phone">8 800 555-86-28</a>
-        <a class="contacts__link contacts__link--email">mail@htmlacademy.ru</a>
-      </p>
-      <ul class="social-list">
-        <li class="social-list__item social-list__item--facebook main-menu__social-item"><a href="#">Facebook</a></li>
-        <li class="social-list__item social-list__item--vkontakte main-menu__social-item"><a href="#">Vkontakte</a></li>
-        <li class="social-list__item social-list__item--instagram main-menu__social-item"><a href="#">Instagram</a></li>
-      </ul>
+      <div class="main-menu__wrap">
+        <a class="button main-menu__button" href="#">Авторизация</a>
+        <p class="contacts main-menu__contacts">
+          <a class="contacts__link contacts__link--phone">8 800 555-86-28</a>
+          <a class="contacts__link contacts__link--email">mail@htmlacademy.ru</a>
+        </p>
+        <ul class="social-list main-menu__social">
+          <li class="social-list__item social-list__item--facebook main-menu__social-item"><a href="#">Facebook</a></li>
+          <li class="social-list__item social-list__item--vkontakte main-menu__social-item"><a href="#">Vkontakte</a>
+          </li>
+          <li class="social-list__item social-list__item--instagram main-menu__social-item"><a href="#">Instagram</a>
+          </li>
+        </ul>
+      </div>
     </nav>
+    <ul class="header__button-list header__button-list--secondary">
+      <li class="header__button-item">
+        <a class="button button--text-hidden button--phone" href="tel:88005558628">
+          <span class="visually-hidden">Позвонить</span>1
+        </a>
+      </li>
+      <li class="header__button-item">
+        <a class="button button--text-hidden button--mail" href="mailto:mail@htmlacademy.ru">
+          <span class="visually-hidden">Написать</span>2
+        </a>
+      </li>
+      <li class="header__button-item header__button-item--active">
+        <a class="button" href="#">Авторизация</a>
+      </li>
+    </ul>
+    <h1 class=" header__title header__title--secondary">Попутчики</h1>
+    <a class="header__back-button" href="index.html">На главную</a>
   </header>
   <main>
-    <h1 class="page-title container">Попутчики</h1>
 
     <section class="country-filter container">
       <h2 class="country-filter__title">Фильтрация по странам</h2>
@@ -48,7 +69,8 @@
         </ul>
         <table class="alphabet-table country-filter__table">
           <tr>
-            <td class="alphabet-table__item alphabet-table__item--current"><a class="alphabet-table__link alphabet-table__link--current" href="#">А</a></td>
+            <td class="alphabet-table__item alphabet-table__item--current"><a
+                class="alphabet-table__link alphabet-table__link--current" href="#">А</a></td>
             <td class="alphabet-table__item"><a class="alphabet-table__link" href="#">Б</a></td>
             <td class="alphabet-table__item"><a class="alphabet-table__link" href="#">В</a></td>
             <td class="alphabet-table__item"><a class="alphabet-table__link" href="#">Г</a></td>
@@ -187,7 +209,7 @@
 
     <section class="travelmates travelmates--catalog container">
       <h2 class="visually-hidden">Список попутчиков</h2>
-      <ul class="travelmates-list">
+      <ul class="travelmates-list travelmates-list--catalog">
         <li class="travelmate-card travelmates-list__item--catalog">
           <img class="travelmate-card__image--small" src="http://placehold.it/70x70" width="70" height="70"
             alt="Таня Фирсова">
@@ -384,8 +406,18 @@
         </li>
       </ul>
       <a class="travelmates__button--catalog" href="#">Показать еще</a>
-      <a class="travelmates__button--back" href="#">Назад</a>
-      <a class="travelmates__button--forward" href="#">Вперед</a>
+      <div class="travelmates__pagination">
+        <ul class="travelmates__pagination-list">
+          <li><a href="#">1</a></li>
+          <li><a href="#">2</a></li>
+          <li><a href="#">3</a></li>
+          <li><a href="#">4</a></li>
+        </ul>
+        <div class="travelmates__pagination-buttons">
+          <a class="travelmates__button--back" href="#">Назад</a>
+          <a class="travelmates__button--forward" href="#">Вперед</a>
+        </div>
+      </div>
     </section>
 
   </main>

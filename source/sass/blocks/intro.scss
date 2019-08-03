@@ -1,19 +1,30 @@
 .intro {
+  display: flex;
+  flex-direction: column;
+
   @include section-padding();
   padding-bottom: 39px;
 
   background-color: $bg-dark;
-  background-image: url("../../img/traveller-illustration-mobile@1x.png"),
-    url("../../img/globe-back-mobile@1x.jpg");
-  background-repeat: no-repeat, no-repeat;
-  background-position: 50% 73%, 0 0;
 }
 
-.intro__title {
-  margin: 0;
-  margin-bottom: 253px;
+.intro__quote {
+  padding-top: 85px;
+}
 
-  font-size: 36px;
-  line-height: 40px;
-  text-align: center;
+@media (min-width: $tablet-width) {
+  .intro {
+    background-image: url("../../img/traveller-illustration-tablet@1x.png"),
+      url("../../img/globe-back-tablet@1x.jpg");
+    background-repeat: no-repeat, no-repeat;
+    background-position: 50% 100%, 50% 100%;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .intro {
+    align-items: flex-end;
+    width: 100%;
+    margin-top: -175px;
+  }
 }

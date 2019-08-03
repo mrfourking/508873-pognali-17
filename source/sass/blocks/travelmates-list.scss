@@ -1,6 +1,30 @@
 .travelmates-list {
+  order: 1;
   margin: 0;
   padding: 0;
 
   list-style: none;
+
+  &--catalog {
+    order: 0;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .travelmates-list {
+    display: flex;
+    flex-direction: column;
+    order: 2;
+    width: 50%;
+
+    &--catalog {
+      order: 0;
+    }
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .travelmates-list {
+    float: right;
+  }
 }

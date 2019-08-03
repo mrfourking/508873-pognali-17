@@ -4,52 +4,61 @@
 <head>
   <meta charset="utf-8">
   <title>HTML Academy: Погнали</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <link href="css/style.css" rel="stylesheet">
 </head>
 
 <body class="page">
-  <header class="header container">
-    <div class="header__wrap">
-      <a class="header__link">
-        <img class="header__logo" src="http://placehold.it/100x19" width="100" height="19" alt="Логотип Погнали?">
-      </a>
-      <button class="header__menu-button" type="button">Главное меню</button>
-    </div>
-    <nav class="main-menu header__wrap">
+  <!-- <header class="header header--menu-open container"> -->
+  <header class="header header--main container">
+    <a class="header__link">
+      <img class="header__logo" src="http://placehold.it/100x19" width="100" height="19" alt="Логотип Погнали?">
+    </a>
+    <button class="header__menu-button" type="button">Главное меню</button>
+    <!-- <nav class="main-menu main-menu--nojs"> -->
+    <nav class="main-menu">
       <ul class="main-menu__list">
         <li class="main-menu__item"><a href="#">О сервисе</a></li>
         <li class="main-menu__item"><a href="form.html">Направления</a></li>
         <li class="main-menu__item"><a href="catalog.html">Попутчики</a></li>
       </ul>
-      <a class="button main-menu__button" href="#">Авторизация</a>
-      <p class="contacts main-menu__contacts">
-        <a class="contacts__link contacts__link--phone">8 800 555-86-28</a>
-        <a class="contacts__link contacts__link--email">mail@htmlacademy.ru</a>
-      </p>
-      <ul class="social-list">
-        <li class="social-list__item social-list__item--facebook main-menu__social-item"><a href="#">Facebook</a></li>
-        <li class="social-list__item social-list__item--vkontakte main-menu__social-item"><a href="#">Vkontakte</a></li>
-        <li class="social-list__item social-list__item--instagram main-menu__social-item"><a href="#">Instagram</a></li>
-      </ul>
+      <div class="main-menu__wrap">
+        <a class="button main-menu__button" href="#">Авторизация</a>
+        <p class="contacts main-menu__contacts">
+          <a class="contacts__link contacts__link--phone">8 800 555-86-28</a>
+          <a class="contacts__link contacts__link--email">mail@htmlacademy.ru</a>
+        </p>
+        <ul class="social-list main-menu__social">
+          <li class="social-list__item social-list__item--facebook main-menu__social-item"><a href="#">Facebook</a></li>
+          <li class="social-list__item social-list__item--vkontakte main-menu__social-item"><a href="#">Vkontakte</a>
+          </li>
+          <li class="social-list__item social-list__item--instagram main-menu__social-item"><a href="#">Instagram</a>
+          </li>
+        </ul>
+      </div>
     </nav>
+    <ul class="header__button-list">
+      <li class="header__button-item">
+        <a class="button button--text-hidden button--phone" href="tel:88005558628">
+          <span class="visually-hidden">Позвонить</span>1
+        </a>
+      </li>
+      <li class="header__button-item">
+        <a class="button button--text-hidden button--mail" href="mailto:mail@htmlacademy.ru">
+          <span class="visually-hidden">Написать</span>2
+        </a>
+      </li>
+      <li class="header__button-item header__button-item--active">
+        <a class="button" href="#">Авторизация</a>
+      </li>
+    </ul>
+    <h2 class="header__title">В путешествие с крутыми попутчиками!</h2>
   </header>
 
   <main>
     <h1 class="visually-hidden">Погнали?</h1>
 
     <section class="intro container">
-      <h2 class="intro__title">В путешествие с крутыми попутчиками!</h2>
-      <ul class="intro__button-list">
-        <li class="intro__button-item">
-          <a class="button button--text-hidden button--phone" href="tel:88005558628">Позвонить</a>
-        </li>
-        <li class="intro__button-item">
-          <a class="button button--text-hidden button--mail" href="mailto:mail@htmlacademy.ru">Написать</a>
-        </li>
-        <li class="intro__button-item">
-          <a class="button" href="#">Авторизация</a>
-        </li>
-      </ul>
       <blockquote class="quote intro__quote">
         <p class="quote__content">«Лучшее приложение, что я видел в жизни!»</p>
         <cite class="quote__author">Мурат Эльтазин главный редактор газеты «гаджетлайф»</cite>
@@ -75,16 +84,10 @@
         близкого по духу — скорее
         зовите в совместный трип!
       </p>
+      <a class="button about__button">Подробнее</a>
     </section>
 
     <section class="countries container">
-      <h2 class="title countries__title">Направления</h2>
-      <p class="section-intro section-intro--font-dark countries__intro">
-        Мы не продаем туры
-        и ничего не рекламируем.
-        Люди сами пишут о странах, куда хотели бы отправиться
-        и чем можно там заняться.
-      </p>
       <ul class="countries__list">
         <li class="country countries__item">
           <img class="country__image" src="http://placehold.it/270x110" width="270" height="110" alt="Море в Тайланде">
@@ -109,18 +112,17 @@
           <p class="country__counter">5326</p>
         </li>
       </ul>
+      <h2 class="title countries__title">Направления</h2>
+      <p class="section-intro section-intro--font-dark countries__intro">
+        Мы не продаем туры
+        и ничего не рекламируем.
+        Люди сами пишут о странах, куда хотели бы отправиться
+        и чем можно там заняться.
+      </p>
       <a class="button countries__button" href="form.html">Показать все</a>
     </section>
 
     <section class="travelmates container">
-      <h2 class="title travelmates__title">Попутчики</h2>
-      <p class="section-intro travelmates__intro">
-        Все мы индивидуальны и у каждого свой взгляд на идеальный отдых.
-        Одному нужен пляж и коктейль, а другому маршрут для хайкинга.
-      </p>
-      <p class="section-intro section-intro--bold travelmates__intro">
-        Теперь можно легко найти единомышленников!
-      </p>
       <ul class="travelmates-list">
         <li class="travelmate-card travelmates-list__item">
           <span class="travelmate-card__level">level 99</span>
@@ -210,6 +212,14 @@
           </ul>
         </li>
       </ul>
+      <h2 class="title travelmates__title">Попутчики</h2>
+      <p class="section-intro travelmates__intro">
+        Все мы индивидуальны и у каждого свой взгляд на идеальный отдых.
+        Одному нужен пляж и коктейль, а другому маршрут для хайкинга.
+      </p>
+      <p class="section-intro section-intro--bold travelmates__intro">
+        Теперь можно легко найти единомышленников!
+      </p>
       <a class="button travelmates__button" href="catalog.html">Показать всех</a>
     </section>
 
