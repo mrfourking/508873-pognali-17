@@ -108,9 +108,16 @@
 }
 
 @media (min-width: $desktop-width) {
+  .travelmate-card {
+    justify-content: flex-end;
+  }
+
   .travelmate-card__level {
     &--form {
       order: 0;
+
+      //временно для сетки
+      background-color: #ffffff;
     }
   }
 

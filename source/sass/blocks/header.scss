@@ -4,6 +4,7 @@
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
+  align-items: center;
 
   background-color: $bg-dark;
 
@@ -112,9 +113,14 @@
 
 @media (min-width: $desktop-width) {
   .header {
+    //временно для сеток
+    min-height: 350px;
+
     @include section-padding(0, 60px);
 
     &--main {
+      //временно для сеток
+      min-height: auto;
       background-color: transparent;
     }
   }

@@ -3,3 +3,15 @@
 
   background-color: $bg-light;
 }
+
+@media (min-width: $desktop-width) {
+  .info {
+    position: relative;
+    z-index: 10;
+    margin-top: -100px;
+
+    @include section-padding();
+
+    background-color: transparent;
+  }
+}
