@@ -61,8 +61,8 @@
       <h2 class="visually-hidden">Информация обо мне</h2>
       <div class="travelmate-card travelmate-card--form info__card">
         <span class="travelmate-card__level travelmate-card__level--form"><span>Level</span> 80</span>
-        <img class="travelmate-card__image travelmate-card__image--small" src="http://placehold.it/100x100" width="100"
-          height="100" alt="Петя Демин">
+        <img class="travelmate-card__image travelmate-card__image--form travelmate-card__image--small"
+          src="http://placehold.it/100x100" width="100" height="100" alt="Петя Демин">
         <label class="button travelmate-card__button travelmate-card__button--change-photo" for="photo-upload">Сменить
           фото</label>
         <input class="visually-hidden" id="photo-upload" type="file" name="photo-upload">
@@ -71,7 +71,7 @@
           <textarea class="travelmate-card__hashtag-list travelmate-card__hashtag-list--editable">#бургер #бар #футбол #концерт #крафт
           </textarea>
         </fieldset>
-        <fieldset class="travelmate-card__wrap">
+        <fieldset class="travelmate-card__wrap travelmate-card__wrap--transport">
           <legend class="travelmate-card__wrap-name">Транспорт</legend>
           <ul class="transport-list travelmate-card__transport">
             <li class="transport-list__item">
@@ -99,15 +99,19 @@
       <ol class="plans__list">
         <li class="plan-card plans__item">
           <h3 class="plan-card__item-title">Франция, Италия</h3>
-          <p class="plan-card__travelmates-number">3 попутчика</p>
-          <p class="plan-card__dates">26 мар — 29 мар</p>
-          <a class="plan-card__link" href="#">Изменить</a>
+          <div class="plan-card__wrap">
+            <p class="plan-card__travelmates-number">3 попутчика</p>
+            <p class="plan-card__dates">26 мар — 29 мар</p>
+            <a class="plan-card__link" href="#">Изменить</a>
+          </div>
         </li>
         <li class="plan-card plans__item">
           <h3 class="plan-card__item-title">Тайланд, Индонезия</h3>
-          <p class="plan-card__travelmates-number">1 попутчик</p>
-          <p class="plan-card__dates">1 июл — 15 июл</p>
-          <a class="plan-card__link" href="#">Изменить</a>
+          <div class="plan-card__wrap">
+            <p class="plan-card__travelmates-number">1 попутчик</p>
+            <p class="plan-card__dates">1 июл — 15 июл</p>
+            <a class="plan-card__link" href="#">Изменить</a>
+          </div>
         </li>
       </ol>
     </section>
@@ -122,33 +126,41 @@
               Укажите предпочтительное количество попутчиков, которых
               вы хотели бы позвать в поездку и ее предполагаемую длительность.
             </p>
-            <div class="find-textfield steps-list__textfield">
-              <label class="find-textfield__textfield-name" for="travelmate-number">Ищу попутчиков:</label>
-              <span class="find-textfield__short">Чел.</span>
-              <button class="find-textfield__textfield-button find-textfield__textfield-button--decrease" type="button">
-                <span class="visually-hidden">Уменьшить на 1</span>
-              </button>
-              <input class="find-textfield__textfield" id="travelmate-number" type="number" name="travelmate-number"
-                min="0" value="2">
-              <button class="find-textfield__textfield-button find-textfield__textfield-button--increase" type="button">
-                <span class="visually-hidden">Увеличить на 1</span>
-              </button>
+            <div class="steps-list__textfield-wrap">
+              <div class="find-textfield">
+                <label class="find-textfield__textfield-name" for="travelmate-number">Ищу попутчиков:</label>
+                <span class="find-textfield__short">Чел.</span>
+                <button class="find-textfield__textfield-button find-textfield__textfield-button--decrease"
+                  type="button">
+                  <span class="visually-hidden">Уменьшить на 1</span>
+                </button>
+                <input class="find-textfield__textfield" id="travelmate-number" type="number" name="travelmate-number"
+                  min="0" value="2">
+                <button class="find-textfield__textfield-button find-textfield__textfield-button--increase"
+                  type="button">
+                  <span class="visually-hidden">Увеличить на 1</span>
+                </button>
+              </div>
+              <div class="find-textfield">
+                <label class="find-textfield__textfield-name" for="day-number">Длительность:</label>
+                <span class="find-textfield__short">Дн.</span>
+                <button class="find-textfield__textfield-button find-textfield__textfield-button--decrease"
+                  type="button">
+                  <span class="visually-hidden">Уменьшить на 1</span>
+                </button>
+                <input class="find-textfield__textfield" id="day-number" type="number" name="day-number" min="0"
+                  value="2">
+                <button class="find-textfield__textfield-button find-textfield__textfield-button--increase"
+                  type="button">
+                  <span class="visually-hidden">Увеличить на 1</span>
+                </button>
+              </div>
+              <div class="steps-list__checkbox-wrap">
+                <input class="steps-list__checkbox" id="kids-toggle" type="checkbox" name="kids" checked>
+                <label class="steps-list__checkbox-name" for="kids-toggle">Можно с детьми</label>
+              </div>
             </div>
-            <div class="find-textfield steps-list__textfield">
-              <label class="find-textfield__textfield-name" for="day-number">Длительность:</label>
-              <span class="find-textfield__short">Дн.</span>
-              <button class="find-textfield__textfield-button find-textfield__textfield-button--decrease" type="button">
-                <span class="visually-hidden">Уменьшить на 1</span>
-              </button>
-              <input class="find-textfield__textfield" id="day-number" type="number" name="day-number" min="0"
-                value="2">
-              <button class="find-textfield__textfield-button find-textfield__textfield-button--increase" type="button">
-                <span class="visually-hidden">Увеличить на 1</span>
-              </button>
-            </div>
-            <input class="steps-list__checkbox" id="kids-toggle" type="checkbox" name="kids">
-            <label class="steps-list__checkbox-name" for="kids-toggle">Можно с детьми</label>
-            <div class="find-textfield steps-list__textfield">
+            <div class="find-textfield">
               <button class="find-textfield__datefield-button find-textfield__datefield-button--decrease" type="button">
                 <span class="visually-hidden">Уменьшить на 1</span>
               </button>
@@ -333,46 +345,166 @@
                   <button class="country-select__button country-select__button--inline">Закрыть</button>
                   <table class="alphabet-table country-select__table">
                     <tr>
-                      <td class="alphabet-table__item"><a class="alphabet-table__link" href="#">А</a></td>
-                      <td class="alphabet-table__item"><a class="alphabet-table__link" href="#">Б</a></td>
-                      <td class="alphabet-table__item"><a class="alphabet-table__link" href="#">В</a></td>
-                      <td class="alphabet-table__item"><a class="alphabet-table__link" href="#">Г</a></td>
-                      <td class="alphabet-table__item"><a class="alphabet-table__link" href="#">Д</a></td>
+                      <td class="alphabet-table__item alphabet-table__item--current">
+                        <input class="alphabet-table__radio visually-hidden" id="letter-1" name="alphabet-radio"
+                          type="radio">
+                        <label class="alphabet-table__radio-label" for="letter-1">А</label>
+                      </td>
+                      <td class="alphabet-table__item">
+                        <input class="alphabet-table__radio visually-hidden" id="letter-2" name="alphabet-radio"
+                          type="radio">
+                        <label class="alphabet-table__radio-label" for="letter-2">Б</label>
+                      </td>
+                      <td class="alphabet-table__item">
+                        <input class="alphabet-table__radio visually-hidden" id="letter-3" name="alphabet-radio"
+                          type="radio">
+                        <label class="alphabet-table__radio-label" for="letter-3">В</label>
+                      </td>
+                      <td class="alphabet-table__item">
+                        <input class="alphabet-table__radio visually-hidden" id="letter-4" name="alphabet-radio"
+                          type="radio">
+                        <label class="alphabet-table__radio-label" for="letter-4">Г</label>
+                      </td>
+                      <td class="alphabet-table__item">
+                        <input class="alphabet-table__radio visually-hidden" id="letter-5" name="alphabet-radio"
+                          type="radio">
+                        <label class="alphabet-table__radio-label" for="letter-5">Д</label>
+                      </td>
                     </tr>
                     <tr>
-                      <td class="alphabet-table__item"><a class="alphabet-table__link" href="#">Е</a></td>
-                      <td class="alphabet-table__item"><a class="alphabet-table__link" href="#">Ё</a></td>
-                      <td class="alphabet-table__item"><a class="alphabet-table__link" href="#">Ж</a></td>
-                      <td class="alphabet-table__item"><a class="alphabet-table__link" href="#">З</a></td>
-                      <td class="alphabet-table__item"><a class="alphabet-table__link" href="#">И</a></td>
+                      <td class="alphabet-table__item">
+                        <input class="alphabet-table__radio visually-hidden" id="letter-6" name="alphabet-radio"
+                          type="radio">
+                        <label class="alphabet-table__radio-label" for="letter-6">Е</label>
+                      </td>
+                      <td class="alphabet-table__item">
+                        <input class="alphabet-table__radio visually-hidden" id="letter-7" name="alphabet-radio"
+                          type="radio">
+                        <label class="alphabet-table__radio-label" for="letter-7">Ё</label>
+                      </td>
+                      <td class="alphabet-table__item">
+                        <input class="alphabet-table__radio visually-hidden" id="letter-8" name="alphabet-radio"
+                          type="radio">
+                        <label class="alphabet-table__radio-label" for="letter-8">Ж</label>
+                      </td>
+                      <td class="alphabet-table__item">
+                        <input class="alphabet-table__radio visually-hidden" id="letter-9" name="alphabet-radio"
+                          type="radio">
+                        <label class="alphabet-table__radio-label" for="letter-9">З</label>
+                      </td>
+                      <td class="alphabet-table__item">
+                        <input class="alphabet-table__radio visually-hidden" id="letter-10" name="alphabet-radio"
+                          type="radio">
+                        <label class="alphabet-table__radio-label" for="letter-10">И</label>
+                      </td>
                     </tr>
                     <tr>
-                      <td class="alphabet-table__item"><a class="alphabet-table__link" href="#">Й</a></td>
-                      <td class="alphabet-table__item"><a class="alphabet-table__link" href="#">К</a></td>
-                      <td class="alphabet-table__item"><a class="alphabet-table__link" href="#">Л</a></td>
-                      <td class="alphabet-table__item"><a class="alphabet-table__link" href="#">М</a></td>
-                      <td class="alphabet-table__item"><a class="alphabet-table__link" href="#">Н</a></td>
+                      <td class="alphabet-table__item">
+                        <input class="alphabet-table__radio visually-hidden" id="letter-11" name="alphabet-radio"
+                          type="radio">
+                        <label class="alphabet-table__radio-label" for="letter-11">Й</label>
+                      </td>
+                      <td class="alphabet-table__item">
+                        <input class="alphabet-table__radio visually-hidden" id="letter-12" name="alphabet-radio"
+                          type="radio">
+                        <label class="alphabet-table__radio-label" for="letter-12">К</label>
+                      </td>
+                      <td class="alphabet-table__item">
+                        <input class="alphabet-table__radio visually-hidden" id="letter-13" name="alphabet-radio"
+                          type="radio">
+                        <label class="alphabet-table__radio-label" for="letter-13">Л</label>
+                      </td>
+                      <td class="alphabet-table__item">
+                        <input class="alphabet-table__radio visually-hidden" id="letter-14" name="alphabet-radio"
+                          type="radio">
+                        <label class="alphabet-table__radio-label" for="letter-14">М</label>
+                      </td>
+                      <td class="alphabet-table__item">
+                        <input class="alphabet-table__radio visually-hidden" id="letter-15" name="alphabet-radio"
+                          type="radio">
+                        <label class="alphabet-table__radio-label" for="letter-15">Н</label>
+                      </td>
                     </tr>
                     <tr>
-                      <td class="alphabet-table__item"><a class="alphabet-table__link" href="#">О</a></td>
-                      <td class="alphabet-table__item"><a class="alphabet-table__link" href="#">П</a></td>
-                      <td class="alphabet-table__item"><a class="alphabet-table__link" href="#">Р</a></td>
-                      <td class="alphabet-table__item"><a class="alphabet-table__link" href="#">С</a></td>
-                      <td class="alphabet-table__item"><a class="alphabet-table__link" href="#">Т</a></td>
+                      <td class="alphabet-table__item">
+                        <input class="alphabet-table__radio visually-hidden" id="letter-16" name="alphabet-radio"
+                          type="radio">
+                        <label class="alphabet-table__radio-label" for="letter-16">О</label>
+                      </td>
+                      <td class="alphabet-table__item">
+                        <input class="alphabet-table__radio visually-hidden" id="letter-17" name="alphabet-radio"
+                          type="radio">
+                        <label class="alphabet-table__radio-label" for="letter-17">П</label>
+                      </td>
+                      <td class="alphabet-table__item">
+                        <input class="alphabet-table__radio visually-hidden" id="letter-18" name="alphabet-radio"
+                          type="radio">
+                        <label class="alphabet-table__radio-label" for="letter-18">Р</label>
+                      </td>
+                      <td class="alphabet-table__item">
+                        <input class="alphabet-table__radio visually-hidden" id="letter-19" name="alphabet-radio"
+                          type="radio">
+                        <label class="alphabet-table__radio-label" for="letter-19">С</label>
+                      </td>
+                      <td class="alphabet-table__item">
+                        <input class="alphabet-table__radio visually-hidden" id="letter-20" name="alphabet-radio"
+                          type="radio">
+                        <label class="alphabet-table__radio-label" for="letter-20">Т</label>
+                      </td>
                     </tr>
                     <tr>
-                      <td class="alphabet-table__item"><a class="alphabet-table__link" href="#">У</a></td>
-                      <td class="alphabet-table__item"><a class="alphabet-table__link" href="#">Ф</a></td>
-                      <td class="alphabet-table__item"><a class="alphabet-table__link" href="#">Х</a></td>
-                      <td class="alphabet-table__item"><a class="alphabet-table__link" href="#">Ц</a></td>
-                      <td class="alphabet-table__item"><a class="alphabet-table__link" href="#">Ч</a></td>
+                      <td class="alphabet-table__item">
+                        <input class="alphabet-table__radio visually-hidden" id="letter-21" name="alphabet-radio"
+                          type="radio">
+                        <label class="alphabet-table__radio-label" for="letter-21">У</label>
+                      </td>
+                      <td class="alphabet-table__item">
+                        <input class="alphabet-table__radio visually-hidden" id="letter-22" name="alphabet-radio"
+                          type="radio">
+                        <label class="alphabet-table__radio-label" for="letter-22">Ф</label>
+                      </td>
+                      <td class="alphabet-table__item">
+                        <input class="alphabet-table__radio visually-hidden" id="letter-23" name="alphabet-radio"
+                          type="radio">
+                        <label class="alphabet-table__radio-label" for="letter-23">Х</label>
+                      </td>
+                      <td class="alphabet-table__item">
+                        <input class="alphabet-table__radio visually-hidden" id="letter-24" name="alphabet-radio"
+                          type="radio">
+                        <label class="alphabet-table__radio-label" for="letter-24">Ц</label>
+                      </td>
+                      <td class="alphabet-table__item">
+                        <input class="alphabet-table__radio visually-hidden" id="letter-25" name="alphabet-radio"
+                          type="radio">
+                        <label class="alphabet-table__radio-label" for="letter-25">Ч</label>
+                      </td>
                     </tr>
                     <tr>
-                      <td class="alphabet-table__item"><a class="alphabet-table__link" href="#">Ш</a></td>
-                      <td class="alphabet-table__item"><a class="alphabet-table__link" href="#">Щ</a></td>
-                      <td class="alphabet-table__item"><a class="alphabet-table__link" href="#">Э</a></td>
-                      <td class="alphabet-table__item"><a class="alphabet-table__link" href="#">Ю</a></td>
-                      <td class="alphabet-table__item"><a class="alphabet-table__link" href="#">Я</a></td>
+                      <td class="alphabet-table__item">
+                        <input class="alphabet-table__radio visually-hidden" id="letter-26" name="alphabet-radio"
+                          type="radio">
+                        <label class="alphabet-table__radio-label" for="letter-26">Ш</label>
+                      </td>
+                      <td class="alphabet-table__item">
+                        <input class="alphabet-table__radio visually-hidden" id="letter-27" name="alphabet-radio"
+                          type="radio">
+                        <label class="alphabet-table__radio-label" for="letter-27">Щ</label>
+                      </td>
+                      <td class="alphabet-table__item">
+                        <input class="alphabet-table__radio visually-hidden" id="letter-28" name="alphabet-radio"
+                          type="radio">
+                        <label class="alphabet-table__radio-label" for="letter-28">Э</label>
+                      </td>
+                      <td class="alphabet-table__item">
+                        <input class="alphabet-table__radio visually-hidden" id="letter-29" name="alphabet-radio"
+                          type="radio">
+                        <label class="alphabet-table__radio-label" for="letter-29">Ю</label>
+                      </td>
+                      <td class="alphabet-table__item">
+                        <input class="alphabet-table__radio visually-hidden" id="letter-30" name="alphabet-radio"
+                          type="radio">
+                        <label class="alphabet-table__radio-label" for="letter-30">Я</label>
+                      </td>
                     </tr>
                   </table>
                   <ul class="countries-list country-select__list">
@@ -425,46 +557,166 @@
                   <button class="country-select__button country-select__button--inline">Закрыть</button>
                   <table class="alphabet-table country-select__table">
                     <tr>
-                      <td class="alphabet-table__item"><a class="alphabet-table__link" href="#">А</a></td>
-                      <td class="alphabet-table__item"><a class="alphabet-table__link" href="#">Б</a></td>
-                      <td class="alphabet-table__item"><a class="alphabet-table__link" href="#">В</a></td>
-                      <td class="alphabet-table__item"><a class="alphabet-table__link" href="#">Г</a></td>
-                      <td class="alphabet-table__item"><a class="alphabet-table__link" href="#">Д</a></td>
+                      <td class="alphabet-table__item alphabet-table__item--current">
+                        <input class="alphabet-table__radio visually-hidden" id="letter-1" name="alphabet-radio"
+                          type="radio">
+                        <label class="alphabet-table__radio-label" for="letter-1">А</label>
+                      </td>
+                      <td class="alphabet-table__item">
+                        <input class="alphabet-table__radio visually-hidden" id="letter-2" name="alphabet-radio"
+                          type="radio">
+                        <label class="alphabet-table__radio-label" for="letter-2">Б</label>
+                      </td>
+                      <td class="alphabet-table__item">
+                        <input class="alphabet-table__radio visually-hidden" id="letter-3" name="alphabet-radio"
+                          type="radio">
+                        <label class="alphabet-table__radio-label" for="letter-3">В</label>
+                      </td>
+                      <td class="alphabet-table__item">
+                        <input class="alphabet-table__radio visually-hidden" id="letter-4" name="alphabet-radio"
+                          type="radio">
+                        <label class="alphabet-table__radio-label" for="letter-4">Г</label>
+                      </td>
+                      <td class="alphabet-table__item">
+                        <input class="alphabet-table__radio visually-hidden" id="letter-5" name="alphabet-radio"
+                          type="radio">
+                        <label class="alphabet-table__radio-label" for="letter-5">Д</label>
+                      </td>
                     </tr>
                     <tr>
-                      <td class="alphabet-table__item"><a class="alphabet-table__link" href="#">Е</a></td>
-                      <td class="alphabet-table__item"><a class="alphabet-table__link" href="#">Ё</a></td>
-                      <td class="alphabet-table__item"><a class="alphabet-table__link" href="#">Ж</a></td>
-                      <td class="alphabet-table__item"><a class="alphabet-table__link" href="#">З</a></td>
-                      <td class="alphabet-table__item"><a class="alphabet-table__link" href="#">И</a></td>
+                      <td class="alphabet-table__item">
+                        <input class="alphabet-table__radio visually-hidden" id="letter-6" name="alphabet-radio"
+                          type="radio">
+                        <label class="alphabet-table__radio-label" for="letter-6">Е</label>
+                      </td>
+                      <td class="alphabet-table__item">
+                        <input class="alphabet-table__radio visually-hidden" id="letter-7" name="alphabet-radio"
+                          type="radio">
+                        <label class="alphabet-table__radio-label" for="letter-7">Ё</label>
+                      </td>
+                      <td class="alphabet-table__item">
+                        <input class="alphabet-table__radio visually-hidden" id="letter-8" name="alphabet-radio"
+                          type="radio">
+                        <label class="alphabet-table__radio-label" for="letter-8">Ж</label>
+                      </td>
+                      <td class="alphabet-table__item">
+                        <input class="alphabet-table__radio visually-hidden" id="letter-9" name="alphabet-radio"
+                          type="radio">
+                        <label class="alphabet-table__radio-label" for="letter-9">З</label>
+                      </td>
+                      <td class="alphabet-table__item">
+                        <input class="alphabet-table__radio visually-hidden" id="letter-10" name="alphabet-radio"
+                          type="radio">
+                        <label class="alphabet-table__radio-label" for="letter-10">И</label>
+                      </td>
                     </tr>
                     <tr>
-                      <td class="alphabet-table__item"><a class="alphabet-table__link" href="#">Й</a></td>
-                      <td class="alphabet-table__item"><a class="alphabet-table__link" href="#">К</a></td>
-                      <td class="alphabet-table__item"><a class="alphabet-table__link" href="#">Л</a></td>
-                      <td class="alphabet-table__item"><a class="alphabet-table__link" href="#">М</a></td>
-                      <td class="alphabet-table__item"><a class="alphabet-table__link" href="#">Н</a></td>
+                      <td class="alphabet-table__item">
+                        <input class="alphabet-table__radio visually-hidden" id="letter-11" name="alphabet-radio"
+                          type="radio">
+                        <label class="alphabet-table__radio-label" for="letter-11">Й</label>
+                      </td>
+                      <td class="alphabet-table__item">
+                        <input class="alphabet-table__radio visually-hidden" id="letter-12" name="alphabet-radio"
+                          type="radio">
+                        <label class="alphabet-table__radio-label" for="letter-12">К</label>
+                      </td>
+                      <td class="alphabet-table__item">
+                        <input class="alphabet-table__radio visually-hidden" id="letter-13" name="alphabet-radio"
+                          type="radio">
+                        <label class="alphabet-table__radio-label" for="letter-13">Л</label>
+                      </td>
+                      <td class="alphabet-table__item">
+                        <input class="alphabet-table__radio visually-hidden" id="letter-14" name="alphabet-radio"
+                          type="radio">
+                        <label class="alphabet-table__radio-label" for="letter-14">М</label>
+                      </td>
+                      <td class="alphabet-table__item">
+                        <input class="alphabet-table__radio visually-hidden" id="letter-15" name="alphabet-radio"
+                          type="radio">
+                        <label class="alphabet-table__radio-label" for="letter-15">Н</label>
+                      </td>
                     </tr>
                     <tr>
-                      <td class="alphabet-table__item"><a class="alphabet-table__link" href="#">О</a></td>
-                      <td class="alphabet-table__item"><a class="alphabet-table__link" href="#">П</a></td>
-                      <td class="alphabet-table__item"><a class="alphabet-table__link" href="#">Р</a></td>
-                      <td class="alphabet-table__item"><a class="alphabet-table__link" href="#">С</a></td>
-                      <td class="alphabet-table__item"><a class="alphabet-table__link" href="#">Т</a></td>
+                      <td class="alphabet-table__item">
+                        <input class="alphabet-table__radio visually-hidden" id="letter-16" name="alphabet-radio"
+                          type="radio">
+                        <label class="alphabet-table__radio-label" for="letter-16">О</label>
+                      </td>
+                      <td class="alphabet-table__item">
+                        <input class="alphabet-table__radio visually-hidden" id="letter-17" name="alphabet-radio"
+                          type="radio">
+                        <label class="alphabet-table__radio-label" for="letter-17">П</label>
+                      </td>
+                      <td class="alphabet-table__item">
+                        <input class="alphabet-table__radio visually-hidden" id="letter-18" name="alphabet-radio"
+                          type="radio">
+                        <label class="alphabet-table__radio-label" for="letter-18">Р</label>
+                      </td>
+                      <td class="alphabet-table__item">
+                        <input class="alphabet-table__radio visually-hidden" id="letter-19" name="alphabet-radio"
+                          type="radio">
+                        <label class="alphabet-table__radio-label" for="letter-19">С</label>
+                      </td>
+                      <td class="alphabet-table__item">
+                        <input class="alphabet-table__radio visually-hidden" id="letter-20" name="alphabet-radio"
+                          type="radio">
+                        <label class="alphabet-table__radio-label" for="letter-20">Т</label>
+                      </td>
                     </tr>
                     <tr>
-                      <td class="alphabet-table__item"><a class="alphabet-table__link" href="#">У</a></td>
-                      <td class="alphabet-table__item"><a class="alphabet-table__link" href="#">Ф</a></td>
-                      <td class="alphabet-table__item"><a class="alphabet-table__link" href="#">Х</a></td>
-                      <td class="alphabet-table__item"><a class="alphabet-table__link" href="#">Ц</a></td>
-                      <td class="alphabet-table__item"><a class="alphabet-table__link" href="#">Ч</a></td>
+                      <td class="alphabet-table__item">
+                        <input class="alphabet-table__radio visually-hidden" id="letter-21" name="alphabet-radio"
+                          type="radio">
+                        <label class="alphabet-table__radio-label" for="letter-21">У</label>
+                      </td>
+                      <td class="alphabet-table__item">
+                        <input class="alphabet-table__radio visually-hidden" id="letter-22" name="alphabet-radio"
+                          type="radio">
+                        <label class="alphabet-table__radio-label" for="letter-22">Ф</label>
+                      </td>
+                      <td class="alphabet-table__item">
+                        <input class="alphabet-table__radio visually-hidden" id="letter-23" name="alphabet-radio"
+                          type="radio">
+                        <label class="alphabet-table__radio-label" for="letter-23">Х</label>
+                      </td>
+                      <td class="alphabet-table__item">
+                        <input class="alphabet-table__radio visually-hidden" id="letter-24" name="alphabet-radio"
+                          type="radio">
+                        <label class="alphabet-table__radio-label" for="letter-24">Ц</label>
+                      </td>
+                      <td class="alphabet-table__item">
+                        <input class="alphabet-table__radio visually-hidden" id="letter-25" name="alphabet-radio"
+                          type="radio">
+                        <label class="alphabet-table__radio-label" for="letter-25">Ч</label>
+                      </td>
                     </tr>
                     <tr>
-                      <td class="alphabet-table__item"><a class="alphabet-table__link" href="#">Ш</a></td>
-                      <td class="alphabet-table__item"><a class="alphabet-table__link" href="#">Щ</a></td>
-                      <td class="alphabet-table__item"><a class="alphabet-table__link" href="#">Э</a></td>
-                      <td class="alphabet-table__item"><a class="alphabet-table__link" href="#">Ю</a></td>
-                      <td class="alphabet-table__item"><a class="alphabet-table__link" href="#">Я</a></td>
+                      <td class="alphabet-table__item">
+                        <input class="alphabet-table__radio visually-hidden" id="letter-26" name="alphabet-radio"
+                          type="radio">
+                        <label class="alphabet-table__radio-label" for="letter-26">Ш</label>
+                      </td>
+                      <td class="alphabet-table__item">
+                        <input class="alphabet-table__radio visually-hidden" id="letter-27" name="alphabet-radio"
+                          type="radio">
+                        <label class="alphabet-table__radio-label" for="letter-27">Щ</label>
+                      </td>
+                      <td class="alphabet-table__item">
+                        <input class="alphabet-table__radio visually-hidden" id="letter-28" name="alphabet-radio"
+                          type="radio">
+                        <label class="alphabet-table__radio-label" for="letter-28">Э</label>
+                      </td>
+                      <td class="alphabet-table__item">
+                        <input class="alphabet-table__radio visually-hidden" id="letter-29" name="alphabet-radio"
+                          type="radio">
+                        <label class="alphabet-table__radio-label" for="letter-29">Ю</label>
+                      </td>
+                      <td class="alphabet-table__item">
+                        <input class="alphabet-table__radio visually-hidden" id="letter-30" name="alphabet-radio"
+                          type="radio">
+                        <label class="alphabet-table__radio-label" for="letter-30">Я</label>
+                      </td>
                     </tr>
                   </table>
                   <ul class="countries-list country-select__list">
@@ -515,46 +767,166 @@
                   <button class="country-select__button country-select__button--inline">Закрыть</button>
                   <table class="alphabet-table country-select__table">
                     <tr>
-                      <td class="alphabet-table__item"><a class="alphabet-table__link" href="#">А</a></td>
-                      <td class="alphabet-table__item"><a class="alphabet-table__link" href="#">Б</a></td>
-                      <td class="alphabet-table__item"><a class="alphabet-table__link" href="#">В</a></td>
-                      <td class="alphabet-table__item"><a class="alphabet-table__link" href="#">Г</a></td>
-                      <td class="alphabet-table__item"><a class="alphabet-table__link" href="#">Д</a></td>
+                      <td class="alphabet-table__item alphabet-table__item--current">
+                        <input class="alphabet-table__radio visually-hidden" id="letter-1" name="alphabet-radio"
+                          type="radio">
+                        <label class="alphabet-table__radio-label" for="letter-1">А</label>
+                      </td>
+                      <td class="alphabet-table__item">
+                        <input class="alphabet-table__radio visually-hidden" id="letter-2" name="alphabet-radio"
+                          type="radio">
+                        <label class="alphabet-table__radio-label" for="letter-2">Б</label>
+                      </td>
+                      <td class="alphabet-table__item">
+                        <input class="alphabet-table__radio visually-hidden" id="letter-3" name="alphabet-radio"
+                          type="radio">
+                        <label class="alphabet-table__radio-label" for="letter-3">В</label>
+                      </td>
+                      <td class="alphabet-table__item">
+                        <input class="alphabet-table__radio visually-hidden" id="letter-4" name="alphabet-radio"
+                          type="radio">
+                        <label class="alphabet-table__radio-label" for="letter-4">Г</label>
+                      </td>
+                      <td class="alphabet-table__item">
+                        <input class="alphabet-table__radio visually-hidden" id="letter-5" name="alphabet-radio"
+                          type="radio">
+                        <label class="alphabet-table__radio-label" for="letter-5">Д</label>
+                      </td>
                     </tr>
                     <tr>
-                      <td class="alphabet-table__item"><a class="alphabet-table__link" href="#">Е</a></td>
-                      <td class="alphabet-table__item"><a class="alphabet-table__link" href="#">Ё</a></td>
-                      <td class="alphabet-table__item"><a class="alphabet-table__link" href="#">Ж</a></td>
-                      <td class="alphabet-table__item"><a class="alphabet-table__link" href="#">З</a></td>
-                      <td class="alphabet-table__item"><a class="alphabet-table__link" href="#">И</a></td>
+                      <td class="alphabet-table__item">
+                        <input class="alphabet-table__radio visually-hidden" id="letter-6" name="alphabet-radio"
+                          type="radio">
+                        <label class="alphabet-table__radio-label" for="letter-6">Е</label>
+                      </td>
+                      <td class="alphabet-table__item">
+                        <input class="alphabet-table__radio visually-hidden" id="letter-7" name="alphabet-radio"
+                          type="radio">
+                        <label class="alphabet-table__radio-label" for="letter-7">Ё</label>
+                      </td>
+                      <td class="alphabet-table__item">
+                        <input class="alphabet-table__radio visually-hidden" id="letter-8" name="alphabet-radio"
+                          type="radio">
+                        <label class="alphabet-table__radio-label" for="letter-8">Ж</label>
+                      </td>
+                      <td class="alphabet-table__item">
+                        <input class="alphabet-table__radio visually-hidden" id="letter-9" name="alphabet-radio"
+                          type="radio">
+                        <label class="alphabet-table__radio-label" for="letter-9">З</label>
+                      </td>
+                      <td class="alphabet-table__item">
+                        <input class="alphabet-table__radio visually-hidden" id="letter-10" name="alphabet-radio"
+                          type="radio">
+                        <label class="alphabet-table__radio-label" for="letter-10">И</label>
+                      </td>
                     </tr>
                     <tr>
-                      <td class="alphabet-table__item"><a class="alphabet-table__link" href="#">Й</a></td>
-                      <td class="alphabet-table__item"><a class="alphabet-table__link" href="#">К</a></td>
-                      <td class="alphabet-table__item"><a class="alphabet-table__link" href="#">Л</a></td>
-                      <td class="alphabet-table__item"><a class="alphabet-table__link" href="#">М</a></td>
-                      <td class="alphabet-table__item"><a class="alphabet-table__link" href="#">Н</a></td>
+                      <td class="alphabet-table__item">
+                        <input class="alphabet-table__radio visually-hidden" id="letter-11" name="alphabet-radio"
+                          type="radio">
+                        <label class="alphabet-table__radio-label" for="letter-11">Й</label>
+                      </td>
+                      <td class="alphabet-table__item">
+                        <input class="alphabet-table__radio visually-hidden" id="letter-12" name="alphabet-radio"
+                          type="radio">
+                        <label class="alphabet-table__radio-label" for="letter-12">К</label>
+                      </td>
+                      <td class="alphabet-table__item">
+                        <input class="alphabet-table__radio visually-hidden" id="letter-13" name="alphabet-radio"
+                          type="radio">
+                        <label class="alphabet-table__radio-label" for="letter-13">Л</label>
+                      </td>
+                      <td class="alphabet-table__item">
+                        <input class="alphabet-table__radio visually-hidden" id="letter-14" name="alphabet-radio"
+                          type="radio">
+                        <label class="alphabet-table__radio-label" for="letter-14">М</label>
+                      </td>
+                      <td class="alphabet-table__item">
+                        <input class="alphabet-table__radio visually-hidden" id="letter-15" name="alphabet-radio"
+                          type="radio">
+                        <label class="alphabet-table__radio-label" for="letter-15">Н</label>
+                      </td>
                     </tr>
                     <tr>
-                      <td class="alphabet-table__item"><a class="alphabet-table__link" href="#">О</a></td>
-                      <td class="alphabet-table__item"><a class="alphabet-table__link" href="#">П</a></td>
-                      <td class="alphabet-table__item"><a class="alphabet-table__link" href="#">Р</a></td>
-                      <td class="alphabet-table__item"><a class="alphabet-table__link" href="#">С</a></td>
-                      <td class="alphabet-table__item"><a class="alphabet-table__link" href="#">Т</a></td>
+                      <td class="alphabet-table__item">
+                        <input class="alphabet-table__radio visually-hidden" id="letter-16" name="alphabet-radio"
+                          type="radio">
+                        <label class="alphabet-table__radio-label" for="letter-16">О</label>
+                      </td>
+                      <td class="alphabet-table__item">
+                        <input class="alphabet-table__radio visually-hidden" id="letter-17" name="alphabet-radio"
+                          type="radio">
+                        <label class="alphabet-table__radio-label" for="letter-17">П</label>
+                      </td>
+                      <td class="alphabet-table__item">
+                        <input class="alphabet-table__radio visually-hidden" id="letter-18" name="alphabet-radio"
+                          type="radio">
+                        <label class="alphabet-table__radio-label" for="letter-18">Р</label>
+                      </td>
+                      <td class="alphabet-table__item">
+                        <input class="alphabet-table__radio visually-hidden" id="letter-19" name="alphabet-radio"
+                          type="radio">
+                        <label class="alphabet-table__radio-label" for="letter-19">С</label>
+                      </td>
+                      <td class="alphabet-table__item">
+                        <input class="alphabet-table__radio visually-hidden" id="letter-20" name="alphabet-radio"
+                          type="radio">
+                        <label class="alphabet-table__radio-label" for="letter-20">Т</label>
+                      </td>
                     </tr>
                     <tr>
-                      <td class="alphabet-table__item"><a class="alphabet-table__link" href="#">У</a></td>
-                      <td class="alphabet-table__item"><a class="alphabet-table__link" href="#">Ф</a></td>
-                      <td class="alphabet-table__item"><a class="alphabet-table__link" href="#">Х</a></td>
-                      <td class="alphabet-table__item"><a class="alphabet-table__link" href="#">Ц</a></td>
-                      <td class="alphabet-table__item"><a class="alphabet-table__link" href="#">Ч</a></td>
+                      <td class="alphabet-table__item">
+                        <input class="alphabet-table__radio visually-hidden" id="letter-21" name="alphabet-radio"
+                          type="radio">
+                        <label class="alphabet-table__radio-label" for="letter-21">У</label>
+                      </td>
+                      <td class="alphabet-table__item">
+                        <input class="alphabet-table__radio visually-hidden" id="letter-22" name="alphabet-radio"
+                          type="radio">
+                        <label class="alphabet-table__radio-label" for="letter-22">Ф</label>
+                      </td>
+                      <td class="alphabet-table__item">
+                        <input class="alphabet-table__radio visually-hidden" id="letter-23" name="alphabet-radio"
+                          type="radio">
+                        <label class="alphabet-table__radio-label" for="letter-23">Х</label>
+                      </td>
+                      <td class="alphabet-table__item">
+                        <input class="alphabet-table__radio visually-hidden" id="letter-24" name="alphabet-radio"
+                          type="radio">
+                        <label class="alphabet-table__radio-label" for="letter-24">Ц</label>
+                      </td>
+                      <td class="alphabet-table__item">
+                        <input class="alphabet-table__radio visually-hidden" id="letter-25" name="alphabet-radio"
+                          type="radio">
+                        <label class="alphabet-table__radio-label" for="letter-25">Ч</label>
+                      </td>
                     </tr>
                     <tr>
-                      <td class="alphabet-table__item"><a class="alphabet-table__link" href="#">Ш</a></td>
-                      <td class="alphabet-table__item"><a class="alphabet-table__link" href="#">Щ</a></td>
-                      <td class="alphabet-table__item"><a class="alphabet-table__link" href="#">Э</a></td>
-                      <td class="alphabet-table__item"><a class="alphabet-table__link" href="#">Ю</a></td>
-                      <td class="alphabet-table__item"><a class="alphabet-table__link" href="#">Я</a></td>
+                      <td class="alphabet-table__item">
+                        <input class="alphabet-table__radio visually-hidden" id="letter-26" name="alphabet-radio"
+                          type="radio">
+                        <label class="alphabet-table__radio-label" for="letter-26">Ш</label>
+                      </td>
+                      <td class="alphabet-table__item">
+                        <input class="alphabet-table__radio visually-hidden" id="letter-27" name="alphabet-radio"
+                          type="radio">
+                        <label class="alphabet-table__radio-label" for="letter-27">Щ</label>
+                      </td>
+                      <td class="alphabet-table__item">
+                        <input class="alphabet-table__radio visually-hidden" id="letter-28" name="alphabet-radio"
+                          type="radio">
+                        <label class="alphabet-table__radio-label" for="letter-28">Э</label>
+                      </td>
+                      <td class="alphabet-table__item">
+                        <input class="alphabet-table__radio visually-hidden" id="letter-29" name="alphabet-radio"
+                          type="radio">
+                        <label class="alphabet-table__radio-label" for="letter-29">Ю</label>
+                      </td>
+                      <td class="alphabet-table__item">
+                        <input class="alphabet-table__radio visually-hidden" id="letter-30" name="alphabet-radio"
+                          type="radio">
+                        <label class="alphabet-table__radio-label" for="letter-30">Я</label>
+                      </td>
                     </tr>
                   </table>
                   <ul class="countries-list country-select__list">
@@ -604,46 +976,166 @@
                   <button class="country-select__button country-select__button--inline">Закрыть</button>
                   <table class="alphabet-table country-select__table">
                     <tr>
-                      <td class="alphabet-table__item"><a class="alphabet-table__link" href="#">А</a></td>
-                      <td class="alphabet-table__item"><a class="alphabet-table__link" href="#">Б</a></td>
-                      <td class="alphabet-table__item"><a class="alphabet-table__link" href="#">В</a></td>
-                      <td class="alphabet-table__item"><a class="alphabet-table__link" href="#">Г</a></td>
-                      <td class="alphabet-table__item"><a class="alphabet-table__link" href="#">Д</a></td>
+                      <td class="alphabet-table__item alphabet-table__item--current">
+                        <input class="alphabet-table__radio visually-hidden" id="letter-1" name="alphabet-radio"
+                          type="radio">
+                        <label class="alphabet-table__radio-label" for="letter-1">А</label>
+                      </td>
+                      <td class="alphabet-table__item">
+                        <input class="alphabet-table__radio visually-hidden" id="letter-2" name="alphabet-radio"
+                          type="radio">
+                        <label class="alphabet-table__radio-label" for="letter-2">Б</label>
+                      </td>
+                      <td class="alphabet-table__item">
+                        <input class="alphabet-table__radio visually-hidden" id="letter-3" name="alphabet-radio"
+                          type="radio">
+                        <label class="alphabet-table__radio-label" for="letter-3">В</label>
+                      </td>
+                      <td class="alphabet-table__item">
+                        <input class="alphabet-table__radio visually-hidden" id="letter-4" name="alphabet-radio"
+                          type="radio">
+                        <label class="alphabet-table__radio-label" for="letter-4">Г</label>
+                      </td>
+                      <td class="alphabet-table__item">
+                        <input class="alphabet-table__radio visually-hidden" id="letter-5" name="alphabet-radio"
+                          type="radio">
+                        <label class="alphabet-table__radio-label" for="letter-5">Д</label>
+                      </td>
                     </tr>
                     <tr>
-                      <td class="alphabet-table__item"><a class="alphabet-table__link" href="#">Е</a></td>
-                      <td class="alphabet-table__item"><a class="alphabet-table__link" href="#">Ё</a></td>
-                      <td class="alphabet-table__item"><a class="alphabet-table__link" href="#">Ж</a></td>
-                      <td class="alphabet-table__item"><a class="alphabet-table__link" href="#">З</a></td>
-                      <td class="alphabet-table__item"><a class="alphabet-table__link" href="#">И</a></td>
+                      <td class="alphabet-table__item">
+                        <input class="alphabet-table__radio visually-hidden" id="letter-6" name="alphabet-radio"
+                          type="radio">
+                        <label class="alphabet-table__radio-label" for="letter-6">Е</label>
+                      </td>
+                      <td class="alphabet-table__item">
+                        <input class="alphabet-table__radio visually-hidden" id="letter-7" name="alphabet-radio"
+                          type="radio">
+                        <label class="alphabet-table__radio-label" for="letter-7">Ё</label>
+                      </td>
+                      <td class="alphabet-table__item">
+                        <input class="alphabet-table__radio visually-hidden" id="letter-8" name="alphabet-radio"
+                          type="radio">
+                        <label class="alphabet-table__radio-label" for="letter-8">Ж</label>
+                      </td>
+                      <td class="alphabet-table__item">
+                        <input class="alphabet-table__radio visually-hidden" id="letter-9" name="alphabet-radio"
+                          type="radio">
+                        <label class="alphabet-table__radio-label" for="letter-9">З</label>
+                      </td>
+                      <td class="alphabet-table__item">
+                        <input class="alphabet-table__radio visually-hidden" id="letter-10" name="alphabet-radio"
+                          type="radio">
+                        <label class="alphabet-table__radio-label" for="letter-10">И</label>
+                      </td>
                     </tr>
                     <tr>
-                      <td class="alphabet-table__item"><a class="alphabet-table__link" href="#">Й</a></td>
-                      <td class="alphabet-table__item"><a class="alphabet-table__link" href="#">К</a></td>
-                      <td class="alphabet-table__item"><a class="alphabet-table__link" href="#">Л</a></td>
-                      <td class="alphabet-table__item"><a class="alphabet-table__link" href="#">М</a></td>
-                      <td class="alphabet-table__item"><a class="alphabet-table__link" href="#">Н</a></td>
+                      <td class="alphabet-table__item">
+                        <input class="alphabet-table__radio visually-hidden" id="letter-11" name="alphabet-radio"
+                          type="radio">
+                        <label class="alphabet-table__radio-label" for="letter-11">Й</label>
+                      </td>
+                      <td class="alphabet-table__item">
+                        <input class="alphabet-table__radio visually-hidden" id="letter-12" name="alphabet-radio"
+                          type="radio">
+                        <label class="alphabet-table__radio-label" for="letter-12">К</label>
+                      </td>
+                      <td class="alphabet-table__item">
+                        <input class="alphabet-table__radio visually-hidden" id="letter-13" name="alphabet-radio"
+                          type="radio">
+                        <label class="alphabet-table__radio-label" for="letter-13">Л</label>
+                      </td>
+                      <td class="alphabet-table__item">
+                        <input class="alphabet-table__radio visually-hidden" id="letter-14" name="alphabet-radio"
+                          type="radio">
+                        <label class="alphabet-table__radio-label" for="letter-14">М</label>
+                      </td>
+                      <td class="alphabet-table__item">
+                        <input class="alphabet-table__radio visually-hidden" id="letter-15" name="alphabet-radio"
+                          type="radio">
+                        <label class="alphabet-table__radio-label" for="letter-15">Н</label>
+                      </td>
                     </tr>
                     <tr>
-                      <td class="alphabet-table__item"><a class="alphabet-table__link" href="#">О</a></td>
-                      <td class="alphabet-table__item"><a class="alphabet-table__link" href="#">П</a></td>
-                      <td class="alphabet-table__item"><a class="alphabet-table__link" href="#">Р</a></td>
-                      <td class="alphabet-table__item"><a class="alphabet-table__link" href="#">С</a></td>
-                      <td class="alphabet-table__item"><a class="alphabet-table__link" href="#">Т</a></td>
+                      <td class="alphabet-table__item">
+                        <input class="alphabet-table__radio visually-hidden" id="letter-16" name="alphabet-radio"
+                          type="radio">
+                        <label class="alphabet-table__radio-label" for="letter-16">О</label>
+                      </td>
+                      <td class="alphabet-table__item">
+                        <input class="alphabet-table__radio visually-hidden" id="letter-17" name="alphabet-radio"
+                          type="radio">
+                        <label class="alphabet-table__radio-label" for="letter-17">П</label>
+                      </td>
+                      <td class="alphabet-table__item">
+                        <input class="alphabet-table__radio visually-hidden" id="letter-18" name="alphabet-radio"
+                          type="radio">
+                        <label class="alphabet-table__radio-label" for="letter-18">Р</label>
+                      </td>
+                      <td class="alphabet-table__item">
+                        <input class="alphabet-table__radio visually-hidden" id="letter-19" name="alphabet-radio"
+                          type="radio">
+                        <label class="alphabet-table__radio-label" for="letter-19">С</label>
+                      </td>
+                      <td class="alphabet-table__item">
+                        <input class="alphabet-table__radio visually-hidden" id="letter-20" name="alphabet-radio"
+                          type="radio">
+                        <label class="alphabet-table__radio-label" for="letter-20">Т</label>
+                      </td>
                     </tr>
                     <tr>
-                      <td class="alphabet-table__item"><a class="alphabet-table__link" href="#">У</a></td>
-                      <td class="alphabet-table__item"><a class="alphabet-table__link" href="#">Ф</a></td>
-                      <td class="alphabet-table__item"><a class="alphabet-table__link" href="#">Х</a></td>
-                      <td class="alphabet-table__item"><a class="alphabet-table__link" href="#">Ц</a></td>
-                      <td class="alphabet-table__item"><a class="alphabet-table__link" href="#">Ч</a></td>
+                      <td class="alphabet-table__item">
+                        <input class="alphabet-table__radio visually-hidden" id="letter-21" name="alphabet-radio"
+                          type="radio">
+                        <label class="alphabet-table__radio-label" for="letter-21">У</label>
+                      </td>
+                      <td class="alphabet-table__item">
+                        <input class="alphabet-table__radio visually-hidden" id="letter-22" name="alphabet-radio"
+                          type="radio">
+                        <label class="alphabet-table__radio-label" for="letter-22">Ф</label>
+                      </td>
+                      <td class="alphabet-table__item">
+                        <input class="alphabet-table__radio visually-hidden" id="letter-23" name="alphabet-radio"
+                          type="radio">
+                        <label class="alphabet-table__radio-label" for="letter-23">Х</label>
+                      </td>
+                      <td class="alphabet-table__item">
+                        <input class="alphabet-table__radio visually-hidden" id="letter-24" name="alphabet-radio"
+                          type="radio">
+                        <label class="alphabet-table__radio-label" for="letter-24">Ц</label>
+                      </td>
+                      <td class="alphabet-table__item">
+                        <input class="alphabet-table__radio visually-hidden" id="letter-25" name="alphabet-radio"
+                          type="radio">
+                        <label class="alphabet-table__radio-label" for="letter-25">Ч</label>
+                      </td>
                     </tr>
                     <tr>
-                      <td class="alphabet-table__item"><a class="alphabet-table__link" href="#">Ш</a></td>
-                      <td class="alphabet-table__item"><a class="alphabet-table__link" href="#">Щ</a></td>
-                      <td class="alphabet-table__item"><a class="alphabet-table__link" href="#">Э</a></td>
-                      <td class="alphabet-table__item"><a class="alphabet-table__link" href="#">Ю</a></td>
-                      <td class="alphabet-table__item"><a class="alphabet-table__link" href="#">Я</a></td>
+                      <td class="alphabet-table__item">
+                        <input class="alphabet-table__radio visually-hidden" id="letter-26" name="alphabet-radio"
+                          type="radio">
+                        <label class="alphabet-table__radio-label" for="letter-26">Ш</label>
+                      </td>
+                      <td class="alphabet-table__item">
+                        <input class="alphabet-table__radio visually-hidden" id="letter-27" name="alphabet-radio"
+                          type="radio">
+                        <label class="alphabet-table__radio-label" for="letter-27">Щ</label>
+                      </td>
+                      <td class="alphabet-table__item">
+                        <input class="alphabet-table__radio visually-hidden" id="letter-28" name="alphabet-radio"
+                          type="radio">
+                        <label class="alphabet-table__radio-label" for="letter-28">Э</label>
+                      </td>
+                      <td class="alphabet-table__item">
+                        <input class="alphabet-table__radio visually-hidden" id="letter-29" name="alphabet-radio"
+                          type="radio">
+                        <label class="alphabet-table__radio-label" for="letter-29">Ю</label>
+                      </td>
+                      <td class="alphabet-table__item">
+                        <input class="alphabet-table__radio visually-hidden" id="letter-30" name="alphabet-radio"
+                          type="radio">
+                        <label class="alphabet-table__radio-label" for="letter-30">Я</label>
+                      </td>
                     </tr>
                   </table>
                   <ul class="countries-list country-select__list">
@@ -678,8 +1170,10 @@
                 </div>
               </li>
             </ul>
-            <a class="button steps-list__button" href="#">Следующий шаг</a>
-            <a class="button steps-list__button steps-list__button--back" href="#">На шаг назад</a>
+            <div class="steps-list__button-wrap">
+              <a class="button steps-list__button" href="#">Следующий шаг</a>
+              <a class="button steps-list__button steps-list__button--back" href="#">На шаг назад</a>
+            </div>
           </li>
           <li class="steps-list__item">
             <h3 class="steps-list__title">Шаг 3. Развлечения</h3>
@@ -697,8 +1191,10 @@
               Пить пиво и лазить по старым замкам,
               наслаждаться аритектурой и вот это все.
             </textarea>
-            <button class="button steps-list__button" type="submit">Отправить</button>
-            <a class="button steps-list__button steps-list__button--back" href="#">На шаг назад</a>
+            <div class="steps-list__button-wrap">
+              <button class="button steps-list__button" type="submit">Отправить</button>
+              <a class="button steps-list__button steps-list__button--back" href="#">На шаг назад</a>
+            </div>
           </li>
         </ol>
       </form>

@@ -70,6 +70,8 @@
   text-transform: uppercase;
 
   &--change-photo {
+    width: 100%;
+
     color: $bg-dark;
   }
 }
@@ -80,4 +82,48 @@
   font-weight: 700;
   color: $title-dark;
   text-transform: uppercase;
+}
+
+@media (min-width: $tablet-width) {
+  .travelmate-card {
+    &--form {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: flex-start;
+    }
+  }
+
+  .travelmate-card__level {
+    &--form {
+      order: -1;
+    }
+  }
+
+  .travelmate-card__wrap {
+    &--transport {
+      order: -1;
+    }
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .travelmate-card {
+    justify-content: flex-end;
+  }
+
+  .travelmate-card__level {
+    &--form {
+      order: 0;
+
+      //временно для сетки
+      background-color: #ffffff;
+    }
+  }
+
+  .travelmate-card__wrap {
+    &--transport {
+      order: 0;
+    }
+  }
 }

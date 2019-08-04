@@ -1,0 +1,7 @@
+@media (min-width: $desktop-width) {
+  .travelmates-catalog-wrap {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: flex-start;
+  }
+}

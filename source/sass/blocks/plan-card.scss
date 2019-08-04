@@ -18,3 +18,19 @@
 .plan-card__link {
   color: rgba(#000000, 0.3);
 }
+
+@media (min-width: $tablet-width) {
+  .plan-card__wrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .plan-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+  }
+}

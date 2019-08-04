@@ -1,4 +1,9 @@
 .alphabet-table {
+  font-size: 14px;
+  line-height: 18px;
+  font-weight: 600;
+  color: $title-dark;
+
   background-color: #ffffff;
 
   border-collapse: collapse;
@@ -8,15 +13,9 @@
   padding: 16px 20px;
 
   border: 1px solid $border-grey;
-
-  &--current {
-    background-color: $title-dark;
-
-    border-color: $title-dark;
-  }
 }
 
-.alphabet-table__link {
+.alphabet-table__radio-label {
   font-size: 14px;
   line-height: 18px;
   font-weight: 600;

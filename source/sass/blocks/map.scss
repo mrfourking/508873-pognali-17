@@ -1,8 +1,30 @@
 .map__contacts-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
   @include section-padding(35px);
   padding-top: 32px;
 
   background-color: $bg-button;
 
   @include section-border-radius();
+}
+
+@media (min-width: $tablet-width) {
+  .map__image {
+    width: $tablet-width;
+    height: 546px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .map__contacts-wrap {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .map__image {
+    width: $desktop-width;
+  }
 }

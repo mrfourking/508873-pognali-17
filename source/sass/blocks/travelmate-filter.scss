@@ -14,3 +14,15 @@
   line-height: 23px;
   color: $title-dark;
 }
+
+@media (min-width: $tablet-width) {
+  .travelmate-filter {
+    width: 100%;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .travelmate-filter {
+    width: auto;
+  }
+}
