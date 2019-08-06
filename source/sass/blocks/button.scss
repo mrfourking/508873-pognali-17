@@ -1,9 +1,66 @@
 .button {
+  padding: 11px 39px;
+
   font-size: 17px;
   line-height: 30px;
   font-weight: 700;
+  text-transform: uppercase;
+  vertical-align: bottom;
 
   background-color: $bg-button;
 
   border-radius: 25px;
+
+  &--phone {
+    padding: 12px 10px 11px 12px;
+
+    background-color: $bg-button-orange;
+
+    border-radius: 50%;
+  }
+
+  &--mail {
+    padding: 12px 11px 11px 11px;
+
+    border-radius: 50%;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .button {
+    padding: 15px 29px;
+
+    font-size: 20px;
+    vertical-align: top;
+
+    &--phone,
+    &--mail {
+      padding: 15px 16px;
+    }
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .button {
+    &--phone:hover {
+      background-color: $bg-phone-hvr;
+    }
+
+    &--mail:hover {
+      background-color: $bg-button-orange;
+    }
+
+    &--phone:active > svg,
+    &--mail:active > svg {
+      opacity: 0.3;
+    }
+
+    &--sign-in:hover {
+      background-color: $bg-button-yellow;
+    }
+
+    &--sign-in:active {
+      color: rgba($bg-dark, 0.3);
+    }
+  }
 }

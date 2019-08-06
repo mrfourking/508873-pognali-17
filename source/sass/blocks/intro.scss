@@ -2,7 +2,7 @@
   display: flex;
   flex-direction: column;
 
-  @include section-padding();
+  padding-top: 50px;
   padding-bottom: 39px;
 
   background-color: $bg-dark;
@@ -10,22 +10,47 @@
 
 .intro__quote {
   margin: 0;
-  padding-top: 85px;
 }
 
 @media (min-width: $tablet-width) {
   .intro {
+    padding-top: 60px;
+
+
+    background-color: $bg-dark-light;
     background-image: url("../../img/traveller-illustration-tablet@1x.png"),
       url("../../img/globe-back-tablet@1x.jpg");
     background-repeat: no-repeat, no-repeat;
-    background-position: 50% 100%, 50% 100%;
+    background-position: 72% 20%, 50% -90%;
+  }
+
+  .intro__quote {
+    margin-bottom: 210px;
+  }
+
+  .intro__content,
+  .intro__author {
+    width: 260px;
+    margin-left: 34px;
   }
 }
 
 @media (min-width: $desktop-width) {
   .intro {
+    position: relative;
+    z-index: 10;
     align-items: flex-end;
     width: 100%;
-    margin-top: -175px;
+    margin-top: -330px;
+    padding-top: 110px;
+
+    background: none;
+    background-color: transparent;
+
+    // background-color: $bg-dark-light;
+    // background-image: url("../../img/traveller-illustration-desktop@1x.png"),
+    //   url("../../img/globe-back-desktop@1x.jpg");
+    // background-repeat: no-repeat, no-repeat;
+    // background-position: 50% 100%, 50% 100%;
   }
 }
