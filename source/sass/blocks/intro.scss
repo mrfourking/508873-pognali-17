@@ -4,8 +4,7 @@
 
   padding-top: 50px;
   padding-bottom: 39px;
-
-  background-color: $bg-dark;
+  background: linear-gradient(to bottom, $bg-dark 50%, $bg-dark-light 50%);
 }
 
 .intro__quote {

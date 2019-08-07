@@ -10,3 +10,10 @@
     color: $title-dark;
   }
 }
+
+@media (min-width: $tablet-width) {
+  .title {
+    font-size: 45px;
+    line-height: 45px;
+  }
+}

@@ -42,11 +42,26 @@
 
 @media (min-width: $desktop-width) {
   .button {
-    &--phone:hover {
+    &:hover,
+    &:focus {
+      background-color: $bg-button-yellow;
+    }
+
+    &:active {
+      color: rgba($bg-dark, 0.3);
+    }
+
+    &:active::after {
+      opacity: 0.3;
+    }
+
+    &--phone:hover,
+    &--phone:focus {
       background-color: $bg-phone-hvr;
     }
 
-    &--mail:hover {
+    &--mail:hover,
+    &--mail:focus {
       background-color: $bg-button-orange;
     }
 
@@ -55,7 +70,8 @@
       opacity: 0.3;
     }
 
-    &--sign-in:hover {
+    &--sign-in:hover,
+    &--sign-in:focus {
       background-color: $bg-button-yellow;
     }
 

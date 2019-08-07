@@ -1,13 +1,22 @@
 .about {
-  @include section-padding(34px);
-  padding-bottom: 85px;
-
   background-color: $bg-dark-light;
   background-image: url("../../img/about-mobile@1x.png");
   background-repeat: no-repeat;
-  background-position: 50% 0;
+  background-position: 0 0;
 
   @include section-border-radius();
+}
+
+.about__wrap {
+  padding: 37px 34px 18px 25px;
+}
+
+.about__title {
+  margin-bottom: 28px;
+}
+
+.about__intro {
+  margin-bottom: 24px;
 }
 
 .about__button {
@@ -15,7 +24,59 @@
 }
 
 @media (min-width: $tablet-width) {
+  .about {
+    background-image: url("../../img/about-tablet@1x.png");
+    background-position: 85% 25%;
+  }
+
+  .about__wrap {
+    padding: 45px 353px 88px 34px;
+  }
+
   .about__button {
+    position: relative;
     display: block;
+    width: 274px;
+    padding: 25px 80px 26px 34px;
+
+    font-size: 24px;
+    line-height: 24px;
+    text-transform: none;
+
+    border-radius: 18px;
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 29px;
+      right: 35px;
+
+      width: 10px;
+      height: 14px;
+
+      background-image: url("../../img/triangle-arrow-right.svg");
+      background-repeat: no-repeat;
+      background-position: 0 0;
+    }
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .about {
+    background-image: url("../../img/about-desktop@1x.png");
+    background-position: 60% 100%;
+  }
+
+  .about__wrap {
+    padding: 135px 630px 163px 70px;
+  }
+
+  .about__intro {
+    margin-bottom: 50px;
+
+    &:nth-child(3) {
+      width: 415px;
+      margin-bottom: 90px;
+    }
   }
 }
