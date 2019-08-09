@@ -1,0 +1,17 @@
+.transport-list {
+  display: flex;
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+.transport-list__item {
+  margin-right: 15px;
+}
+
+.transport-list__icon {
+  &--active {
+    fill: $title-dark;
+  }
+}

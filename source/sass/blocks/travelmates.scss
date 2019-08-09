@@ -2,15 +2,12 @@
   display: flex;
   flex-direction: column;
 
-  @include section-padding(30px);
   padding-top: 73px;
 
   background-color: $bg-dark-light;
-  background-image: url("../../img/rogovaya-back-mobile@1x.png"),
-    url("../../img/smolov-back-desktop@1x.png");
-  background-repeat: no-repeat, no-repeat;
-  background-size: 18%, 45%;
-  background-position: 0 310px, 150px 40px;
+  background-image: url("../../img/travelmates-back-mobile.png");
+  background-repeat: no-repeat;
+  background-position: 0% 4%;
 
   @include section-border-radius();
 
@@ -23,10 +20,37 @@
   }
 }
 
-.travelmates__button {
-  order: 2;
+.travelmates__title {
+  margin-bottom: 25px;
+}
 
-  background-color: $bg-button;
+.travelmates__intro {
+  margin-bottom: 25px;
+}
+
+.travelmates__button {
+  position: relative;
+  order: 2;
+  margin-bottom: 30px;
+  padding: 15px 80px 15px 34px;
+
+  text-transform: none;
+
+  border-radius: 8px;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 24px;
+    right: 25px;
+
+    width: 10px;
+    height: 14px;
+
+    background-image: url("../../img/triangle-arrow-right.svg");
+    background-repeat: no-repeat;
+    background-position: 0 0;
+  }
 
   &--catalog {
     text-transform: uppercase;
@@ -48,8 +72,43 @@
 }
 
 @media (min-width: $tablet-width) {
+  .travelmates {
+    padding-top: 143px;
+
+    background-image: url("../../img/travelmates-back-tablet.png");
+    background-position: 35% 13%;
+  }
+
+  .travelmates__title {
+    margin-left: 35px;
+  }
+
+  .travelmates__intro {
+    width: 430px;
+    margin-left: 35px;
+
+    &:last-child {
+      width: 400px;
+    }
+  }
+
   .travelmates__pagination-list {
     display: flex;
+  }
+
+  .travelmates__button {
+    margin: 0 35px 88px;
+    padding: 30px 50px 32px 35px;
+
+    font-size: 24px;
+    line-height: 24px;
+
+    border-radius: 18px;
+
+    &::after {
+      top: 35px;
+      right: 35px;
+    }
   }
 }
 
@@ -57,15 +116,31 @@
   .travelmates {
     display: block;
     overflow: hidden;
+    padding-top: 133px;
+
+    background-image: url("../../img/travelmates-back-desktop.png");
+    background-position: 8% 45%;
+
+    @include section-border-radius(60px);
 
     &--catalog {
       display: flex;
     }
   }
 
-  .travelmates__title,
-  .travelmates__intro,
-  .travelmates__button {
+  .travelmates__title {
     width: 50%;
+    margin-bottom: 70px;
+  }
+
+  .travelmates__intro {
+    width: 440px;
+    margin-bottom: 50px;
+  }
+
+  .travelmates__button {
+    display: block;
+    width: 280px;
+    margin-bottom: 134px;
   }
 }
