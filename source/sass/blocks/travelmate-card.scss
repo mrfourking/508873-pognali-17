@@ -1,4 +1,9 @@
 .travelmate-card {
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   margin-bottom: 10px;
 
   font-size: 16px;
@@ -6,31 +11,107 @@
   font-weight: 400;
   color: $text-dark;
 
-  &--catalog {
-    font-size: 15px;
-  }
+  border-radius: 9px;
 
   background-color: #ffffff;
+
+  &--catalog {
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    padding-top: 15px;
+    padding-bottom: 22px;
+
+    font-size: 15px;
+
+    border-radius: 18px;
+  }
 
   &--form {
     background-color: transparent;
   }
+}
 
-  border-radius: 18px;
+.travelmate-card__image {
+  &--catalog {
+    position: absolute;
+    top: 15px;
+    left: 18px;
+
+    border-radius: 50%;
+  }
+}
+
+.travelmate-card__name-wrap {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
 }
 
 .travelmate-card__name {
+  position: relative;
+  margin: 0;
+  margin-bottom: 20px;
+
   font-size: 21px;
   line-height: 21px;
   font-weight: 700;
   color: $title-dark;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 6px;
+    left: -12px;
+
+    width: 5px;
+    height: 5px;
+
+    background-color: $bg-offline;
+
+    border-radius: 50%;
+  }
+
+  &--online::before {
+    background-color: $bg-online;
+  }
+
+  &--catalog {
+    position: static;
+    width: 85px;
+    margin-bottom: 45px;
+    margin-left: 100px;
+  }
+
+  &--catalog::before {
+    top: 23px;
+    right: 22px;
+    left: unset;
+  }
 }
 
-.travelmate-card__likes-counter {
-  font-size: 14px;
-  line-height: 21px;
-  font-weight: 700;
-  color: $bg-dark;
+.travelmate-card__hashtag-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 190px;
+  margin: 0;
+  margin-bottom: 20px;
+  padding: 0;
+
+  list-style: none;
+
+  li {
+    margin-right: 5px;
+  }
+
+  &--catalog {
+    justify-content: flex-start;
+    width: 100%;
+    margin: 0;
+    margin-bottom: 25px;
+    padding: 0 70px 0 25px;
+  }
 }
 
 .travelmate-card__hashtag-link {
@@ -38,36 +119,128 @@
   color: $text-dark;
 }
 
-.travelmate-card__countries-name {
-  font-size: 15px;
-  line-height: 18px;
-  font-weight: 700;
-  color: $title-dark;
-  text-transform: uppercase;
+.travelmate-card__section-label {
+  margin: 0;
+  margin-top: -10px;
+  margin-bottom: 20px;
+  margin-left: 35px;
+  padding: 0 12px;
+
+  background-color: #ffffff;
+
+  &--transport {
+    margin-bottom: 0;
+  }
+}
+
+.travelmate-card__transport-wrap {
+  display: flex;
+  flex-direction: row;
+  align-items: baseline;
+  flex-wrap: wrap;
+  order: 2;
+  width: 100%;
+  margin-bottom: 15px;
+
+  border-top: 1px solid $bg-light;
+}
+
+.travelmate-card__transport {
+  margin-bottom: 22px;
+
+  &--catalog {
+    margin-left: 25px;
+  }
+}
+
+.travelmate-card__level-wrap {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  top: 16px;
+  left: 16px;
+
+  width: 60px;
+  height: 60px;
+  color: #ffffff;
+
+  background-color: rgba(#000000, 0.6);
+
+  border-radius: 50%;
+
+  &--catalog {
+    position: relative;
+    width: 45px;
+    height: 45px;
+
+    background-color: transparent;
+  }
+}
+
+.travelmate-card__level-stroke {
+  transform: rotate(-90deg);
 }
 
 .travelmate-card__level {
-  font-size: 25px;
-  line-height: 18px;
+  position: absolute;
+  top: 12px;
+  left: 17px;
+
+  margin-bottom: 3px;
+
+  font-size: 24px;
+  line-height: 24px;
   font-weight: 700;
-  color: $title-dark;
+  color: #ffffff;
+
+  border-bottom: 1px solid #ffffff;
+
+  &--small {
+    position: absolute;
+    top: 40px;
+    left: 18px;
+
+    font-size: 14px;
+    line-height: 14px;
+    font-weight: 400;
+
+    border: none;
+  }
+
+  &--catalog {
+    top: 13px;
+    left: 10px;
+
+    color: $title-dark;
+
+    border-bottom: none;
+  }
+
+  &--small-catalog {
+    display: none;
+  }
 
   &--form {
     font-size: 38px;
     line-height: 38px;
     color: $bg-dark;
   }
+}
 
-  span {
-    font-size: 18px;
-    line-height: 22px;
-    font-weight: 400;
-    color: $text-dark;
-  }
+.travelmate-card__button-wrap {
+  display: flex;
+  flex-direction: column;
+  order: 3;
+  width: 100%;
+  padding: 0 20px;
 }
 
 .travelmate-card__button {
+  padding: 5px;
   text-transform: uppercase;
+  text-align: center;
 
   &--change-photo {
     width: 100%;
@@ -76,16 +249,103 @@
   }
 }
 
-.travelmate-card__wrap-name {
-  font-size: 16px;
+.travelmate-card__like-button {
+  position: absolute;
+  top: 55px;
+  left: 67px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-self: center;
+  padding: 7px 5px;
+
+  background-color: $bg-light;
+
+  border-radius: 50%;
+
+  &--pressed {
+    background-color: $bg-like-button-pressed;
+  }
+}
+
+.travelmates-card__like-heart {
+  &--pressed {
+    fill: $heart-fill;
+  }
+}
+
+.travelmate-card__likes-counter {
+  position: absolute;
+  top: 65px;
+  left: 105px;
+
+  font-size: 14px;
+  line-height: 21px;
+  font-weight: 700;
+  color: $bg-dark;
+}
+
+.travelmate-card__countries-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+
+  border-top: 1px solid $bg-light;
+}
+
+.travelmate-card__countries-list {
+  display: flex;
+  margin: 0;
+  margin-top: -12px;
+  margin-bottom: 15px;
+  padding: 0;
+
+  list-style: none;
+
+  &--catalog {
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    margin-top: 0;
+    margin-bottom: 23px;
+    padding-left: 25px;
+  }
+}
+
+.travelmate-card__countries-item {
+  display: flex;
+  align-items: center;
+  margin-right: 19px;
+  margin-bottom: 10px;
+}
+
+.travelmate-card__countries-icon {
+  &--catalog {
+    margin-right: 15px;
+  }
+}
+
+.travelmate-card__countries-name {
+  font-size: 15px;
   line-height: 18px;
   font-weight: 700;
   color: $title-dark;
+  vertical-align: baseline;
   text-transform: uppercase;
 }
 
 @media (min-width: $tablet-width) {
   .travelmate-card {
+
+    border-radius: 18px;
+
+    &--catalog {
+      margin-bottom: 40px;
+      padding: 36px 0 26px;
+    }
+
     &--form {
       display: flex;
       flex-wrap: wrap;
@@ -94,15 +354,161 @@
     }
   }
 
+  .travelmate-card__image {
+    width: 285px;
+    height: 285px;
+
+    &--catalog {
+      position: static;
+      width: 190px;
+      height: 190px;
+      margin-right: 30px;
+      margin-left: 35px;
+
+      border-radius: 18px;
+    }
+  }
+
+  .travelmate-card__name-wrap {
+    width: 250px;
+  }
+
+  .travelmate-card__name {
+    position: relative;
+
+    font-size: 24px;
+    line-height: 24px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 7px;
+      left: -22px;
+
+      width: 7px;
+      height: 7px;
+    }
+
+    &--catalog {
+      width: 250px;
+      margin-bottom: 20px;
+      margin-left: 0;
+      padding-right: 30px;
+
+      font-size: 30px;
+    }
+
+    &--catalog::before {
+      top: 9px;
+      left: unset;
+      right: 15px;
+    }
+  }
+
+  .travelmate-card__hashtag-list {
+    width: 230px;
+
+    font-size: 20px;
+    line-height: 24px;
+
+    &--catalog {
+      padding: 0;
+
+      border-bottom: none;
+    }
+  }
+
+  .travelmate-card__section-label {
+    &--transport {
+      display: none;
+    }
+  }
+
+  .travelmate-card__transport-wrap {
+    order: -1;
+
+    &--catalog {
+      flex-direction: column;
+      align-items: center;
+      order: 0;
+      width: auto;
+      margin-left: auto;
+      margin-bottom: 0;
+
+      border: none;
+    }
+  }
+
+  .travelmate-card__transport {
+    &--catalog {
+      flex-direction: column;
+      margin: 0 auto;
+    }
+  }
+
+  .travelmate-card__level-wrap {
+    &--catalog {
+      margin-top: -10px;
+      margin-right: 35px;
+      width: 60px;
+      height: 60px;
+    }
+  }
+
   .travelmate-card__level {
+    &--small-catalog {
+      display: block;
+      top: 40px;
+      left: 17px;
+
+      font-size: 14px;
+      line-height: 14px;
+      color: rgba($text-dark, 0.4);
+    }
+
+    &--catalog {
+      top: 14px;
+      left: 17px;
+
+      border-bottom: 1px solid rgba(#000000, 0.1);
+    }
+
     &--form {
       order: -1;
     }
   }
 
-  .travelmate-card__wrap {
-    &--transport {
-      order: -1;
+  .travelmate-card__button-wrap {
+    order: 0;
+    flex-direction: row;
+    align-items: center;
+    margin-top: -50px;
+    margin-bottom: 31px;
+    margin-left: 235px;
+  }
+
+  .travelmate-card__button {
+    padding: 10px 32px;
+    border-radius: 25px;
+  }
+
+  .travelmate-card__like-button {
+    position: static;
+    margin-right: 9px;
+    padding: 16px 15px;
+  }
+
+  .travelmate-card__likes-counter {
+    position: static;
+    font-size: 20px;
+    line-height: 30px;
+  }
+
+  .travelmate-card__countries-list {
+    &--catalog {
+      flex-direction: row;
+      margin-bottom: 0;
+      padding-left: 35px;
     }
   }
 }
@@ -110,6 +516,84 @@
 @media (min-width: $desktop-width) {
   .travelmate-card {
     justify-content: flex-end;
+
+    &--catalog {
+      padding: 0;
+      justify-content: flex-start;
+    }
+
+    &:hover {
+      box-shadow: 0 6px 21px 0 rgba(0, 0, 0, 0.1);
+    }
+
+    &:hover > img {
+      transform: scale(1.05);
+      z-index: 0;
+    }
+
+    &:hover > .countries-list,
+    &:hover > .travelmate-card__level-wrap {
+      z-index: 10;
+    }
+  }
+
+  .travelmate-card__image {
+    &--catalog {
+      width: 285px;
+      height: 285px;
+      margin-left: 0;
+      margin-right: 60px;
+
+      line-height: 30px;
+
+      border-top-right-radius: 0;
+      border-bottom-right-radius: 0;
+    }
+  }
+
+  .travelmate-card__name-wrap {
+    margin-top: 49px;
+    margin-right: 100px;
+  }
+
+  .travelmate-card__name {
+    &::before {
+      top: 9px;
+      left: -25px;
+      right: unset;
+    }
+
+    &:hover,
+    &:focus {
+      opacity: 0.7;
+    }
+
+    &:active {
+      opacity: 0.3;
+    }
+  }
+
+  .travelmate-card__section-label {
+    display: none;
+  }
+
+  .travelmate-card__transport-wrap {
+    order: 3;
+    flex-direction: row;
+    align-items: baseline;
+    margin: 0;
+    margin-top: -110px;
+
+    &--form {
+      order: 0;
+    }
+  }
+
+  .travelmate-card__transport {
+    &--catalog {
+      flex-direction: row;
+      margin-right: 10px;
+    }
   }
 
   .travelmate-card__level {
@@ -121,9 +605,38 @@
     }
   }
 
-  .travelmate-card__wrap {
-    &--transport {
-      order: 0;
+  .travelmate-card__button-wrap {
+    order: 2;
+    width: auto;
+    margin: -97px 90px 0 321px;
+  }
+
+  .travelmate-card__like-button {
+    &:hover,
+    &:focus {
+      background-color: $bg-light-grey;
+    }
+
+    &:active > svg {
+      opacity: 0.1;
+    }
+
+    &--pressed:hover,
+    &--pressed:focus {
+      background-color: $bg-like-button-hover;
+    }
+  }
+
+  .travelmate-card__countries-wrap {
+    width: auto;
+    margin-top: 49px;
+  }
+
+  .travelmate-card__countries-list {
+    position: relative;
+
+    &--catalog {
+      flex-direction: column;
     }
   }
 }

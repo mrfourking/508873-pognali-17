@@ -1,15 +1,166 @@
 .instruction-list {
   display: flex;
   flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
 
   font-size: 18px;
   line-height: 18px;
   font-weight: 700;
   color: $bg-dark;
 
-  background-color: $title-orange;
-
   list-style: none;
 
   border-radius: 8px;
+
+  counter-reset: inst-counter;
+}
+
+.instruction-list__item {
+  position: relative;
+  margin-top: -12px;
+  padding: 25px 95px 40px 25px;
+
+  background-color: $title-orange;
+
+  border-radius: 8px;
+
+  &:first-child {
+    margin-top: 0;
+  }
+
+  &:nth-child(2) {
+    background-color: #ffa530;
+  }
+
+  &:nth-child(3) {
+    padding-right: 102px;
+    background-color: $bg-button-yellow;
+  }
+
+  &:last-child {
+    background-color: $bg-button;
+  }
+}
+
+.instruction-list__counter {
+  position: absolute;
+  top: 25px;
+  right: 22px;
+
+  font-size: 18px;
+  line-height: 18px;
+  color: #ffffff;
+
+  &::before {
+    counter-increment: inst-counter;
+    content: counter(inst-counter);
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .instruction-list__item {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    margin: 0;
+    padding: 31px 110px 26px 34px;
+
+    font-size: 24px;
+    line-height: 24px;
+
+    &:first-child {
+      width: 55%;
+      border-bottom-left-radius: 0;
+      border-bottom-right-radius: 0;
+    }
+
+    &:nth-child(2) {
+      margin-left: -35px;
+      border-bottom-left-radius: 0;
+      border-bottom-right-radius: 0;
+    }
+
+    &:nth-child(3) {
+      width: 55%;
+      margin-top: -5px;
+      padding-right: 155px;
+      padding-bottom: 21px;
+
+      border-top-left-radius: 0;
+      border-top-right-radius: 0;
+    }
+
+    &:last-child {
+      margin-top: -5px;
+      margin-left: -35px;
+      padding-bottom: 21px;
+
+      border-top-left-radius: 0;
+      border-top-right-radius: 0;
+    }
+
+    border-radius: 18px;
+  }
+
+  .instruction-list__counter {
+    position: initial;
+    margin-top: 10px;
+
+    font-size: 30px;
+    line-height: 30px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .instruction-list {
+    flex-wrap: nowrap;
+    width: 100%;
+  }
+
+  .instruction-list__item {
+    display: block;
+    margin: 0;
+    width: 316px;
+    padding: 30px 110px 30px 34px;
+
+    &:first-child {
+      width: 375px;
+
+      border-radius: 18px;
+    }
+
+    &:nth-child(2) {
+      width: 375px;
+      margin: 0;
+      margin-left: -63px;
+
+      border-radius: 18px;
+    }
+
+    &:nth-child(3) {
+      width: 375px;
+      margin: 0;
+      margin-left: -29px;
+      padding: 30px 150px 30px 34px;
+
+      border-radius: 18px;
+    }
+
+    &:last-child {
+      margin: 0;
+      margin-left: -28px;
+      padding: 30px 110px 30px 31px;
+
+      border-radius: 18px;
+    }
+  }
+
+  .instruction-list__counter {
+    position: absolute;
+    top: 16px;
+    right: 34px;
+
+    font-size: 24px;
+  }
 }

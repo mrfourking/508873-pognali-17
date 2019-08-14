@@ -4,7 +4,6 @@
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-  align-items: center;
 
   background-color: $bg-dark;
 
@@ -14,34 +13,42 @@
     background-image: url("../../img/traveller-illustration-mobile@1x.png"),
       url("../../img/globe-back-mobile@1x.jpg");
     background-repeat: no-repeat, no-repeat;
-    background-position: 50% 100%, 100% 100%;
+    background-position: 62% 100%, 100% 0;
 
     @include section-border-radius(0);
   }
 
   &--menu-open {
     background-color: #ffffff;
+    background-position: 62% 100%, 100% 151%;
   }
 }
 
 .header__link {
-  margin-left: 25px;
   padding-top: 27px;
   padding-bottom: 22px;
+
+  &--secondary {
+    padding-top: 19px;
+    padding-bottom: 15px;
+  }
 }
 
 .header__menu-button {
   align-self: center;
-  margin-right: 25px;
+  padding: 0;
+
+  background-color: transparent;
+
+  border: none;
 }
 
 .header__button-list {
   display: flex;
   order: 2;
   margin: 0;
-  margin-bottom: -20px;
-
-  @include section-padding();
+  margin-bottom: -15px;
+  padding: 0;
 
   list-style: none;
 
@@ -52,7 +59,7 @@
 
 .header__title {
   width: 100%;
-  margin: 25px 25px 256px;
+  margin: 19px 5px 240px;
 
   font-size: 36px;
   line-height: 40px;
@@ -60,8 +67,26 @@
   text-align: center;
 
   &--secondary {
-    width: 50%;
-    margin-bottom: 20px;
+    position: relative;
+    width: auto;
+    margin: 34px auto 0 0;
+    padding-bottom: 9px;
+
+    text-align: left;
+  }
+
+  &--secondary::after {
+    content: "";
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+
+    width: 100%;
+    height: 5px;
+
+    background-color: $bg-button-orange;
+
+    border-radius: 3px;
   }
 }
 
@@ -70,24 +95,40 @@
 
   font-size: 20px;
   line-height: 24px;
-  font-weight: 700;
+  text-transform: uppercase;
   color: #ffffff;
 }
 
 @media (min-width: $tablet-width) {
   .header {
     flex-direction: row;
-    justify-content: space-between;
-
-    @include section-padding(0, 40px);
+    align-items: center;
 
     background-image: none;
+
+    @include section-border-radius(60px);
+
+    &--main {
+      background-color: $bg-dark-light;
+
+      @include section-border-radius(0);
+    }
+  }
+
+  .header__logo {
+    width: 164px;
+    height: 42px;
+  }
+
+  .header__menu-button {
+    padding-left: 25px;
   }
 
   .header__button-list {
     align-self: center;
     order: 0;
     margin: 0;
+    padding: 51px 0 48px;
 
     &--secondary {
       display: flex;
@@ -103,34 +144,77 @@
   }
 
   .header__title {
-    margin: 0;
+    margin: 30px 140px 0;
+
+    font-size: 60px;
+    line-height: 70px;
+
+    &--secondary {
+      margin: 86px 0 0 34px;
+      padding-bottom: 63px;
+    }
+
+    &--secondary::after {
+      bottom: -4px;
+
+      width: 100%;
+      height: 8px;
+
+      border-radius: 4px;
+    }
   }
 
   .header__back-button {
+    position: relative;
     display: block;
+    padding: 29px 96px 0 0;
+
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 7px;
+      right: 35px;
+
+      width: 32px;
+      height: 16px;
+
+      background-image: url("../../img/return.svg");
+      background-repeat: no-repeat;
+      background-position: 0 0;
+    }
   }
 }
 
 @media (min-width: $desktop-width) {
   .header {
-    //временно для сеток
-    min-height: 350px;
-
-    @include section-padding(0, 60px);
+    padding-top: 35px;
 
     &--main {
-      //временно для сеток
-      min-height: auto;
-      background-color: transparent;
+      background-color: $bg-dark;
+      background-image: url("../../img/traveller-illustration-desktop@1x.png"),
+        url("../../img/globe-back-desktop@1x.jpg");
+      background-repeat: no-repeat, no-repeat;
+      background-position: 60% 100%, 50% 100%;
     }
   }
 
-  .header__wrap {
-    padding: 0;
+  .header__link {
+    padding-top: 13px;
+    padding-bottom: 10px;
+  }
+
+  .header__logo {
+    width: 198px;
+    height: 51px;
   }
 
   .header__menu-button {
     display: none;
+  }
+
+  .header__button-list {
+    order: 2;
+    padding: 0;
   }
 
   .header__button-item {
@@ -138,8 +222,29 @@
   }
 
   .header__title {
-    padding-right: 800px;
+    order: 2;
+    width: 400px;
+    margin-top: 89px;
+    margin-right: auto;
+    margin-left: 67px;
+    margin-bottom: 330px;
+
+    text-align: left;
 
     background-color: transparent;
+
+    &--secondary {
+      width: auto;
+      margin: 99px 0 0 66px;
+    }
+  }
+
+  .header__back-button {
+    order: 2;
+    padding: 40px 124px 0 0;
+
+    &::after {
+      right: 63px;
+    }
   }
 }

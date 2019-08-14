@@ -15,3 +15,15 @@
   color: $bg-button;
   text-decoration: underline;
 }
+
+@media (min-width: $tablet-width) {
+  .section-intro {
+    font-size: 28px;
+    line-height: 33px;
+
+    &--bold {
+      font-size: 21px;
+      line-height: 25px;
+    }
+  }
+}

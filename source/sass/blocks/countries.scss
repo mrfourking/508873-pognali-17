@@ -1,46 +1,142 @@
 .countries {
   display: flex;
   flex-direction: column;
-
-  @include section-padding(30px);
-  padding-top: 72px;
+  padding-top: 73px;
+  padding-bottom: 30px;
 
   background-color: $bg-light;
 
   @include section-border-radius();
 }
 
+.countries__title {
+  margin-bottom: 25px;
+  margin-left: 25px;
+}
+
+.countries__intro {
+  margin-right: 50px;
+  margin-bottom: 65px;
+  margin-left: 25px;
+}
+
 .countries__list {
+  position: relative;
   order: 1;
   margin: 0;
   padding: 0;
   list-style: none;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    background: linear-gradient(to bottom, rgba($bg-light, 0) 80%, $bg-light 100%);
+  }
+}
+
+.countries__item {
+  margin-bottom: 10px;
 }
 
 .countries__button {
+  position: relative;
   order: 2;
+  padding: 15px 80px 15px 34px;
+
+  text-transform: none;
+
+  border-radius: 8px;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 24px;
+    right: 25px;
+
+    width: 10px;
+    height: 14px;
+
+    background-image: url("../../img/triangle-arrow-right.svg");
+    background-repeat: no-repeat;
+    background-position: 0 0;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .countries {
+    background-image: url("../../img/contries-back.png");
+    background-repeat: no-repeat;
+    background-position: 50% 23%;
+  }
+
+  .countries__title,
+  .countries__intro,
+  .countries__list,
+  .countries__button {
+    margin-right: 35px;
+    margin-left: 35px;
+  }
+
+  .countries__list {
+    margin-bottom: 33px;
+
+    &::after {
+      background: linear-gradient(to bottom, rgba(237, 239, 246, 0) 60%, #edeff6 100%);
+    }
+  }
+
+  .countries__button {
+    padding: 30px 50px 32px 35px;
+    font-size: 24px;
+    line-height: 24px;
+
+    border-radius: 18px;
+
+    &::after {
+      top: 35px;
+      right: 35px;
+    }
+  }
 }
 
 @media (min-width: $desktop-width) {
   .countries {
-    @include section-padding(60px);
     display: block;
     overflow: hidden;
-  }
 
-  .countries__title {
-    width: 50%;
-  }
-
-  .countries__intro {
-    width: 50%;
+    background-image: url("../../img/contries-back-desktop.png");
   }
 
   .countries__list {
     float: left;
+    width: 560px;
+    margin-left: 72px;
+  }
+
+  .countries__title,
+  .countries__intro,
+  .countries__button {
+    margin-left: 60%;
+    margin-right: 15%;
+  }
+
+  .countries__title {
+    margin-bottom: 75px;
+  }
+
+  .countries__intro {
+    margin-bottom: 105px;
   }
 
   .countries__button {
-    width: 50%;
+    display: block;
+    width: 277px;
+    margin-bottom: 139px;
   }
 }

@@ -1,5 +1,44 @@
 .contacts {
+  display: flex;
+  flex-direction: column;
+
   font-size: 16px;
   line-height: 22px;
   font-weight: 700;
+}
+
+.contacts__link {
+  position: relative;
+
+  margin-bottom: 23px;
+
+  &--email {
+    margin-bottom: 58px;
+  }
+
+  &--phone::before,
+  &--email::before {
+    content: "";
+    position: absolute;
+    top: -16px;
+    left: -60px;
+
+    width: 45px;
+    height: 45px;
+
+    background-color: $bg-contacts;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: 18px 18px;
+
+    border-radius: 50%;
+  }
+
+  &--phone::before {
+    background-image: url("../../img/contacts-phone.svg");
+  }
+
+  &--email::before {
+    background-image: url("../../img/contacts-mail.svg");
+  }
 }

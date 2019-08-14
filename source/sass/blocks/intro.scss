@@ -2,30 +2,58 @@
   display: flex;
   flex-direction: column;
 
-  @include section-padding();
+  padding-top: 50px;
   padding-bottom: 39px;
-
-  background-color: $bg-dark;
+  background: linear-gradient(to bottom, $bg-dark 50%, $bg-dark-light 50%);
 }
 
 .intro__quote {
+  width: 180px;
   margin: 0;
-  padding-top: 85px;
+  margin-bottom: 34px;
+  padding-left: 25px;
 }
 
 @media (min-width: $tablet-width) {
   .intro {
+    padding-top: 60px;
+
+
+    background-color: $bg-dark-light;
     background-image: url("../../img/traveller-illustration-tablet@1x.png"),
       url("../../img/globe-back-tablet@1x.jpg");
     background-repeat: no-repeat, no-repeat;
-    background-position: 50% 100%, 50% 100%;
+    background-position: 72% 9%, 50% 5%;
+  }
+
+  .intro__quote {
+    margin-bottom: 210px;
+    padding: 0;
+  }
+
+  .intro__content,
+  .intro__author {
+    width: 260px;
+    margin-left: 34px;
   }
 }
 
 @media (min-width: $desktop-width) {
   .intro {
+    position: relative;
+    z-index: 10;
     align-items: flex-end;
     width: 100%;
-    margin-top: -175px;
+    margin-top: -615px;
+    margin-bottom: 82px;
+
+    background: none;
+    background-color: transparent;
+  }
+
+  .intro__quote {
+    width: 285px;
+    margin-right: 35px;
+    margin-bottom: 114px;
   }
 }

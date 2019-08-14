@@ -1,6 +1,8 @@
 .travelmates-list {
   order: 1;
   margin: 0;
+  margin-top: 35px;
+  margin-bottom: 10px;
   padding: 0;
 
   list-style: none;
@@ -13,12 +15,22 @@
 @media (min-width: $tablet-width) {
   .travelmates-list {
     display: flex;
-    flex-direction: column;
     order: 2;
-    width: 50%;
+    justify-content: space-between;
+    margin-bottom: 70px;
+    padding: 0 35px;
 
     &--catalog {
+      flex-direction: column;
       order: 0;
+      margin-bottom: 30px;
+      padding: 0;
+    }
+  }
+
+  .travelmates-list__item {
+    &:first-child {
+      margin-right: 48px;
     }
   }
 }
@@ -26,5 +38,13 @@
 @media (min-width: $desktop-width) {
   .travelmates-list {
     float: right;
+    margin-top: 0;
+    padding: 0;
+  }
+
+  .travelmates-list__item {
+    &:first-child {
+      margin-right: 60px;
+    }
   }
 }

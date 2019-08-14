@@ -1,6 +1,59 @@
 .social-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-self: center;
+  margin: 0;
+  padding: 0;
+
   font-size: 16px;
   line-height: 22px;
 
   list-style: none;
+}
+
+.social-list__item {
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+  margin-right: 25px;
+}
+
+.social-list__link {
+
+  background-color: $bg-button;
+
+  border-radius: 50%;
+
+  &--facebook {
+    padding: 12px 17px;
+  }
+
+  &--vkontakte {
+    padding: 14px 7px;
+  }
+
+  &--instagram {
+    padding: 11px;
+  }
+
+  &:hover,
+  &:focus {
+    background-color: $bg-dark-light;
+  }
+
+  & > svg {
+    display: block;
+
+    fill: $title-dark;
+  }
+
+  &:hover > svg,
+  &:focus > svg {
+    fill: #ffffff;
+  }
+
+  &:active > svg {
+    fill: rgba(#ffffff, 0.3);
+  }
 }
