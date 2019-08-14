@@ -132,5 +132,9 @@
     &:focus span {
       transform: translateY(-100%);
     }
+
+    &:active {
+      opacity: 0.3;
+    }
   }
 }

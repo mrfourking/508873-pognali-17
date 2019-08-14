@@ -21,7 +21,10 @@
     padding: 0 35px;
 
     &--catalog {
+      flex-direction: column;
       order: 0;
+      margin-bottom: 30px;
+      padding: 0;
     }
   }
 
