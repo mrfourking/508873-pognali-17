@@ -476,20 +476,28 @@
       <h2 class="visually-hidden">Реклама</h2>
       <p class="title call-to-action__title">Заинтересовались?</p>
       <p class="section-intro call-to-action__intro">
-        Зарегистрируйтесь, это быстро и бесплатно!
+        Зарегистрируйтесь, это быстро и бесплатно!<br>
         Уже зарегистрированы? Тогда скорее
         <a class="section-intro__link" href="#">авторизуйтесь.</a>
       </p>
       <form class="call-to-action__form" action="https://echo.htmlacademy.ru" method="POST">
         <label class="visually-hidden" for="cta-email">Email</label>
-        <input class="call-to-action__input" id="cta-email" type="email" name="cta-email">
+        <input class="call-to-action__input" id="cta-email" type="email" name="cta-email" placeholder="E-mail">
         <button class="button call-to-action__button" type="submit">
           <span class="call-to-action__button-label">Регистрация</span>
         </button>
       </form>
-      <p class="section-intro call-to-action__text">
-        Остались вопросы? Мы с радостью на них ответим!
-      </p>
+      <div class="call-to-action__text-wrap">
+        <p class="section-intro call-to-action__text">
+          Остались вопросы?
+        </p>
+        <p class="section-intro call-to-action__text call-to-action__text--nodesktop">
+          Мы с радостью на них ответим!
+        </p>
+        <p class="section-intro call-to-action__text call-to-action__text--desktop">
+          Свяжитесь с нами удобным для вас способом:
+        </p>
+      </div>
       <p class="contacts call-to-action__contacts">
         <a class="contacts__link contacts__link--phone call-to-action__contacts-link">8 800 555-86-28</a>
         <a class="contacts__link contacts__link--email call-to-action__contacts-link">mail@htmlacademy.ru</a>
