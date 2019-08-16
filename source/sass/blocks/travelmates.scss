@@ -137,6 +137,8 @@
     background-image: url("../../img/travelmates-back-tablet.png");
     background-position: 35% 13%;
 
+    @include section-border-radius(60px);
+
     &--catalog {
       background: none;
     }

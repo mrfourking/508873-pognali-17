@@ -16,22 +16,24 @@
     margin-bottom: 58px;
   }
 
-  &--phone::before,
-  &--email::before {
-    content: "";
-    position: absolute;
-    top: -16px;
-    left: -60px;
+  &--phone,
+  &--email {
+    &::before {
+      content: "";
+      position: absolute;
+      top: -16px;
+      left: -60px;
 
-    width: 45px;
-    height: 45px;
+      width: 45px;
+      height: 45px;
 
-    background-color: $bg-contacts;
-    background-repeat: no-repeat;
-    background-position: 50% 50%;
-    background-size: 18px 18px;
+      background-color: $bg-contacts;
+      background-repeat: no-repeat;
+      background-position: 50% 50%;
+      background-size: 18px 18px;
 
-    border-radius: 50%;
+      border-radius: 50%;
+    }
   }
 
   &--phone::before {

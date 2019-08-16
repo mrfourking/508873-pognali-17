@@ -2,12 +2,12 @@
   padding: $top-bottom $left-right;
 }
 
-@mixin section-border-radius($radius:22px) {
+@mixin section-border-radius($radius:30px) {
   border-bottom-left-radius: $radius;
   border-bottom-right-radius: $radius;
 }
 
-@mixin section-top-border-radius($radius:22px) {
+@mixin section-top-border-radius($radius:30px) {
   border-top-left-radius: $radius;
   border-top-right-radius: $radius;
 }

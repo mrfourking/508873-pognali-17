@@ -73,6 +73,8 @@
     background-image: url("../../img/contries-back.png");
     background-repeat: no-repeat;
     background-position: 50% 23%;
+
+    @include section-border-radius(60px);
   }
 
   .countries__title,
