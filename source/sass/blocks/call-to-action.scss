@@ -33,6 +33,7 @@
 
   font-size: 18px;
   line-height: 18px;
+  font-weight: 700;
 
   border: none;
   border-radius: 8px;
@@ -147,7 +148,7 @@
 
   .call-to-action__contacts {
     align-self: flex-start;
-    margin-left: 100px;
+    margin-left: 125px;
   }
 }
 
@@ -164,6 +165,23 @@
   .call-to-action__form {
     margin-bottom: 70px;
     padding: 0 75px;
+  }
+
+  .call-to-action__input {
+    &:hover,
+    &:focus {
+      background-color: $bg-light;
+    }
+
+    &:active {
+      padding: 24px 32px;
+
+      color: #ffffff;
+
+      background-color: $bg-contacts;
+
+      border: 3px solid #ffffff;
+    }
   }
 
   .call-to-action__button {
@@ -196,10 +214,10 @@
   .call-to-action__contacts {
     flex-direction: row;
     justify-content: space-around;
-    margin-left: 310px;
+    margin-left: 225px;
   }
 
   .call-to-action__contacts-link {
-    margin-right: 200px;
+    margin-right: 110px;
   }
 }
