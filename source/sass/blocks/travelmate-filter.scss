@@ -10,6 +10,8 @@
 }
 
 .travelmate-filter__title {
+  margin-bottom: 20px;
+
   font-size: 23px;
   line-height: 23px;
   color: $title-dark;
@@ -18,11 +20,20 @@
 @media (min-width: $tablet-width) {
   .travelmate-filter {
     width: 100%;
+    padding: 38px 35px;
+  }
+
+  .travelmate-filter__title {
+    margin-bottom: 38px;
+
+    font-size: 30px;
+    line-height: 30px;
   }
 }
 
 @media (min-width: $desktop-width) {
   .travelmate-filter {
-    width: auto;
+    width: 285px;
+    padding: 47px;
   }
 }
