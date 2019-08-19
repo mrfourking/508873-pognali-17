@@ -4,12 +4,14 @@
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
+  padding-top: 73px;
 
   background-color: $bg-dark;
 
   @include section-border-radius();
 
   &--main {
+
     background-image: url("../../img/traveller-illustration-mobile@1x.png"),
       url("../../img/globe-back-mobile@1x.jpg");
     background-repeat: no-repeat, no-repeat;
@@ -18,29 +20,72 @@
     @include section-border-radius(0);
   }
 
+  &--nojs {
+    background-position: 62% 100%, 100% 125%;
+  }
+}
+
+.header__scroll-wrap {
+  position: fixed;
+  z-index: 100;
+  top: 0;
+  left: 50%;
+  margin-left: -160px;
+
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 320px;
+
+  background-color: $bg-dark;
+
+  &--nojs {
+    position: static;
+    margin: 0;
+    margin-top: -73px;
+    padding: 0;
+
+    background-color: #ffffff;
+  }
+
   &--menu-open {
     background-color: #ffffff;
-    background-position: 62% 100%, 100% 151%;
   }
 }
 
 .header__link {
+  margin-left: 25px;
   padding-top: 27px;
   padding-bottom: 22px;
-
-  &--secondary {
-    padding-top: 19px;
-    padding-bottom: 15px;
-  }
 }
 
 .header__menu-button {
   align-self: center;
+  margin-right: 25px;
   padding: 0;
 
   background-color: transparent;
 
   border: none;
+
+  &--nojs {
+    display: none;
+  }
+}
+
+.header__menu-icon {
+  display: none;
+
+  fill: #ffffff;
+
+  &--close {
+    fill: #cccccc;
+  }
+
+  &--active {
+    display: block;
+  }
 }
 
 .header__button-list {
@@ -48,6 +93,7 @@
   order: 2;
   margin: 0;
   margin-bottom: -15px;
+  margin-left: 25px;
   padding: 0;
 
   list-style: none;
@@ -69,7 +115,7 @@
   &--secondary {
     position: relative;
     width: auto;
-    margin: 34px auto 0 0;
+    margin: 34px auto 0 25px;
     padding-bottom: 9px;
 
     text-align: left;
@@ -103,6 +149,7 @@
   .header {
     flex-direction: row;
     align-items: center;
+    padding-top: 132px;
 
     background-image: none;
 
@@ -115,6 +162,37 @@
     }
   }
 
+  .header__scroll-wrap {
+    left: 50%;
+    margin-left: -$tablet-width/2;
+
+    width: 440px;
+
+    @include section-padding(0, 40px);
+
+    &--main {
+      background-color: $bg-dark-light;
+    }
+
+    &--menu-open {
+      background-color: #ffffff;
+    }
+
+    &--nojs {
+      width: 100%;
+      margin-top: -132px;
+      margin-left: 0;
+      padding: 0;
+
+      background-color: #ffffff;
+    }
+  }
+
+  .header__link {
+    padding-top: 42px;
+    padding-bottom: 37px;
+  }
+
   .header__logo {
     width: 164px;
     height: 42px;
@@ -125,13 +203,33 @@
   }
 
   .header__button-list {
+    position: fixed;
+    z-index: 100;
+    top: 0;
+    right: 50%;
+
+    justify-content: flex-end;
     align-self: center;
+    width: 328px;
     order: 0;
     margin: 0;
-    padding: 51px 0 48px;
+    margin-right: -$tablet-width/2;
+    padding: 51px 40px 48px 40px;
+
+    &--main {
+      background-color: $bg-dark-light;
+    }
+
+    &--menu-open {
+      background-color: #ffffff;
+    }
 
     &--secondary {
       display: flex;
+    }
+
+    &--nojs {
+      display: none;
     }
   }
 
@@ -150,7 +248,7 @@
     line-height: 70px;
 
     &--secondary {
-      margin: 86px 0 0 34px;
+      margin: 86px 0 0 75px;
       padding-bottom: 63px;
     }
 
@@ -167,6 +265,7 @@
   .header__back-button {
     position: relative;
     display: block;
+    margin-right: 40px;
     padding: 29px 96px 0 0;
 
     &::after {
@@ -187,7 +286,7 @@
 
 @media (min-width: $desktop-width) {
   .header {
-    padding-top: 35px;
+    padding-top: 110px;
 
     &--main {
       background-color: $bg-dark;
@@ -198,14 +297,28 @@
     }
   }
 
+  .header__scroll-wrap {
+    align-items: center;
+    width: 1035px;
+    left: 50%;
+    margin: 0;
+    margin-left: -$desktop-width/2;
+    padding: 20px 60px;
+
+    background-color: $bg-dark;
+
+    &--nojs {
+      position: fixed;
+    }
+  }
+
   .header__link {
-    padding-top: 13px;
-    padding-bottom: 10px;
+    padding: 0;
   }
 
   .header__logo {
     width: 198px;
-    height: 51px;
+    height: 52px;
   }
 
   .header__menu-button {
@@ -213,8 +326,16 @@
   }
 
   .header__button-list {
+    display: flex;
+    right: 50%;
+
     order: 2;
-    padding: 0;
+    width: 405px;
+    margin: 0;
+    margin-right: -$desktop-width/2;
+    padding: 35px 60px;
+
+    background-color: $bg-dark;
   }
 
   .header__button-item {
@@ -226,7 +347,7 @@
     width: 400px;
     margin-top: 89px;
     margin-right: auto;
-    margin-left: 67px;
+    margin-left: 25px;
     margin-bottom: 330px;
 
     text-align: left;
@@ -235,16 +356,26 @@
 
     &--secondary {
       width: auto;
-      margin: 99px 0 0 66px;
+      margin: 99px 0 0 126px;
     }
   }
 
   .header__back-button {
     order: 2;
+    margin-right: 60px;
     padding: 40px 124px 0 0;
 
     &::after {
       right: 63px;
+    }
+
+    &:hover,
+    &:focus {
+      opacity: 0.6;
+    }
+
+    &:active {
+      opacity: 0.3;
     }
   }
 }
