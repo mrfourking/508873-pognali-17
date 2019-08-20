@@ -14,3 +14,10 @@
   font: inherit;
   color: $text-dark;
 }
+
+@media (min-width: $tablet-width) {
+  .countries-list__link {
+    font-size: 20px;
+    line-height: 30px;
+  }
+}

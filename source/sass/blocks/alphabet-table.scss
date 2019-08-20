@@ -10,18 +10,54 @@
 }
 
 .alphabet-table__item {
-  padding: 16px 20px;
+  padding: 12px 16px;
+
+  color: $title-dark;
+  text-align: center;
+  vertical-align: middle;
 
   border: 1px solid $border-grey;
+
+  &--current {
+    color: #ffffff;
+
+    background-color: $bg-dark;
+  }
 }
 
 .alphabet-table__radio-label {
   font-size: 14px;
   line-height: 18px;
   font-weight: 600;
-  color: $title-dark;
 
-  &--current {
-    color: #ffffff;
+  // &--current {
+  //   color: #ffffff;
+  // }
+}
+
+@media (min-width: $tablet-width) {
+  .alphabet-table {
+    background-color: transparent;
+
+    border: none;
+  }
+
+  .alphabet-table__item {
+    padding: 11px 15px;
+
+    color: rgba($title-dark, 0.3);
+
+    background-color: transparent;
+
+    border: none;
+
+    &--current {
+      color: $title-dark;
+    }
+  }
+
+  .alphabet-table__radio-label {
+    font-size: 60px;
+    line-height: 60px;
   }
 }

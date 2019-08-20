@@ -220,12 +220,14 @@
       background-color: $bg-dark-light;
     }
 
-    &--menu-open {
-      background-color: #ffffff;
-    }
-
     &--secondary {
       display: flex;
+
+      background-color: $bg-dark;
+    }
+
+    &--menu-open {
+      background-color: #ffffff;
     }
 
     &--nojs {
