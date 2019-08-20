@@ -35,6 +35,15 @@
   width: 105px;
   margin-left: 25px;
   margin-bottom: 49px;
+
+  &--business {
+    width: 100%;
+    margin: 0;
+    margin-bottom: 35px;
+    padding: 0;
+
+    text-align: center;
+  }
 }
 
 .rates__list {
@@ -45,6 +54,11 @@
   padding-right: 45px;
 
   counter-reset: rates-counter;
+
+  &--business {
+    margin: 0;
+    padding: 0;
+  }
 }
 
 .rates__item {
@@ -104,13 +118,44 @@
 .rates__button {
   margin-bottom: 40px;
   margin-left: 25px;
+
+  &--close {
+    margin: 0;
+    padding: 18px 0;
+
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: $title-dark;
+
+    background-color: $bg-rates-button-close;
+
+    @include section-border-radius(18px);
+    border: none;
+  }
 }
 
 .rates__business {
   display: none;
+  position: absolute;
+  z-index: 10;
+  bottom: 20px;
+  left: 50%;
+
+  flex-direction: column;
+  width: 270px;
+  margin-left: -135px;
+
   background-color: #ffffff;
 
   border-radius: 18px;
+
+  box-shadow: 0 20px 50px 0 rgba(29, 46, 91, 0.1);
+
+  &--active {
+    display: flex;
+  }
 }
 
 .rates__business-wrap {
@@ -151,6 +196,11 @@
 
     font-size: 28px;
     line-height: 33px;
+
+    &--business {
+      margin: 0;
+      padding: 0;
+    }
   }
 
   .rates__item {
@@ -194,6 +244,30 @@
 
       border-radius: 50%;
     }
+
+    &--close {
+      margin: 0;
+      padding: 42px 0;
+
+      text-transform: none;
+
+      @include section-border-radius(30px);
+
+      &::before {
+        display: none;
+      }
+    }
+  }
+
+  .rates__business {
+    width: 688px;
+    margin-left: -344px;
+
+    border-radius: 30px;
+  }
+
+  .rates__business-wrap {
+    padding: 54px 91px 51px;
   }
 }
 
@@ -217,14 +291,37 @@
 
   .rates__title {
     margin-bottom: 137px;
+
+    &--business {
+      margin-bottom: 50px;
+    }
   }
 
   .rates__list {
     padding: 0 345px 0 162px;
+
+    &--business {
+      padding: 0;
+    }
   }
 
   .rates__button {
     margin-bottom: 167px;
     margin-left: 72px;
+
+    &--close {
+      margin: 0;
+    }
+  }
+
+  .rates__business {
+    bottom: 115px;
+
+    width: 750px;
+    margin-left: -375px;
+  }
+
+  .rates__business-wrap {
+    padding: 54px 60px 51px;
   }
 }

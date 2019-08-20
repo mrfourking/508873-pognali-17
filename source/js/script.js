@@ -1,3 +1,5 @@
+/*Главное меню */
+
 var header = document.querySelector(".header");
 var mainMenuButton = header.querySelector(".header__menu-button");
 var menuButtonIcon = mainMenuButton.querySelectorAll(".header__menu-icon");
@@ -23,4 +25,22 @@ mainMenuButton.addEventListener("click", function(evt) {
   mainMenu.classList.toggle("main-menu--open");
   menuBar.classList.toggle("header__scroll-wrap--menu-open");
   loginButton.classList.toggle("header__button-list--menu-open");
+});
+
+/* Бизнес-тарифы */
+
+var ratesButton = document.querySelector(".rates__button");
+var ratesBusiness = document.querySelector(".rates__business");
+var ratesButtonClose = ratesBusiness.querySelector(".rates__button");
+
+ratesButton.addEventListener("click", function(evt) {
+  evt.preventDefault();
+
+  ratesBusiness.classList.add("rates__business--active");
+});
+
+ratesButtonClose.addEventListener("click", function(evt) {
+  evt.preventDefault();
+
+  ratesBusiness.classList.remove("rates__business--active");
 });
