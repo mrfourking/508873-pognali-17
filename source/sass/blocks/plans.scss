@@ -1,6 +1,7 @@
 .plans {
-  @include section-padding(30px);
+  margin-bottom: -25px;
   padding-top: 30px;
+  padding-bottom: 45px;
 
   background-color: $bg-plans;
 
@@ -8,7 +9,41 @@
   border-top-right-radius: 25px;
 }
 
+.plans__title {
+  margin-bottom: 35px;
+}
+
 .plans__list {
   margin: 0;
   padding: 0;
+
+  list-style: none;
+
+  counter-reset: plan-card-counter;
+}
+
+.plans__item {
+  margin-bottom: 10px;
+}
+
+@media (min-width: $tablet-width) {
+  .plans {
+    padding-top: 65px;
+    padding-bottom: 90px;
+  }
+
+  .plans__title {
+    margin-bottom: 55px;
+  }
+
+  .plans__list {
+    margin: 0 35px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .plans__title,
+  .plans__list {
+    margin-left: 65px;
+  }
 }
