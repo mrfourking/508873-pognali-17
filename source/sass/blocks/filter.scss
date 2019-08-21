@@ -190,6 +190,7 @@
   }
 
   .filter__wrap {
+    display: flex;
     flex-direction: row;
 
     &--transport,
@@ -297,6 +298,7 @@
   }
 
   .filter__wrap {
+    display: none;
     flex-direction: column;
 
     &--transport,
@@ -307,6 +309,11 @@
 
     &--level {
       margin-bottom: 43px;
+    }
+
+    &--nojs,
+    &--open {
+      display: flex;
     }
   }
 

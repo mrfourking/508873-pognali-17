@@ -28,6 +28,10 @@
   }
 
   &--form {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
     background-color: transparent;
   }
 }
@@ -37,6 +41,13 @@
     position: absolute;
     top: 15px;
     left: 18px;
+
+    border-radius: 50%;
+  }
+
+  &--form {
+    margin-right: 20px;
+    margin-bottom: 20px;
 
     border-radius: 50%;
   }
@@ -112,6 +123,19 @@
     margin-bottom: 25px;
     padding: 0 70px 0 25px;
   }
+
+  &--editable {
+    overflow: auto;
+    resize: none;
+    width: 100%;
+    margin: 0;
+    padding: 25px;
+
+    background-color: transparent;
+
+    border: 1px solid $filter-text-border;
+    border-radius: 9px;
+  }
 }
 
 .travelmate-card__hashtag-link {
@@ -131,6 +155,21 @@
   &--transport {
     margin-bottom: 0;
   }
+
+  &--form,
+  &--form-tags {
+    margin-left: 0;
+
+    color: $title-dark;
+    text-transform: uppercase;
+
+    background-color: $bg-light;
+  }
+
+  &--form-tags {
+    margin-top: 0;
+    margin-bottom: -10px;
+  }
 }
 
 .travelmate-card__transport-wrap {
@@ -143,6 +182,18 @@
   margin-bottom: 15px;
 
   border-top: 1px solid $bg-light;
+
+  &--form {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 0;
+    padding: 25px;
+    padding-top: 0;
+
+    border: 1px solid $filter-text-border;
+    border-radius: 9px;
+  }
 }
 
 .travelmate-card__transport {
@@ -170,12 +221,19 @@
 
   border-radius: 50%;
 
-  &--catalog {
+  &--catalog,
+  &--form {
     position: relative;
     width: 45px;
     height: 45px;
 
     background-color: transparent;
+  }
+
+  &--form {
+    width: 100px;
+    height: 100px;
+    margin-top: -47px;
   }
 }
 
@@ -223,9 +281,26 @@
   }
 
   &--form {
+    top: 25px;
+    left: 30px;
+
     font-size: 38px;
     line-height: 38px;
     color: $bg-dark;
+
+    border-color: $bg-dark;
+  }
+
+  &--small-form {
+    top: 66px;
+    left: 35px;
+
+    font-size: 18px;
+    line-height: 22px;
+    font-weight: 400;
+    color: $text-dark;
+
+    border: none;
   }
 }
 
@@ -235,6 +310,12 @@
   order: 3;
   width: 100%;
   padding: 0 20px;
+
+  &--form {
+    order: 0;
+    margin-bottom: 33px;
+    padding: 0;
+  }
 }
 
 .travelmate-card__button {
@@ -246,6 +327,8 @@
     width: 100%;
 
     color: $bg-dark;
+
+    background-color: $bg-plans;
   }
 }
 
@@ -336,6 +419,14 @@
   text-transform: uppercase;
 }
 
+.travelmate-card__wrap {
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 25px;
+}
+
 @media (min-width: $tablet-width) {
   .travelmate-card {
 
@@ -351,6 +442,7 @@
       flex-wrap: wrap;
       justify-content: space-between;
       align-items: flex-start;
+      padding: 0 35px;
     }
   }
 
@@ -366,6 +458,15 @@
       margin-left: 35px;
 
       border-radius: 18px;
+    }
+
+    &--form {
+      width: 94px;
+      height: 94px;
+      margin-right: 0;
+      margin-bottom: 50px;
+
+      border-radius: 6px;
     }
   }
 
@@ -416,11 +517,29 @@
 
       border-bottom: none;
     }
+
+    &--editable {
+      width: 100%;
+      padding: 22px;
+    }
   }
 
   .travelmate-card__section-label {
     &--transport {
       display: none;
+    }
+
+    &--form {
+      margin-top: 0;
+      margin-bottom: -15px;
+
+      font-size: 20px;
+      line-height: 20px;
+    }
+
+    &--form-tags {
+      margin-bottom: 0;
+      margin-top: -10px;
     }
   }
 
@@ -437,6 +556,14 @@
 
       border: none;
     }
+
+    &--form {
+      flex-direction: column-reverse;
+      width: 307px;
+      margin: 0;
+      padding: 25px;
+      padding-bottom: 0;
+    }
   }
 
   .travelmate-card__transport {
@@ -452,6 +579,14 @@
       margin-right: 35px;
       width: 60px;
       height: 60px;
+    }
+
+    &--form {
+      order: -1;
+      width: 95px;
+      height: 95px;
+      margin-top: -20px;
+      margin-left: 0;
     }
   }
 
@@ -474,7 +609,13 @@
     }
 
     &--form {
-      order: -1;
+      top: 23px;
+      left: 27px;
+    }
+
+    &--small-form {
+      top: 63px;
+      left: 32px;
     }
   }
 
@@ -485,11 +626,22 @@
     margin-top: -50px;
     margin-bottom: 31px;
     margin-left: 235px;
+
+    &--form {
+      margin: 0;
+      margin-bottom: 50px;
+    }
   }
 
   .travelmate-card__button {
     padding: 10px 32px;
     border-radius: 25px;
+
+    &--change-photo {
+      padding: 15px;
+
+      border-radius: 8px;
+    }
   }
 
   .travelmate-card__like-button {
@@ -511,6 +663,10 @@
       padding-left: 35px;
     }
   }
+
+  .travelmate-card__wrap {
+    flex-direction: column;
+  }
 }
 
 @media (min-width: $desktop-width) {
@@ -520,6 +676,10 @@
     &--catalog {
       padding: 0;
       justify-content: flex-start;
+    }
+
+    &--form {
+      background-color: transparent;
     }
 
     &:hover {
@@ -537,6 +697,14 @@
     &:hover > .travelmate-card__level-wrap {
       z-index: 10;
     }
+
+    &--form:hover {
+      box-shadow: none;
+    }
+
+    &--form:hover > img {
+      transform: none;
+    }
   }
 
   .travelmate-card__image {
@@ -550,6 +718,16 @@
 
       border-top-right-radius: 0;
       border-bottom-right-radius: 0;
+    }
+
+    &--form {
+      width: 190px;
+      height: 190px;
+      margin-right: 95px;
+      margin-bottom: 0;
+
+      @include section-top-border-radius(10px);
+      @include section-border-radius(0);
     }
   }
 
@@ -575,8 +753,30 @@
     }
   }
 
+  .travelmate-card__hashtag-list {
+    &--editable {
+      &:hover,
+      &:focus {
+        border-color: #aeb4cb;
+      }
+
+      &:active {
+        border-color: #161c35;
+      }
+    }
+  }
+
   .travelmate-card__section-label {
     display: none;
+
+    &--form {
+      display: block;
+    }
+
+    &--form-tags {
+      align-self: flex-start;
+      margin-left: 10px;
+    }
   }
 
   .travelmate-card__transport-wrap {
@@ -587,7 +787,10 @@
     margin-top: -110px;
 
     &--form {
+      flex-direction: column-reverse;
+      align-items: center;
       order: 0;
+      margin: 0;
     }
   }
 
@@ -598,12 +801,19 @@
     }
   }
 
-  .travelmate-card__level {
+  .travelmate-card__level-wrap {
     &--form {
-      order: 0;
+      margin-top: 43px;
+      margin-right: 55px;
+    }
+  }
 
-      //временно для сетки
-      background-color: #ffffff;
+  .travelmate-card__level {
+    &--form,
+    &--small-form {
+      color: #ffffff;
+
+      border-color: #ffffff;
     }
   }
 
@@ -611,6 +821,37 @@
     order: 2;
     width: auto;
     margin: -97px 90px 0 321px;
+
+    &--form {
+      order: 0;
+      justify-content: flex-end;
+      width: 100%;
+      margin: 0;
+      margin-bottom: 26px;
+    }
+  }
+
+  .travelmate-card__button {
+    &--change-photo {
+      width: auto;
+      margin-right: 95px;
+      padding: 8px 70px;
+
+      @include section-top-border-radius(0);
+
+      &:hover,
+      &:focus {
+        background-color: #d1d7e9;
+      }
+
+      &:active {
+        color: rgba($title-dark, 0.3);
+      }
+    }
+  }
+
+  .travelmate-card__button-label {
+    display: none;
   }
 
   .travelmate-card__like-button {
@@ -640,5 +881,11 @@
     &--catalog {
       flex-direction: column;
     }
+  }
+
+  .travelmate-card__wrap {
+    width: 730px;
+    margin-right: 142px;
+    margin-bottom: 65px;
   }
 }
