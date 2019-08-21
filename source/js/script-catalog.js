@@ -11,14 +11,14 @@ var loginButton = header.querySelector(".header__button-list");
 header.classList.remove("header--nojs");
 mainMenuButton.classList.remove("header__menu-button--nojs")
 mainMenu.classList.remove("main-menu--nojs");
-loginMenuButton.classList.remove ("main-menu__button--nojs");
+loginMenuButton.classList.remove("main-menu__button--nojs");
 menuBar.classList.remove("header__scroll-wrap--nojs");
 loginButton.classList.remove("header__button-list--nojs");
 
-mainMenuButton.addEventListener("click", function(evt) {
+mainMenuButton.addEventListener("click", function (evt) {
   evt.preventDefault();
 
-  for(var i=0; i < menuButtonIcon.length; i++){
+  for (var i = 0; i < menuButtonIcon.length; i++) {
     menuButtonIcon[i].classList.toggle("header__menu-icon--active");
   }
 
@@ -39,22 +39,22 @@ var countryFilterWrap = document.querySelector(".country-filter__wrap");
 continents.classList.remove("country-filter__continents--nojs");
 countryFilterWrap.classList.remove("country-filter__wrap--nojs");
 
-for (var i=0; i < buttonIcon.length; i++) {
+for (var i = 0; i < buttonIcon.length; i++) {
   buttonIcon[i].classList.toggle("country-filter__button-icon--active");
 }
 
-for (var i=0; i < buttonLabel.length; i++) {
+for (var i = 0; i < buttonLabel.length; i++) {
   buttonLabel[i].classList.toggle("country-filter__button-label--active");
 }
 
-countryFilterButton.addEventListener("click", function(evt) {
+countryFilterButton.addEventListener("click", function (evt) {
   evt.preventDefault();
 
-  for (var i=0; i < buttonIcon.length; i++) {
+  for (var i = 0; i < buttonIcon.length; i++) {
     buttonIcon[i].classList.toggle("country-filter__button-icon--active");
   }
 
-  for (var i=0; i < buttonLabel.length; i++) {
+  for (var i = 0; i < buttonLabel.length; i++) {
     buttonLabel[i].classList.toggle("country-filter__button-label--active");
   }
 
@@ -62,17 +62,38 @@ countryFilterButton.addEventListener("click", function(evt) {
   countryFilterWrap.classList.toggle("country-filter__wrap--open");
 });
 
-countryFilterButtonClose.addEventListener("click", function(evt) {
+countryFilterButtonClose.addEventListener("click", function (evt) {
   evt.preventDefault();
 
-  for (var i=0; i < buttonIcon.length; i++) {
+  for (var i = 0; i < buttonIcon.length; i++) {
     buttonIcon[i].classList.toggle("country-filter__button-icon--active");
   }
 
-  for (var i=0; i < buttonLabel.length; i++) {
+  for (var i = 0; i < buttonLabel.length; i++) {
     buttonLabel[i].classList.toggle("country-filter__button-label--active");
   }
 
   continents.classList.remove("country-filter__continents--open");
   countryFilterWrap.classList.remove("country-filter__wrap--open");
 });
+
+/* Фильтр попутчиков */
+
+var filterButton = document.querySelectorAll(".filter__wrap-button");
+var filterWrap = document.querySelectorAll(".filter__wrap");
+
+for (var i = 0; i < filterWrap.length; i++) {
+  filterWrap[i].classList.remove("filter__wrap--nojs");
+}
+
+for (var i = 0; i < filterButton.length; i++) {
+  filterButton[i].addEventListener("click", setHandler(i), false);
+}
+
+function setHandler(i) {
+  return function (evt) {
+    evt.preventDefault();
+
+    filterWrap[i].classList.toggle("filter__wrap--open");
+  };
+};

@@ -46,7 +46,7 @@
 }
 
 .filter__wrap {
-  display: flex;
+  display: none;
   flex-direction: column;
   align-content: flex-start;
   padding: 8px 0;
@@ -56,6 +56,11 @@
     flex-direction: row;
     flex-wrap: wrap;
     margin-bottom: 11px;
+  }
+
+  &--nojs,
+  &--open {
+    display: flex;
   }
 }
 
