@@ -5,8 +5,7 @@
 
   background-color: $bg-plans;
 
-  border-top-left-radius: 25px;
-  border-top-right-radius: 25px;
+  @include section-top-border-radius(25px);
 }
 
 .plans__title {
@@ -42,6 +41,10 @@
 }
 
 @media (min-width: $desktop-width) {
+  .plans {
+    @include section-top-border-radius(50px);
+  }
+
   .plans__title,
   .plans__list {
     margin-left: 65px;

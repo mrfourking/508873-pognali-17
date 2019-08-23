@@ -23,6 +23,14 @@
 
     background-color: $bg-dark;
   }
+
+  &--form {
+    padding: 12px;
+  }
+
+  &--current-form {
+    background-color: $bg-light;
+  }
 }
 
 .alphabet-table__radio-label {

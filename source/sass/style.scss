@@ -3,7 +3,6 @@
 @import "variables.scss";
 @import "mixins.scss";
 @import "common.scss";
-@import "blocks/visually-hidden.scss";
 @import "blocks/container.scss";
 @import "blocks/button.scss";
 @import "blocks/title.scss";
@@ -39,8 +38,9 @@
 @import "blocks/plans.scss";
 @import "blocks/plan-card.scss";
 @import "blocks/create-plan.scss";
+@import "blocks/country-select.scss";
 @import "blocks/steps-list.scss";
 @import "blocks/find-textfield.scss";
 @import "blocks/calendar.scss";
-@import "blocks/country-select.scss";
 @import "blocks/footer.scss";
+@import "blocks/visually-hidden.scss";
