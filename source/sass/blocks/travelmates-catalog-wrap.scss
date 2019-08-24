@@ -1,4 +1,6 @@
 .travelmates-catalog-wrap {
+  padding-top: 25px;
+
   background-color: $bg-light;
 }
 
@@ -7,5 +9,6 @@
     display: flex;
     flex-direction: row-reverse;
     align-items: flex-start;
+    padding-top: 77px;
   }
 }

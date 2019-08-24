@@ -27,3 +27,16 @@
     }
   }
 }
+
+@media (min-width: $desktop-width) {
+  .section-intro__link {
+    &:hover,
+    &:focus {
+      color: $bg-button-orange;
+    }
+
+    &:active {
+      opacity: 0.3;
+    }
+  }
+}

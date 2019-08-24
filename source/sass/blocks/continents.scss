@@ -7,16 +7,37 @@
 
 .continents__item {
   margin-right: 25px;
+  margin-bottom: 10px;
 }
 
 .continents__link {
   font-size: 16px;
   line-height: 22px;
   font-weight: 700;
-  color: rgba($bg-dark-light, 0.3);
+  color: rgba($title-dark, 0.3);
   text-transform: uppercase;
 
   &--active {
-    color: $bg-dark-light;
+    color: $title-dark;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .continents__link {
+    font-size: 20px;
+    line-height: 24px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .continents__link {
+    &:hover,
+    &:focus {
+      color: rgba($title-dark, 0.6);
+    }
+
+    &:active {
+      color: $title-dark;
+    }
   }
 }

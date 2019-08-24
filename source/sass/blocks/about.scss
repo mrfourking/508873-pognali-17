@@ -27,6 +27,8 @@
   .about {
     background-image: url("../../img/about-tablet@1x.png");
     background-position: 85% 25%;
+
+    @include section-border-radius(60px);
   }
 
   .about__wrap {

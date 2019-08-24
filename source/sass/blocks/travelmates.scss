@@ -88,6 +88,8 @@
 
     border-top-left-radius: 18px;
     border-bottom-left-radius: 18px;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
   }
 
   &--forward {
@@ -95,6 +97,8 @@
     padding: 25px 67px;
     background-color: #ffffff;
 
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
     border-top-right-radius: 18px;
     border-bottom-right-radius: 18px;
   }
@@ -137,7 +141,10 @@
     background-image: url("../../img/travelmates-back-tablet.png");
     background-position: 35% 13%;
 
+    @include section-border-radius(60px);
+
     &--catalog {
+      padding-top: 40px;
       background: none;
     }
   }
@@ -237,6 +244,8 @@
 
     &--catalog {
       display: flex;
+      margin-right: 85px;
+      padding-top: 0;
 
       background: none;
     }

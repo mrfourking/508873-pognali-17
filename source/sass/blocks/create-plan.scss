@@ -1,8 +1,25 @@
 .create-plan {
-  @include section-padding(283px);
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
   padding-top: 30px;
+  padding-bottom: 283px;
 
   background-color: $bg-plan-add;
 
   @include section-top-border-radius();
+}
+
+.create-plan__title {
+  margin-bottom: 35px;
+}
+
+@media (min-width: $tablet-width) {
+  .create-plan__title {
+    margin-left: 35px;
+
+    font-size: 36px;
+    line-height: 50px;
+  }
 }

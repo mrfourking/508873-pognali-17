@@ -1,33 +1,223 @@
 .call-to-action {
-  @include section-padding(29px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 72px;
+  padding-bottom: 29px;
 
   background-color: $bg-dark-light;
 
   @include section-border-radius();
 }
 
-.call-to-action__contacts-link {
-  color: $bg-button;
+.call-to-action__title {
+  margin-bottom: 20px;
+}
+
+.call-to-action__intro {
+  margin: 0 35px;
+  margin-bottom: 30px;
+
+  text-align: center;
+}
+
+.call-to-action__form {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 30px;
+}
+
+.call-to-action__input {
+  width: 237px;
+  padding: 20px 52px 19px 25px;
+
+  font-size: 18px;
+  line-height: 18px;
+  font-weight: 700;
+
+  border: none;
+  border-radius: 8px;
+}
+
+.call-to-action__button {
+  position: relative;
+  margin-left: -27px;
+  padding: 30px;
+
+  border: none;
+  border-radius: 8px;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: 50%;
+    margin-top: -8px;
+    margin-right: -5px;
+
+    width: 10px;
+    height: 15px;
+
+    background-image: url("../../img/triangle-arrow-right.svg");
+    background-repeat: no-repeat;
+    background-position: 0 0;
+  }
 }
 
 .call-to-action__button-label {
   display: none;
 }
 
+.call-to-action__text-wrap {
+  margin: 25px;
+  margin-top: 0;
+  margin-bottom: 35px;
+
+  text-align: center;
+}
+
+.call-to-action__text {
+  &--desktop {
+    display: none;
+  }
+}
+
+.call-to-action__contacts {
+  margin: 0;
+}
+
+.call-to-action__contacts-link {
+  color: $bg-button;
+
+  &:last-child {
+    margin: 0;
+  }
+}
+
 @media (min-width: $tablet-width) {
-  .call-to-action__contacts {
+  .call-to-action {
+    padding-top: 75px;
+    padding-bottom: 60px;
+
+    @include section-border-radius(60px);
+  }
+
+  .call-to-action__title {
+    margin-bottom: 60px;
+  }
+
+  .call-to-action__intro {
+    margin-bottom: 65px;
+  }
+
+  .call-to-action__form {
+    width: 100%;
+    margin-bottom: 60px;
+    padding: 0 35px;
+  }
+
+  .call-to-action__input {
+    flex-grow: 1;
+    padding: 27px 35px;
+
+    font-size: 24px;
+    line-height: 24px;
+
+    border-radius: 18px;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+
+  .call-to-action__button {
+    margin: 0;
+    padding: 40px;
+
+    border-radius: 18px;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+  }
+
+  .call-to-action__text-wrap {
     display: flex;
-    flex-direction: column;
+    margin-bottom: 40px;
+  }
+
+  .call-to-action__text {
+    margin-right: 10px;
+  }
+
+  .call-to-action__contacts {
+    align-self: flex-start;
+    margin-left: 125px;
   }
 }
 
 @media (min-width: $desktop-width) {
+  .call-to-action {
+    padding-top: 110px;
+    padding-bottom: 105px;
+  }
+
+  .call-to-action__intro {
+    margin-bottom: 60px;
+  }
+
+  .call-to-action__form {
+    margin-bottom: 70px;
+    padding: 0 75px;
+  }
+
+  .call-to-action__input {
+    &:hover,
+    &:focus {
+      background-color: $bg-light;
+    }
+
+    &:active {
+      padding: 24px 32px;
+
+      color: #ffffff;
+
+      background-color: $bg-contacts;
+
+      border: 3px solid #ffffff;
+    }
+  }
+
+  .call-to-action__button {
+    padding: 25px 152px 25px 37px;
+
+    &::after {
+      top: 40px;
+      right: 46px;
+    }
+  }
+
   .call-to-action__button-label {
     display: inline;
+  }
+
+  .call-to-action__text-wrap {
+    margin-bottom: 80px;
+  }
+
+  .call-to-action__text {
+    &--nodesktop {
+      display: none;
+    }
+
+    &--desktop {
+      display: block;
+    }
   }
 
   .call-to-action__contacts {
     flex-direction: row;
     justify-content: space-around;
+    margin-left: 225px;
+  }
+
+  .call-to-action__contacts-link {
+    margin-right: 110px;
   }
 }

@@ -1,16 +1,25 @@
 .info {
-  @include section-padding(33px);
-
   background-color: $bg-light;
+}
+
+.info__card {
+  margin: 0;
+  padding-top: 22px;
+  padding-bottom: 33px;
+}
+
+@media (min-width: $tablet-width) {
+  .info__card {
+    padding-top: 64px;
+  }
 }
 
 @media (min-width: $desktop-width) {
   .info {
     position: relative;
     z-index: 10;
-    margin-top: -100px;
-
-    @include section-padding();
+    margin-top: -255px;
+    padding: 0;
 
     background-color: transparent;
   }

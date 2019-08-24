@@ -1,15 +1,366 @@
 .filter {
+  display: flex;
+  flex-direction: column;
   width: 100%;
+  margin: 0;
+
   font-size: 15px;
   line-height: 15px;
   font-weight: 400;
   color: $text-dark;
 }
 
-.filter__wrap-name {
+.filter__wrap-button {
+  position: relative;
+  padding: 13px 0;
+
   font-size: 16px;
   line-height: 22px;
   font-weight: 700;
   color: $title-dark;
   text-transform: uppercase;
+  text-align: left;
+
+  background-color: transparent;
+
+  border: none;
+  border-top: 1px solid rgba(#000000, 0.1);
+
+  &--tablet {
+    display: none;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 18px;
+    right: 0;
+
+    width: 8px;
+    height: 4px;
+
+    background-image: url("../../img/dropdown.svg");
+    background-repeat: no-repeat;
+    background-position: 0 0;
+  }
+}
+
+.filter__wrap {
+  display: none;
+  flex-direction: column;
+  align-content: flex-start;
+  padding: 8px 0;
+
+  &--transport,
+  &--level {
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-bottom: 11px;
+  }
+
+  &--nojs,
+  &--open {
+    display: flex;
+  }
+}
+
+.filter__input-name {
+  position: relative;
+  margin-bottom: 12px;
+  padding-left: 27px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: -4px;
+    left: 0;
+
+    width: 18px;
+    height: 18px;
+
+    background-color: #ffffff;
+    background-image: none;
+
+    border-radius: 3px;
+  }
+}
+
+.filter__checkbox {
+  &:checked + .filter__input-name::before {
+    background-image: url("../../img/tick.svg");
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: 9px 9px;
+  }
+}
+
+.filter__textfield-wrap {
+  position: relative;
+  display: flex;
+  margin-bottom: 24px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -6px;
+    margin-left: -13px;
+
+    width: 26px;
+    height: 11px;
+
+    background-color: $filter-text-border;
+
+    border: 5px solid #ffffff;
+  }
+}
+
+.filter__textfield {
+  width: 50%;
+  padding: 9px 15px;
+
+  font-size: 15px;
+  line-height: 15px;
+  font-weight: 600;
+  text-align: center;
+
+  background-color: #ffffff;
+
+  border: 1px solid $filter-text-border;
+
+  &--min {
+    border-right: 0.5px solid $filter-text-border;
+    border-top-left-radius: 6px;
+    border-bottom-left-radius: 6px;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+
+  &--max {
+    border-left: 0.5px solid $filter-text-border;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    border-top-right-radius: 6px;
+    border-bottom-right-radius: 6px;
+  }
+}
+
+.filter__sliders {
+  margin-bottom: 26px;
+}
+
+.filter__button {
+  width: 100%;
+  padding: 5px 39px;
+
+  background-color: #ffffff;
+
+  border: none;
+}
+
+@media (min-width: $tablet-width) {
+  .filter {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: baseline;
+    padding-top: 38px;
+
+    border-top: 1px solid rgba(#000000, 0.1);
+  }
+
+  .filter__wrap-button {
+    width: 120px;
+    padding: 0;
+
+    font-size: 20px;
+    line-height: 30px;
+
+    border: none;
+
+    &--tablet {
+      display: inline;
+      margin-left: -5px;
+    }
+
+    &::after {
+      display: none;
+    }
+  }
+
+  .filter__wrap {
+    display: flex;
+    flex-direction: row;
+
+    &--transport,
+    &--level {
+      width: 485px;
+      margin: 0;
+      padding: 0;
+    }
+
+    &--level {
+      // flex-wrap: nowrap;
+      justify-content: space-between;
+      align-items: baseline;
+      margin-bottom: 73px;
+    }
+  }
+
+  .filter__input-name {
+    width: 151px;
+    margin-right: 13px;
+    padding-left: 37px;
+
+    font-size: 20px;
+    line-height: 20px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    &::before {
+      width: 24px;
+      height: 24px;
+    }
+  }
+
+  .filter__checkbox {
+    &:checked + .filter__input-name::before {
+      background-size: 12px 12px;
+    }
+  }
+
+  .filter__textfield-wrap {
+    order: 2;
+    margin: 0;
+  }
+
+  .filter__textfield {
+    width: 75px;
+    padding: 11px 15px;
+
+    font-size: 20px;
+    line-height: 20px;
+  }
+
+  .filter__sliders {
+    margin: 0;
+  }
+
+  .filter__button {
+    position: relative;
+    padding: 10px 39px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: -37px;
+      left: 0;
+
+      width: 100%;
+      height: 1px;
+
+      background-color: rgba(#000000, 0.1);
+    }
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .filter {
+    flex-direction: column;
+    padding: 0;
+
+    border: none;
+  }
+
+  .filter__wrap-button {
+    width: 100%;
+    padding: 13px 0;
+
+    &--tablet {
+      display: none;
+    }
+
+    &::after {
+      display: block;
+    }
+
+    &:hover,
+    &:focus {
+      opacity: 0.6;
+    }
+
+    &:active {
+      opacity: 0.3;
+    }
+  }
+
+  .filter__wrap {
+    display: none;
+    flex-direction: column;
+
+    &--transport,
+    &--level {
+      flex-direction: row;
+      width: 100%;
+    }
+
+    &--level {
+      margin-bottom: 43px;
+    }
+
+    &--nojs,
+    &--open {
+      display: flex;
+    }
+  }
+
+  .filter__input-name {
+    &:hover,
+    &:focus {
+      opacity: 0.6;
+    }
+
+    &:active {
+      opacity: 0.3;
+    }
+  }
+
+  .filter__textfield-wrap {
+    order: 0;
+    margin-bottom: 36px;
+  }
+
+  .filter__textfield {
+    width: 50%;
+
+    &:hover,
+    &:focus {
+      border-color: $filter-text-border-hvr;
+    }
+
+    &:active {
+      border-color: $bg-dark;
+    }
+  }
+
+  .filter__button {
+    &::before {
+      display: none;
+    }
+
+    &:hover,
+    &:focus {
+      background-color: #ffffff;
+
+      box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.2);
+    }
+
+    &:active {
+      opacity: 0.3;
+      background-color: rgba(#000000, 0.3);
+    }
+  }
 }

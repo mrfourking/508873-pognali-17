@@ -1,4 +1,9 @@
 .find-textfield {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-bottom: 21px;
+
   font-size: 16px;
   line-height: 16px;
   font-weight: 600;
@@ -6,6 +11,177 @@
   text-transform: uppercase;
 }
 
+.find-textfield__name {
+  margin-bottom: 12px;
+}
+
 .find-textfield__short {
+  margin-left: 35px;
   color: rgba($title-dark, 0.3);
+}
+
+.find-textfield__wrap {
+  display: flex;
+}
+
+.find-textfield__button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 43px;
+  height: 43px;
+  padding: 0;
+
+  background-color: transparent;
+
+  border: 1px solid $border-grey;
+
+  &--decrease {
+    border-right: none;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+  }
+
+  &--increase {
+    border-left: none;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+  }
+
+  &--date-decrease,
+  &--date-increase {
+    justify-content: flex-start;
+    border-left: none;
+    border-right: none;
+    border-radius: 0;
+  }
+
+  &--date-increase {
+    justify-content: flex-end;
+  }
+}
+
+.find-textfield__textfield {
+  width: 134px;
+
+  font-size: 15px;
+  line-height: 15px;
+  font-weight: 600;
+  color: $title-dark;
+  text-align: center;
+
+  border: 1px solid $border-grey;
+  border-left: none;
+  border-right: none;
+  border-radius: 0;
+
+  appearance: none;
+}
+
+@media (min-width: $tablet-width) {
+  .find-textfield {
+    width: 100%;
+    margin-bottom: 35px;
+    padding-top: 25px;
+
+    border-top: 1px solid $bg-plan-add;
+
+    &:first-child {
+      order: -1;
+    }
+
+    &--date {
+      margin-top: 24px;
+      margin-bottom: 31px;
+      border: none;
+    }
+  }
+
+  .find-textfield__name,
+  .find-textfield__short {
+    margin-bottom: 28px;
+
+    font-size: 20px;
+    line-height: 20px;
+  }
+
+  .find-textfield__wrap {
+    width: 100%;
+  }
+
+  .find-textfield__button {
+    width: 70px;
+    height: 70px;
+  }
+
+  .find-textfield__button-icon {
+    width: 20px;
+    height: 20px;
+
+    &--date {
+      width: 19px;
+      height: 34px;
+    }
+  }
+
+  .find-textfield__textfield {
+    flex-grow: 1;
+
+    font-size: 20px;
+    line-height: 20px;
+
+    appearance: none;
+
+    &--date {
+      font-size: 36px;
+      line-height: 36px;
+    }
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .find-textfield {
+    align-items: center;
+    width: 485px;
+    margin-bottom: 14px;
+    padding: 0;
+    border: none;
+
+    &--date {
+      width: 100%;
+    }
+  }
+
+  .find-textfield__name {
+    width: 190px;
+    margin: 0;
+    margin-right: 32px;
+  }
+
+  .find-textfield__short {
+    order: 2;
+    margin: 0;
+  }
+
+  .find-textfield__wrap {
+    width: auto;
+    margin-right: 39px;
+  }
+
+  .find-textfield__textfield {
+    width: 40px;
+
+    &--date {
+      padding: 23px;
+      flex-grow: 1;
+    }
+  }
+
+  .find-textfield__button {
+    &--date-decrease,
+    &--date-increase {
+      width: 87px;
+      height: 87px;
+    }
+  }
 }

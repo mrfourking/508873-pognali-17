@@ -1,20 +1,101 @@
 .map__contacts-wrap {
+  position: relative;
+  z-index: 10;
   display: flex;
   flex-direction: column;
-  align-items: center;
 
-  @include section-padding(35px);
-  padding-top: 32px;
+  padding: 35px 25px;
 
   background-color: $bg-button;
 
   @include section-border-radius();
 }
 
+.map__contact {
+  position: relative;
+
+  margin: 0 60px;
+  margin-bottom: 35px;
+
+  text-transform: uppercase;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: -5px;
+    left: -60px;
+
+    width: 45px;
+    height: 45px;
+
+    background-color: $bg-contacts;
+    background-image: url("../../img/contacts-location.svg");
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: 14px 22px;
+
+    border-radius: 50%;
+  }
+}
+
+.map__button {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 19px 20px 19px 25px;
+
+  font-size: 18px;
+  line-height: 18px;
+  text-transform: none;
+
+  border-radius: 9px;
+  border: 3px solid $bg-contacts;
+}
+
+.map__image {
+  margin-top: -30px;
+}
+
 @media (min-width: $tablet-width) {
+  .map__contacts-wrap {
+    padding: 70px 40px 85px 40px;
+
+    @include section-border-radius(60px);
+  }
+
+  .map__contact {
+    margin: 0;
+    margin-left: 128px;
+    margin-bottom: 65px;
+
+    font-size: 28px;
+    line-height: 28px;
+
+    &::before {
+      top: -24px;
+      left: -94px;
+
+      width: 68px;
+      height: 68px;
+
+      background-size: 21px 32px;
+    }
+  }
+
+  .map__button {
+    margin: 0 35px;
+    padding: 22px 35px;
+
+    font-size: 24px;
+    line-height: 24px;
+
+    border-radius: 18px;
+  }
+
   .map__image {
     width: $tablet-width;
     height: 546px;
+    margin-top: -60px;
   }
 }
 
@@ -22,6 +103,38 @@
   .map__contacts-wrap {
     flex-direction: row;
     justify-content: space-between;
+    align-items: baseline;
+  }
+
+  .map__contact {
+    margin: 0;
+    margin-left: 345px;
+  }
+
+  .map__button {
+    width: 324px;
+    margin: 0;
+    margin-right: 75px;
+    padding: 22px 33px;
+
+    &:hover,
+    &:focus {
+      color: #ffffff;
+
+      background-color: $bg-contacts;
+
+      & > .map__button-icon {
+        fill: #ffffff;
+      }
+    }
+
+    &:active {
+      color: rgba(#ffffff, 0.3);
+
+      & > .map__button-icon {
+        opacity: 0.3;
+      }
+    }
   }
 
   .map__image {

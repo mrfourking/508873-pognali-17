@@ -1,4 +1,8 @@
 .plan-card {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 25px 0;
+
   font-size: 14px;
   line-height: 14px;
   font-weight: 600;
@@ -6,31 +10,143 @@
   text-transform: uppercase;
 
   background-color: #ffffff;
+
+  border-radius: 8px;
+}
+
+.plan-card__counter {
+  margin-right: 5px;
+  margin-left: 25px;
+
+  font-size: 16px;
+  line-height: 16px;
+  font-weight: 600;
+
+  &::before {
+    counter-increment: plan-card-counter;
+    content: counter(plan-card-counter) ".";
+  }
 }
 
 .plan-card__item-title {
+  margin: 0;
+  margin-bottom: 25px;
+
   font-size: 16px;
   line-height: 16px;
   font-weight: 700;
   text-transform: none;
 }
 
+.plan-card__wrap {
+  padding: 0 25px;
+
+  font-size: 14px;
+  line-height: 14px;
+  font-weight: 600;
+}
+
+.plan-card__travelmates-number {
+  margin: 0;
+  margin-bottom: 9px;
+}
+
+.plan-card__dates {
+  margin: 0;
+  margin-bottom: 25px;
+}
+
 .plan-card__link {
+  line-height: 18px;
   color: rgba(#000000, 0.3);
 }
 
 @media (min-width: $tablet-width) {
+  .plan-card {
+    justify-content: space-between;
+    padding-bottom: 20px;
+  }
+
+  .plan-card__counter {
+    margin-right: 35px;
+
+    font-size: 20px;
+    line-height: 20px;
+  }
+
+  .plan-card__item-title {
+    order: -1;
+    margin-bottom: 25px;
+    margin-left: 35px;
+
+    font-size: 24px;
+    line-height: 24px;
+  }
+
   .plan-card__wrap {
     display: flex;
     justify-content: space-between;
     align-items: baseline;
+    width: 100%;
+    padding: 20px 35px 0;
+
+    font-size: 20px;
+    line-height: 20px;
+
+    border-top: 1px solid rgba($border-grey, 0.3);
+  }
+
+  .plan-card__travelmates-number {
+    margin: 0;
+  }
+
+  .plan-card__dates {
+    margin: 0;
   }
 }
 
 @media (min-width: $desktop-width) {
   .plan-card {
     display: flex;
+    flex-wrap: nowrap;
     justify-content: space-between;
     align-items: baseline;
+    padding: 42px;
+  }
+
+  .plan-card__counter {
+    margin: 0;
+    margin-right: 38px;
+  }
+
+  .plan-card__item-title {
+    order: 0;
+    margin: 0;
+  }
+
+  .plan-card__wrap {
+    width: auto;
+    margin: 0;
+    margin-left: auto;
+    padding: 0;
+  }
+
+  .plan-card__travelmates-number {
+    margin-right: 40px;
+  }
+
+  .plan-card__dates {
+    margin-right: 130px;
+  }
+
+  .plan-card__link {
+    &:hover,
+    &:focus {
+      color: rgba(#000000, 0.6);
+    }
+
+    &:active {
+      color: rgba(#000000, 0.1);
+    }
   }
 }
