@@ -37,6 +37,8 @@
 }
 
 .travelmate-card__image {
+  display: block;
+
   &--catalog {
     position: absolute;
     top: 15px;
@@ -689,7 +691,7 @@
       transition: box-shadow 0.3s;
     }
 
-    &:hover > img {
+    &:hover .travelmate-card__image {
       transform: scale(1.05);
       z-index: 0;
       transition: transform 0.3s;
