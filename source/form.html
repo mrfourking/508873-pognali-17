@@ -15,8 +15,9 @@
         <picture>
           <source media="(min-width: 1440px)"
             srcset="img/logo-desktop-white@1x.png 1x, img/logo-desktop-white@2x.png 2x">
-          <source media="(min-width: 768px)" srcset="img/logo-tablet-white@1x.png 1x, img/logo-tablet-white@2x.png 2x">
-          <img class="header__logo" src="img/logo-mobile-white@1x.png" srcset="img/logo-mobile-white@2x.png 2x"
+          <source id="tablet-logo" media="(min-width: 768px)"
+            srcset="img/logo-tablet-blue@1x.png 1x, img/logo-tablet-blue@2x.png 2x">
+          <img class="header__logo" src="img/logo-mobile-blue@1x.png" srcset="img/logo-mobile-blue@2x.png 2x"
             width="100" height="19" alt="Логотип Погнали?">
         </picture>
       </a>
@@ -202,8 +203,10 @@
           </svg>
         </div>
         <picture>
-          <source media="(min-width: 1440px)" srcset="img/photo-account-desktop@1x.jpg 1x, img/photo-account-desktop@2x.jpg 2x">
-          <source media="(min-width: 768px)" srcset="img/photo-account-tablet@1x.jpg 1x, img/photo-account-tablet@2x.jpg 2x">
+          <source media="(min-width: 1440px)"
+            srcset="img/photo-account-desktop@1x.jpg 1x, img/photo-account-desktop@2x.jpg 2x">
+          <source media="(min-width: 768px)"
+            srcset="img/photo-account-tablet@1x.jpg 1x, img/photo-account-tablet@2x.jpg 2x">
           <img class="travelmate-card__image travelmate-card__image--form" src="img/photo-account-mobile@1x.jpg"
             srcset="img/photo-account-mobile@2x.jpg 2x" width="100" height="100" alt="Петя Демин">
         </picture>
@@ -841,8 +844,7 @@
                   <span class="visually-hidden">Выбрать страну</span>
                 </button>
                 <div class="country-select__image-wrap">
-                  <img class="country-select__image" src="img/flag-czech.svg" width="35" height="24"
-                    alt="Чехия">
+                  <img class="country-select__image" src="img/flag-czech.svg" width="35" height="24" alt="Чехия">
                   <button class="country-select__button country-select__button--delete" type="button">
                     <svg class="country-select__button-icon country-select__button-icon--delete" width="9" height="9"
                       version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
