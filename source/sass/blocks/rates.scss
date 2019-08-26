@@ -258,10 +258,10 @@
       text-transform: none;
 
       @include section-border-radius(30px);
+    }
 
-      &::before {
-        display: none;
-      }
+    &--close::before {
+      display: none;
     }
   }
 
