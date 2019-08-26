@@ -15,7 +15,7 @@ var strSrcset = header.srcset;
 var fl = true;
 
 headerLogo.src = "img/logo-mobile-white@1x.png";
-headerLogo.srcset = "img/logo-mobile-white@2x.png";
+headerLogo.srcset = "img/logo-mobile-white@2x.png 2x";
 sourceLogo.srcset = "img/logo-tablet-white@1x.png 1x, img/logo-tablet-white@2x.png 2x";
 
 header.classList.remove("header--nojs");
@@ -31,14 +31,14 @@ mainMenuButton.addEventListener("click", function (evt) {
   /*Условие для переключения логотипа*/
   if (fl) {
     headerLogo.src = "img/logo-mobile-blue@1x.png";
-    headerLogo.srcset = "img/logo-mobile-blue@2x.png";
+    headerLogo.srcset = "img/logo-mobile-blue@2x.png 2x";
 
     sourceLogo.srcset = "img/logo-tablet-blue@1x.png 1x, img/logo-tablet-blue@2x.png 2x";
 
     fl = false;
   } else {
     headerLogo.src = "img/logo-mobile-white@1x.png";
-    headerLogo.srcset = "img/logo-mobile-white@2x.png";
+    headerLogo.srcset = "img/logo-mobile-white@2x.png 2x";
     sourceLogo.srcset = "img/logo-tablet-white@1x.png 1x, img/logo-tablet-white@2x.png 2x";
 
     fl = true;

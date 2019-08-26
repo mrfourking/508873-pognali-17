@@ -70,9 +70,16 @@
 
 @media (min-width: $tablet-width) {
   .countries {
-    background-image: url("../../img/contries-back.png");
+    background-image: url("../../img/flags-back@1x.png"),
+      url("../../img/blue-back-countries.png");
     background-repeat: no-repeat;
-    background-position: 50% 23%;
+    background-position: 95% 20%, 6% 40%;
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../../img/flags-back@2x.png"),
+        url("../../img/blue-back-countries.png");
+      background-size: 289px auto, 141px auto;
+    }
 
     @include section-border-radius(60px);
   }
@@ -83,6 +90,10 @@
   .countries__button {
     margin-right: 35px;
     margin-left: 35px;
+  }
+
+  .countries__intro {
+    margin-right: 300px;
   }
 
   .countries__list {
@@ -112,7 +123,17 @@
     display: block;
     overflow: hidden;
 
-    background-image: url("../../img/contries-back-desktop.png");
+    background-image: url("../../img/flags-back@1x.png"),
+      url("../../img/blue-back-countries.png");
+    background-repeat: no-repeat;
+    background-size: auto;
+    background-position: 95% 20%, 3% 5%;
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../../img/flags-back@2x.png"),
+        url("../../img/blue-back-countries.png");
+      background-size: 289px auto, 141px auto;
+    }
   }
 
   .countries__list {
