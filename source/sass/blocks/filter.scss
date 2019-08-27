@@ -26,10 +26,6 @@
   border: none;
   border-top: 1px solid rgba(#000000, 0.1);
 
-  &--tablet {
-    display: none;
-  }
-
   &::after {
     content: "";
     position: absolute;
@@ -179,11 +175,6 @@
 
     border: none;
 
-    &--tablet {
-      display: inline;
-      margin-left: -5px;
-    }
-
     &::after {
       display: none;
     }
@@ -278,10 +269,6 @@
   .filter__wrap-button {
     width: 100%;
     padding: 13px 0;
-
-    &--tablet {
-      display: none;
-    }
 
     &::after {
       display: block;

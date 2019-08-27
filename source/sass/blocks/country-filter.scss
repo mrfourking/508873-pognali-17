@@ -227,21 +227,19 @@
       opacity: 0.3;
     }
 
-    &--close {
-      &:hover,
-      &:focus {
-        opacity: 1;
+    &--close:hover,
+    &--close:focus {
+      opacity: 1;
 
-        background-color: #c8cee8;
-      }
+      background-color: #c8cee8;
+    }
 
-      &:active {
-        color: rgba($title-dark, 0.3);
-      }
+    &--close:active {
+      color: rgba($title-dark, 0.3);
+    }
 
-      &:active > .country-filter__button-icon {
-        fill: rgba($title-dark, 0.3);
-      }
+    &--close:active > .country-filter__button-icon {
+      fill: rgba($title-dark, 0.3);
     }
   }
 

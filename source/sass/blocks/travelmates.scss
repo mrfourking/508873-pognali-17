@@ -5,9 +5,19 @@
   padding-top: 73px;
 
   background-color: $bg-dark-light;
-  background-image: url("../../img/travelmates-back-mobile.png");
+  background-image: url("../../img/blue-back-mobile.png"),
+    url("../../img/rogovaya-back-mobile@1x.png"),
+    url("../../img/smolov-back-desktop@1x.png");
   background-repeat: no-repeat;
-  background-position: 0% 4%;
+  background-position: 0% 5%, 0% 23%, 80% 5%;
+
+  @media (min-resolution: $retina-dpi),
+    (min-resolution: $retina-dppx) {
+    background-image: url("../../img/blue-back-mobile.png"),
+      url("../../img/rogovaya-back-mobile@2x.png"),
+      url("../../img/smolov-back-desktop@2x.png");
+    background-size: 113px auto, 71px auto, 143px auto;
+  }
 
   @include section-border-radius();
 
@@ -22,10 +32,19 @@
 
 .travelmates__title {
   margin-bottom: 25px;
+
+  &--main {
+    margin-left: 25px;
+  }
 }
 
 .travelmates__intro {
   margin-bottom: 25px;
+
+  &--main {
+    margin: 25px;
+    margin-top: 0;
+  }
 }
 
 .travelmates__button {
@@ -138,8 +157,20 @@
   .travelmates {
     padding-top: 143px;
 
-    background-image: url("../../img/travelmates-back-tablet.png");
-    background-position: 35% 13%;
+    background-image: url("../../img/blue-back-tablet.png"),
+      url("../../img/rogovaya-back-desktop@1x.png"),
+      url("../../img/smolov-back-desktop@1x.png");
+    background-repeat: no-repeat;
+    background-size: auto;
+    background-position: 7% 8%, 93% 9%, 7% 35%;
+
+    @media (min-resolution: $retina-dpi),
+      (min-resolution: $retina-dppx) {
+      background-image: url("../../img/blue-back-tablet.png"),
+        url("../../img/rogovaya-back-desktop@2x.png"),
+        url("../../img/smolov-back-desktop@2x.png");
+      background-size: 213px auto, 285px auto, 143px auto;
+    }
 
     @include section-border-radius(60px);
 
@@ -237,8 +268,20 @@
     overflow: hidden;
     padding-top: 133px;
 
-    background-image: url("../../img/travelmates-back-desktop.png");
-    background-position: 8% 45%;
+    background-image: url("../../img/blue-back-tablet.png"),
+      url("../../img/rogovaya-back-desktop@1x.png"),
+      url("../../img/smolov-back-desktop@1x.png");
+    background-repeat: no-repeat;
+    background-size: auto;
+    background-position: 4% 13%, 14% 90%, 41% 22%;
+
+    @media (min-resolution: $retina-dpi),
+      (min-resolution: $retina-dppx) {
+      background-image: url("../../img/blue-back-tablet.png"),
+        url("../../img/rogovaya-back-desktop@2x.png"),
+        url("../../img/smolov-back-desktop@2x.png");
+      background-size: 213px auto, 285px auto, 143px auto;
+    }
 
     @include section-border-radius(60px);
 

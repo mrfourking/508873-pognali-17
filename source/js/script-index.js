@@ -8,17 +8,43 @@ var loginMenuButton = mainMenu.querySelector(".main-menu__button");
 var menuBar = header.querySelector(".header__scroll-wrap");
 var loginButton = header.querySelector(".header__button-list");
 
+var headerLogo = header.querySelector(".header__logo");
+var sourceLogo = header.querySelector("#tablet-logo");
+var strSrc = headerLogo.src;
+var strSrcset = header.srcset;
+var fl = true;
+
+headerLogo.src = "img/logo-mobile-white@1x.png";
+headerLogo.srcset = "img/logo-mobile-white@2x.png 2x";
+sourceLogo.srcset = "img/logo-tablet-white@1x.png 1x, img/logo-tablet-white@2x.png 2x";
+
 header.classList.remove("header--nojs");
 mainMenuButton.classList.remove("header__menu-button--nojs")
 mainMenu.classList.remove("main-menu--nojs");
-loginMenuButton.classList.remove ("main-menu__button--nojs");
+loginMenuButton.classList.remove("main-menu__button--nojs");
 menuBar.classList.remove("header__scroll-wrap--nojs");
 loginButton.classList.remove("header__button-list--nojs");
 
-mainMenuButton.addEventListener("click", function(evt) {
+mainMenuButton.addEventListener("click", function (evt) {
   evt.preventDefault();
 
-  for(var i=0; i < menuButtonIcon.length; i++){
+  /*Условие для переключения логотипа*/
+  if (fl) {
+    headerLogo.src = "img/logo-mobile-blue@1x.png";
+    headerLogo.srcset = "img/logo-mobile-blue@2x.png 2x";
+
+    sourceLogo.srcset = "img/logo-tablet-blue@1x.png 1x, img/logo-tablet-blue@2x.png 2x";
+
+    fl = false;
+  } else {
+    headerLogo.src = "img/logo-mobile-white@1x.png";
+    headerLogo.srcset = "img/logo-mobile-white@2x.png 2x";
+    sourceLogo.srcset = "img/logo-tablet-white@1x.png 1x, img/logo-tablet-white@2x.png 2x";
+
+    fl = true;
+  }
+
+  for (var i = 0; i < menuButtonIcon.length; i++) {
     menuButtonIcon[i].classList.toggle("header__menu-icon--active");
   }
 
@@ -33,13 +59,13 @@ var ratesButton = document.querySelector(".rates__button");
 var ratesBusiness = document.querySelector(".rates__business");
 var ratesButtonClose = ratesBusiness.querySelector(".rates__button");
 
-ratesButton.addEventListener("click", function(evt) {
+ratesButton.addEventListener("click", function (evt) {
   evt.preventDefault();
 
   ratesBusiness.classList.add("rates__business--active");
 });
 
-ratesButtonClose.addEventListener("click", function(evt) {
+ratesButtonClose.addEventListener("click", function (evt) {
   evt.preventDefault();
 
   ratesBusiness.classList.remove("rates__business--active");

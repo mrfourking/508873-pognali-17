@@ -86,10 +86,8 @@
     border-radius: 50%;
   }
 
-  &--current {
-    &::before {
-      background-color: $title-dark;
-    }
+  &--current::before {
+    background-color: $title-dark;
   }
 }
 
@@ -334,12 +332,12 @@
 
     &--back {
       padding: 28px 0 28px 35px;
+    }
 
-      &::after {
-        right: unset;
-        left: 0;
-        background-image: url("../../img/triangle-arrow-left.svg");
-      }
+    &--back::after {
+      right: unset;
+      left: 0;
+      background-image: url("../../img/triangle-arrow-left.svg");
     }
   }
 

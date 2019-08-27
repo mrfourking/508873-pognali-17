@@ -4,6 +4,13 @@
   background-repeat: no-repeat;
   background-position: 0 0;
 
+  @media (min-resolution: $retina-dpi),
+    (min-resolution: $retina-dppx) {
+    background-image: url("../../img/about-mobile@2x.png"),
+      url("../../img/blue-back-mobile.png");
+    background-size: 310px auto, 106px auto;
+  }
+
   @include section-border-radius();
 }
 
@@ -27,6 +34,15 @@
   .about {
     background-image: url("../../img/about-tablet@1x.png");
     background-position: 85% 25%;
+    background-size: auto;
+
+    @media (min-resolution: $retina-dpi),
+      (min-resolution: $retina-dppx) {
+      background-image: url("../../img/about-tablet@2x.png"),
+        url("../../img/blue-back-about.png");
+      background-size: 342px auto, 688px auto;
+      background-position: 100% 40%, 50% 0%;
+    }
 
     @include section-border-radius(60px);
   }
@@ -66,7 +82,16 @@
 @media (min-width: $desktop-width) {
   .about {
     background-image: url("../../img/about-desktop@1x.png");
+    background-size: auto;
     background-position: 60% 100%;
+
+    @media (min-resolution: $retina-dpi),
+      (min-resolution: $retina-dppx) {
+      background-image: url("../../img/about-desktop@2x.png"),
+        url("../../img/blue-back-tablet.png");
+      background-size: 610px auto, 212px auto;
+      background-position: 90% 100%, 5% 15%;
+    }
   }
 
   .about__wrap {

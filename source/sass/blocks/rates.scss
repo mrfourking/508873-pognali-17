@@ -28,6 +28,12 @@
     background-repeat: no-repeat;
     background-position: 0 0;
     background-size: cover;
+
+    @media (min-resolution: $retina-dpi),
+      (min-resolution: $retina-dppx) {
+      background-image: url("../../img/rates@2x.png");
+      background-size: cover;
+    }
   }
 }
 
@@ -252,10 +258,10 @@
       text-transform: none;
 
       @include section-border-radius(30px);
+    }
 
-      &::before {
-        display: none;
-      }
+    &--close::before {
+      display: none;
     }
   }
 

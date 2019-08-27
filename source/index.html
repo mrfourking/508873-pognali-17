@@ -12,7 +12,13 @@
   <header class="header header--main header--nojs container container--nopadding">
     <div class="header__scroll-wrap header__scroll-wrap--main header__scroll-wrap--nojs">
       <a class="header__link">
-        <img class="header__logo" src="img/logo-mobile-white@1x.png" width="100" height="19" alt="Логотип Погнали?">
+        <picture>
+          <source media="(min-width: 1440px)"
+            srcset="img/logo-desktop-white@1x.png 1x, img/logo-desktop-white@2x.png 2x">
+          <source id="tablet-logo" media="(min-width: 768px)" srcset="img/logo-tablet-blue@1x.png 1x, img/logo-tablet-blue@2x.png 2x">
+          <img class="header__logo" src="img/logo-mobile-blue@1x.png" srcset="img/logo-mobile-blue@2x.png 2x"
+            width="100" height="19" alt="Логотип Погнали?">
+        </picture>
       </a>
       <button class="header__menu-button header__menu-button--menu-open header__menu-button--nojs" type="button">
         <span class="visually-hidden">Открыть меню</span>
@@ -231,8 +237,12 @@
     <section class="countries container">
       <ul class="countries__list">
         <li class="country countries__item">
-          <img class="country__image" src="img/thailand-mobile@1x.jpg" width="270" height="110" alt="Море в Тайланде">
-          <img class="country__icon" src="img/thailand-flag.png" width="35" height="24" alt="Флаг Тайланда">
+          <picture>
+            <source media="(min-width: 768px)" srcset="img/thailand-desktop@1x.jpg 1x, img/thailand-desktop@2x.jpg 2x">
+            <img class="country__image" src="img/thailand-mobile@1x.jpg" srcset="img/thailand-mobile@2x.jpg 2x" width="270"
+              height="110" alt="Тайланд">
+          </picture>
+          <img class="country__icon" src="img/flag-thailand.svg" width="35" height="24" alt="Флаг Тайланда">
           <div class="country__wrap">
             <p class="country__name">Тайланд</p>
             <p class="country__counter">18321</p>
@@ -240,8 +250,12 @@
           </div>
         </li>
         <li class="country countries__item">
-          <img class="country__image" src="img/france-mobile@1x.jpg" width="270" height="110" alt="Французская улочка">
-          <img class="country__icon" src="img/france-flag.png" width="35" height="24" alt="Флаг Франции">
+          <picture>
+            <source media="(min-width: 768px)" srcset="img/france-desktop@1x.jpg 1x, img/france-desktop@2x.jpg 2x">
+            <img class="country__image" src="img/france-mobile@1x.jpg" srcset="img/france-mobile@2x.jpg 2x" width="270"
+              height="110" alt="Франция">
+          </picture>
+          <img class="country__icon" src="img/flag-france.svg" width="35" height="24" alt="Флаг Франции">
           <div class="country__wrap">
             <p class="country__name">Франция</p>
             <p class="country__counter">12518</p>
@@ -249,8 +263,12 @@
           </div>
         </li>
         <li class="country countries__item">
-          <img class="country__image" src="img/czech-mobile@1x.jpg" width="270" height="110" alt="Река в Чехии">
-          <img class="country__icon" src="img/czech-flag.png" width="35" height="24" alt="Флаг Чехии">
+          <picture>
+            <source media="(min-width: 768px)" srcset="img/czech-desktop@1x.jpg 1x, img/czech-desktop@2x.jpg 2x">
+            <img class="country__image" src="img/czech-mobile@1x.jpg" srcset="img/czech-mobile@2x.jpg 2x" width="270"
+              height="110" alt="Чехия">
+          </picture>
+          <img class="country__icon" src="img/flag-czech.svg" width="35" height="24" alt="Флаг Чехии">
           <div class="country__wrap">
             <p class="country__name">Чехия</p>
             <p class="country__counter">5326</p>
@@ -279,19 +297,23 @@
                 stroke-dasharray="188.4" stroke-dashoffset="5" />
             </svg>
           </div>
-          <img class="travelmate-card__image" src="img/firsova-mobile@1x.jpg" width="270" height="270"
-            alt="Таня Фирсова">
+          <picture>
+            <source media="(min-width: 1440px)" srcset="img/firsova-desktop@1x.jpg 1x, img/firsova-desktop@2x.jpg 2x">
+            <source media="(min-width: 768px)" srcset="img/firsova-tablet@1x.jpg 1x, img/firsova-tablet@2x.jpg 2x">
+            <img class="travelmate-card__image" src="img/firsova-mobile@1x.jpg" srcset="img/firsova-mobile@2x.jpg 2x"
+              width="270" height="270" alt="Таня Фирсова">
+          </picture>
           <ul class="travelmate-card__countries-list">
             <li class="travelmate-card__countries-item">
-              <img class="travelmate-card__countries-icon" src="img/flag-sri-lanka.png" width="35" height="24"
+              <img class="travelmate-card__countries-icon" src="img/flag-sri-lanka.svg" width="35" height="24"
                 alt="Шри-Ланка">
             </li>
             <li class="travelmate-card__countries-item">
-              <img class="travelmate-card__countries-icon" src="img/thailand-flag.png" width="35" height="24"
+              <img class="travelmate-card__countries-icon" src="img/flag-thailand.svg" width="35" height="24"
                 alt="Тайланд">
             </li>
             <li class="travelmate-card__countries-item">
-              <img class="travelmate-card__countries-icon" src="img/flag-seychelles.png" width="35" height="24"
+              <img class="travelmate-card__countries-icon" src="img/flag-seychelles.svg" width="35" height="24"
                 alt="Сейшелы">
             </li>
           </ul>
@@ -366,14 +388,19 @@
                 stroke-dasharray="188.4" stroke-dashoffset="37.68" />
             </svg>
           </div>
-          <img class="travelmate-card__image" src="img/demin-mobile@1x.jpg" width="270" height="270" alt="Петя Демин">
+          <picture>
+            <source media="(min-width: 1440px)" srcset="img/demin-desktop@1x.jpg 1x, img/demin-desktop@2x.jpg 2x">
+            <source media="(min-width: 768px)" srcset="img/demin-tablet@1x.jpg 1x, img/demin-tablet@2x.jpg 2x">
+            <img class="travelmate-card__image" src="img/demin-mobile@1x.jpg" srcset="img/demin-mobile@2x.jpg 2x"
+              width="270" height="270" alt="Петя Демин">
+          </picture>
           <ul class="travelmate-card__countries-list">
             <li class="travelmate-card__countries-item">
-              <img class="travelmate-card__countries-icon" src="img/flag-belgium.png" width="35" height="24"
+              <img class="travelmate-card__countries-icon" src="img/flag-belgium.svg" width="35" height="24"
                 alt="Бельгия">
             </li>
             <li class="travelmate-card__countries-item">
-              <img class="travelmate-card__countries-icon" src="img/czech-flag.png" width="35" height="24" alt="Чехия">
+              <img class="travelmate-card__countries-icon" src="img/flag-czech.svg" width="35" height="24" alt="Чехия">
             </li>
           </ul>
           <a class="travelmate-card__name travelmate-card__name--online" href="#">
@@ -439,12 +466,12 @@
           </ul>
         </li>
       </ul>
-      <h2 class="title travelmates__title">Попутчики</h2>
-      <p class="section-intro travelmates__intro">
+      <h2 class="title travelmates__title travelmates__title--main">Попутчики</h2>
+      <p class="section-intro travelmates__intro travelmates__intro--main">
         Все мы индивидуальны и у каждого свой взгляд на идеальный отдых.
         Одному нужен пляж и коктейль, а другому маршрут для хайкинга.
       </p>
-      <p class="section-intro section-intro--bold travelmates__intro">
+      <p class="section-intro section-intro--bold travelmates__intro travelmates__intro--main">
         Теперь можно легко найти единомышленников!
       </p>
       <a class="button travelmates__button" href="catalog.html">Показать всех</a>
@@ -563,13 +590,23 @@
           </svg>
         </a>
       </div>
-      <img class="map__image" src="img/map.jpg" width="320" height="546" alt="Мы на карте">
+      <picture>
+        <source media="(min-width: 1440px)" srcset="img/map-desktop@1x.jpg 1x, img/map-desktop@2x.jpg 2x">
+        <source media="(min-width: 768px)" srcset="img/map-tablet@1x.jpg 1x, img/map-tablet@2x.jpg 2x">
+        <img class="map__image" src="img/map-mobile@1x.jpg" srcset="img/map-mobile@2x.jpg 2x" width="320" height="546"
+          alt="Мы на карте">
+map      </picture>
     </section>
   </main>
 
   <footer class="footer container">
     <a class="footer__link">
-      <img class="footer__logo" src="img/logo-mobile-blue@1x.png" width="100" height="19" alt="Логотип Погнали?">
+      <picture>
+        <source media="(min-width: 1440px)" srcset="img/logo-desktop-blue@1x.png 1x, img/logo-desktop-blue@2x.png 2x">
+        <source media="(min-width: 768px)" srcset="img/logo-tablet-blue@1x.png 1x, img/logo-tablet-blue@2x.png 2x">
+        <img class="header__logo" src="img/logo-mobile-blue@1x.png" srcset="img/logo-mobile-blue@2x.png 2x" width="100"
+          height="19" alt="Логотип Погнали?">
+      </picture>
     </a>
     <ul class="social-list footer__social-list">
       <li class="social-list__item footer__social-item">

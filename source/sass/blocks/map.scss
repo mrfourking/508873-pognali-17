@@ -122,18 +122,19 @@
       color: #ffffff;
 
       background-color: $bg-contacts;
+    }
 
-      & > .map__button-icon {
-        fill: #ffffff;
-      }
+    &:hover > .map__button-icon,
+    &:focus > .map__button-icon {
+      fill: #ffffff;
     }
 
     &:active {
       color: rgba(#ffffff, 0.3);
+    }
 
-      & > .map__button-icon {
-        opacity: 0.3;
-      }
+    &:active > .map__button-icon {
+      opacity: 0.3;
     }
   }
 
