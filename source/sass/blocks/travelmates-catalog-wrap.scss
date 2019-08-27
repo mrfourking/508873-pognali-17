@@ -1,11 +1,15 @@
 .travelmates-catalog-wrap {
-  padding-top: 25px;
+  width: 100%;
 
   background-color: $bg-light;
 }
 
+.travelmates-catalog-wrap__container {
+  padding-top: 25px;
+}
+
 @media (min-width: $desktop-width) {
-  .travelmates-catalog-wrap {
+  .travelmates-catalog-wrap__container {
     display: flex;
     flex-direction: row-reverse;
     align-items: flex-start;

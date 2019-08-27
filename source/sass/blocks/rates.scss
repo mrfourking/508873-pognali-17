@@ -1,6 +1,15 @@
 .rates {
   position: relative;
+  width: 100%;
 
+  background-color: $bg-light;
+
+  @include section-border-radius();
+  @include outer-fill($bg-dark-light);
+}
+
+.rates__container {
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -11,11 +20,7 @@
   font-weight: 300;
   color: $text-dark;
 
-  background-color: $bg-light;
-
-  @include section-border-radius();
-
-  &::after {
+  &::before {
     content: "";
     position: absolute;
     top: 37px;
@@ -171,15 +176,17 @@
 
 @media (min-width: $tablet-width) {
   .rates {
+    @include section-border-radius(60px);
+  }
+
+  .rates__container {
     padding-top: 76px;
 
     background-image: url("../../img/rates-list-back-tablet.png");
     background-repeat: no-repeat;
     background-position: 94% 55%;
 
-    @include section-border-radius(60px);
-
-    &::after {
+    &::before {
       top: unset;
       bottom: 48px;
       right: 85px;
@@ -278,14 +285,14 @@
 }
 
 @media (min-width: $desktop-width) {
-  .rates {
+  .rates__container {
     padding-top: 110px;
 
     background-image: url("../../img/rates-list-back-desktop.png");
     background-repeat: no-repeat;
     background-position: 75% 50%;
 
-    &::after {
+    &::before {
       top: 285px;
       bottom: unset;
       right: 135px;

@@ -1,10 +1,13 @@
 .intro {
+  background: linear-gradient(to bottom, $bg-dark 50%, $bg-dark-light 50%);
+}
+
+.intro__container {
   display: flex;
   flex-direction: column;
 
   padding-top: 50px;
   padding-bottom: 39px;
-  background: linear-gradient(to bottom, $bg-dark 50%, $bg-dark-light 50%);
 }
 
 .intro__quote {
@@ -16,10 +19,13 @@
 
 @media (min-width: $tablet-width) {
   .intro {
+    background: none;
+    background-color: $bg-dark-light;
+  }
+
+  .intro__container {
     padding-top: 60px;
 
-
-    background-color: $bg-dark-light;
     background-image: url("../../img/traveller-illustration-tablet@1x.png"),
       url("../../img/globe-back-tablet@1x.jpg");
     background-repeat: no-repeat, no-repeat;
@@ -46,6 +52,10 @@
 
 @media (min-width: $desktop-width) {
   .intro {
+    background-color: transparent;
+  }
+
+  .intro__container {
     position: relative;
     z-index: 10;
     align-items: flex-end;

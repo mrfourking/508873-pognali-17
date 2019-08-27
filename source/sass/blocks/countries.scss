@@ -1,12 +1,17 @@
 .countries {
-  display: flex;
-  flex-direction: column;
-  padding-top: 73px;
-  padding-bottom: 30px;
+  position: relative;
 
   background-color: $bg-light;
 
   @include section-border-radius();
+  @include outer-fill($bg-dark-light);
+}
+
+.countries__container {
+  display: flex;
+  flex-direction: column;
+  padding-top: 73px;
+  padding-bottom: 30px;
 }
 
 .countries__title {
@@ -70,6 +75,10 @@
 
 @media (min-width: $tablet-width) {
   .countries {
+    @include section-border-radius(60px);
+  }
+
+  .countries__container {
     background-image: url("../../img/flags-back@1x.png"),
       url("../../img/blue-back-countries.png");
     background-repeat: no-repeat;
@@ -80,8 +89,6 @@
         url("../../img/blue-back-countries.png");
       background-size: 289px auto, 141px auto;
     }
-
-    @include section-border-radius(60px);
   }
 
   .countries__title,
@@ -119,7 +126,7 @@
 }
 
 @media (min-width: $desktop-width) {
-  .countries {
+  .countries__container {
     display: block;
     overflow: hidden;
 

@@ -1,10 +1,23 @@
 .travelmates {
+  position: relative;
+  width: 100%;
+  background-color: $bg-dark-light;
+
+  @include section-border-radius();
+  @include outer-fill();
+
+  &--catalog {
+    background-color: $bg-light;
+    background-image: none;
+  }
+}
+
+.travelmates__container {
   display: flex;
   flex-direction: column;
 
   padding-top: 73px;
 
-  background-color: $bg-dark-light;
   background-image: url("../../img/blue-back-mobile.png"),
     url("../../img/rogovaya-back-mobile@1x.png"),
     url("../../img/smolov-back-desktop@1x.png");
@@ -19,14 +32,9 @@
     background-size: 113px auto, 71px auto, 143px auto;
   }
 
-  @include section-border-radius();
-
   &--catalog {
     padding-top: 28px;
     padding-bottom: 285px;
-
-    background-color: $bg-light;
-    background-image: none;
   }
 }
 
@@ -155,6 +163,10 @@
 
 @media (min-width: $tablet-width) {
   .travelmates {
+    @include section-border-radius(60px);
+  }
+
+  .travelmates__container {
     padding-top: 143px;
 
     background-image: url("../../img/blue-back-tablet.png"),
@@ -171,8 +183,6 @@
         url("../../img/smolov-back-desktop@2x.png");
       background-size: 213px auto, 285px auto, 143px auto;
     }
-
-    @include section-border-radius(60px);
 
     &--catalog {
       padding-top: 40px;
@@ -263,7 +273,7 @@
 }
 
 @media (min-width: $desktop-width) {
-  .travelmates {
+  .travelmates__container {
     display: block;
     overflow: hidden;
     padding-top: 133px;
@@ -282,8 +292,6 @@
         url("../../img/smolov-back-desktop@2x.png");
       background-size: 213px auto, 285px auto, 143px auto;
     }
-
-    @include section-border-radius(60px);
 
     &--catalog {
       display: flex;

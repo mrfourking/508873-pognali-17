@@ -1,13 +1,20 @@
 .call-to-action {
+  position: relative;
+
+  width: 100%;
+
+  background-color: $bg-dark-light;
+
+  @include section-border-radius();
+  @include outer-fill($bg-button);
+}
+
+.call-to-action__container {
   display: flex;
   flex-direction: column;
   align-items: center;
   padding-top: 72px;
   padding-bottom: 29px;
-
-  background-color: $bg-dark-light;
-
-  @include section-border-radius();
 }
 
 .call-to-action__title {
@@ -96,10 +103,12 @@
 
 @media (min-width: $tablet-width) {
   .call-to-action {
+    @include section-border-radius(60px);
+  }
+
+  .call-to-action__container {
     padding-top: 75px;
     padding-bottom: 60px;
-
-    @include section-border-radius(60px);
   }
 
   .call-to-action__title {
