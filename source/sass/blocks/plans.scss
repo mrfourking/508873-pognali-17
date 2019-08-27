@@ -1,11 +1,14 @@
 .plans {
   margin-bottom: -25px;
-  padding-top: 30px;
-  padding-bottom: 45px;
 
   background-color: $bg-plans;
 
   @include section-top-border-radius(25px);
+}
+
+.plans__container {
+  padding-top: 30px;
+  padding-bottom: 45px;
 }
 
 .plans__title {
@@ -26,7 +29,7 @@
 }
 
 @media (min-width: $tablet-width) {
-  .plans {
+  .plans__container {
     padding-top: 65px;
     padding-bottom: 90px;
   }

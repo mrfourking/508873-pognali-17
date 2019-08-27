@@ -7,8 +7,7 @@
   @include outer-fill();
 
   &--catalog {
-    background-color: $bg-light;
-    background-image: none;
+    background: none;
   }
 }
 
@@ -35,6 +34,9 @@
   &--catalog {
     padding-top: 28px;
     padding-bottom: 285px;
+
+    background-color: $bg-light;
+    background-image: none;
   }
 }
 

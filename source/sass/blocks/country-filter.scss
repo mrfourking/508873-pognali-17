@@ -1,14 +1,20 @@
 .country-filter {
+  position: relative;
+  width: 100%;
+
+  background-color: $bg-light-grey;
+
+  @include section-border-radius();
+  @include outer-fill();
+}
+
+.country-filter__container {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: baseline;
   padding-top: 15px;
   padding-bottom: 15px;
-
-  background-color: $bg-light-grey;
-
-  @include section-border-radius();
 }
 
 .country-filter__title {
@@ -123,10 +129,12 @@
 
 @media (min-width: $tablet-width) {
   .country-filter {
+    @include section-border-radius(60px);
+  }
+
+  .country-filter__container {
     padding-top: 56px;
     padding-bottom: 56px;
-
-    @include section-border-radius(60px);
   }
 
   .country-filter__title {
