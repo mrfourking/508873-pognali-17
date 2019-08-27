@@ -1,14 +1,27 @@
 .header {
   position: relative;
+  width: 100%;
+
+  background-color: $bg-dark;
+
+  @include section-border-radius();
+
+  &--main {
+    @include section-border-radius(0);
+  }
+
+  &--catalog {
+    @include outer-fill($bg-light-grey);
+  }
+}
+
+.header__container {
+  position: relative;
 
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
   padding-top: 73px;
-
-  background-color: $bg-dark;
-
-  @include section-border-radius();
 
   &--main {
 
@@ -23,8 +36,6 @@
         url("../../img/globe-back-mobile@2x.jpg");
       background-size: 192px auto, 320px auto;
     }
-
-    @include section-border-radius(0);
   }
 
   &--nojs {
@@ -36,14 +47,12 @@
   position: fixed;
   z-index: 100;
   top: 0;
-  left: 50%;
-  margin-left: -160px;
-
+  left: 0;
 
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  width: 320px;
+  width: 100%;
 
   background-color: $bg-dark;
 
@@ -62,14 +71,15 @@
 }
 
 .header__link {
-  margin-left: 25px;
+  margin-left: auto;
+  margin-right: 145px;
   padding-top: 27px;
   padding-bottom: 22px;
 }
 
 .header__menu-button {
   align-self: center;
-  margin-right: 25px;
+  margin-right: auto;
   padding: 0;
 
   background-color: transparent;
@@ -154,12 +164,6 @@
 
 @media (min-width: $tablet-width) {
   .header {
-    flex-direction: row;
-    align-items: center;
-    padding-top: 132px;
-
-    background-image: none;
-
     @include section-border-radius(60px);
 
     &--main {
@@ -169,14 +173,15 @@
     }
   }
 
+  .header__container {
+    flex-direction: row;
+    align-items: center;
+    padding-top: 132px;
+
+    background-image: none;
+  }
+
   .header__scroll-wrap {
-    left: 50%;
-    margin-left: -$tablet-width/2;
-
-    width: 440px;
-
-    @include section-padding(0, 40px);
-
     &--main {
       background-color: $bg-dark-light;
     }
@@ -196,6 +201,7 @@
   }
 
   .header__link {
+    margin-right: 165px;
     padding-top: 42px;
     padding-bottom: 37px;
   }
@@ -206,7 +212,7 @@
   }
 
   .header__menu-button {
-    padding-left: 25px;
+    padding-right: 330px;
   }
 
   .header__button-list {
@@ -223,14 +229,8 @@
     margin-right: -$tablet-width/2;
     padding: 50px 40px 47px 40px;
 
-    &--main {
-      background-color: $bg-dark-light;
-    }
-
     &--secondary {
       display: flex;
-
-      background-color: $bg-dark;
     }
 
     &--menu-open {
@@ -295,10 +295,13 @@
 
 @media (min-width: $desktop-width) {
   .header {
+    background-color: $bg-dark;
+  }
+
+  .header__container {
     padding-top: 110px;
 
     &--main {
-      background-color: $bg-dark;
       background-image: url("../../img/traveller-illustration-desktop@1x.png"),
         url("../../img/globe-back-desktop@1x.jpg");
       background-size: auto;
@@ -316,10 +319,10 @@
 
   .header__scroll-wrap {
     align-items: center;
-    width: 1035px;
-    left: 50%;
-    margin: 0;
-    margin-left: -$desktop-width/2;
+    // width: 1035px;
+    // left: 50%;
+    // margin: 0;
+    // margin-left: -$desktop-width/2;
     padding: 20px 60px;
 
     background-color: $bg-dark;
@@ -330,6 +333,7 @@
   }
 
   .header__link {
+    margin-right: 0;
     padding: 0;
   }
 
@@ -351,8 +355,6 @@
     margin: 0;
     margin-right: -$desktop-width/2;
     padding: 35px 60px;
-
-    background-color: $bg-dark;
   }
 
   .header__button-item {
