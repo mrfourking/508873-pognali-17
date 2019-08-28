@@ -10,6 +10,8 @@ var loginButton = header.querySelector(".header__button-list");
 
 var headerLogo = header.querySelector(".header__logo");
 var sourceLogo = header.querySelector("#tablet-logo");
+var webpMobile = header.querySelector("#webp-mobile");
+var webpTablet = header.querySelector("#webp-tablet");
 var strSrc = headerLogo.src;
 var strSrcset = header.srcset;
 var fl = true;
@@ -17,6 +19,8 @@ var fl = true;
 headerLogo.src = "img/logo-mobile-white@1x.png";
 headerLogo.srcset = "img/logo-mobile-white@2x.png 2x";
 sourceLogo.srcset = "img/logo-tablet-white@1x.png 1x, img/logo-tablet-white@2x.png 2x";
+webpMobile.srcset = "img/logo-mobile-white@1x.webp 1x, img/logo-mobile-white@2x.webp 2x";
+webpTablet.srcset = "img/logo-tablet-white@1x.webp 1x, img/logo-tablet-white@2x.webp 2x";
 
 header.classList.remove("header--nojs");
 mainMenuButton.classList.remove("header__menu-button--nojs")
@@ -34,12 +38,16 @@ mainMenuButton.addEventListener("click", function (evt) {
     headerLogo.srcset = "img/logo-mobile-blue@2x.png 2x";
 
     sourceLogo.srcset = "img/logo-tablet-blue@1x.png 1x, img/logo-tablet-blue@2x.png 2x";
+    webpMobile.srcset = "img/logo-mobile-blue@1x.webp 1x, img/logo-mobile-blue@2x.webp 2x";
+    webpTablet.srcset = "img/logo-tablet-blue@1x.webp 1x, img/logo-tablet-blue@2x.webp 2x";
 
     fl = false;
   } else {
     headerLogo.src = "img/logo-mobile-white@1x.png";
     headerLogo.srcset = "img/logo-mobile-white@2x.png 2x";
     sourceLogo.srcset = "img/logo-tablet-white@1x.png 1x, img/logo-tablet-white@2x.png 2x";
+    webpMobile.srcset = "img/logo-mobile-white@1x.webp 1x, img/logo-mobile-white@2x.webp 2x";
+    webpTablet.srcset = "img/logo-tablet-white@1x.webp 1x, img/logo-tablet-white@2x.webp 2x";
 
     fl = true;
   }
