@@ -16,12 +16,10 @@
   display: flex;
   justify-content: center;
   align-items: baseline;
-  margin-right: 25px;
 }
 
 .social-list__link {
-
-  background-color: $bg-button;
+  fill: #cccccc;
 
   border-radius: 50%;
 
@@ -44,8 +42,6 @@
 
   & > svg {
     display: block;
-
-    fill: $title-dark;
   }
 
   &:hover > svg,

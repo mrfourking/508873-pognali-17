@@ -357,6 +357,8 @@
 }
 
 .travelmates-card__like-heart {
+    fill: rgba($bg-dark-light, 0.3);
+
   &--pressed {
     fill: $heart-fill;
   }

@@ -56,6 +56,8 @@
 }
 
 .transport-list__icon {
+  fill: $transport-icon;
+
   &--active {
     fill: $title-dark;
   }

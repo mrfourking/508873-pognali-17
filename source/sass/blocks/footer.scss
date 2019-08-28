@@ -41,6 +41,12 @@
   margin: 0;
 }
 
+.footer__social-link {
+  background-color: $bg-button;
+
+  fill: $title-dark;
+}
+
 .footer__copyright {
   display: flex;
   justify-content: space-between;
