@@ -47,21 +47,47 @@
   }
 
   .alphabet-table__item {
-    padding: 11px 15px;
+    &--catalog {
 
-    color: rgba($title-dark, 0.3);
+      padding: 11px 15px;
 
-    background-color: transparent;
+      color: rgba($title-dark, 0.3);
 
-    border: none;
+      background-color: transparent;
+
+      border: none;
+    }
+
+    &--form {
+      width: 54px;
+      height: 70px;
+    }
 
     &--current {
       color: $title-dark;
     }
+
+    &--current-form {
+      color: #ffffff;
+
+      background-color: $title-dark;
+    }
   }
 
   .alphabet-table__radio-label {
-    font-size: 60px;
-    line-height: 60px;
+    &--catalog {
+      font-size: 60px;
+      line-height: 60px;
+    }
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .alphabet-table__item {
+    &--form {
+      width: 60px;
+      height: 70px;
+      border-spacing: 15px;
+    }
   }
 }
