@@ -1,6 +1,6 @@
 /*Главное меню */
 
-var header = document.querySelector(".header");
+var header = document.querySelector(".header__container");
 var mainMenuButton = header.querySelector(".header__menu-button");
 var menuButtonIcon = mainMenuButton.querySelectorAll(".header__menu-icon");
 var mainMenu = header.querySelector(".main-menu");
@@ -16,13 +16,12 @@ var strSrc = headerLogo.src;
 var strSrcset = header.srcset;
 var fl = true;
 
-headerLogo.src = "img/logo-mobile-white@1x.png";
-headerLogo.srcset = "img/logo-mobile-white@2x.png 2x";
+headerLogo.srcset = "img/logo-mobile-white@1x.png 1x, img/logo-mobile-white@2x.png 2x";
 sourceLogo.srcset = "img/logo-tablet-white@1x.png 1x, img/logo-tablet-white@2x.png 2x";
 webpMobile.srcset = "img/logo-mobile-white@1x.webp 1x, img/logo-mobile-white@2x.webp 2x";
 webpTablet.srcset = "img/logo-tablet-white@1x.webp 1x, img/logo-tablet-white@2x.webp 2x";
 
-header.classList.remove("header--nojs");
+header.classList.remove("header__container--nojs");
 mainMenuButton.classList.remove("header__menu-button--nojs")
 mainMenu.classList.remove("main-menu--nojs");
 loginMenuButton.classList.remove("main-menu__button--nojs");
@@ -34,8 +33,7 @@ mainMenuButton.addEventListener("click", function (evt) {
 
   /*Условие для переключения логотипа*/
   if (fl) {
-    headerLogo.src = "img/logo-mobile-blue@1x.png";
-    headerLogo.srcset = "img/logo-mobile-blue@2x.png 2x";
+    headerLogo.srcset = "img/logo-mobile-blue@1x.png 1x, img/logo-mobile-blue@2x.png 2x";
 
     sourceLogo.srcset = "img/logo-tablet-blue@1x.png 1x, img/logo-tablet-blue@2x.png 2x";
     webpMobile.srcset = "img/logo-mobile-blue@1x.webp 1x, img/logo-mobile-blue@2x.webp 2x";
@@ -43,8 +41,7 @@ mainMenuButton.addEventListener("click", function (evt) {
 
     fl = false;
   } else {
-    headerLogo.src = "img/logo-mobile-white@1x.png";
-    headerLogo.srcset = "img/logo-mobile-white@2x.png 2x";
+    headerLogo.srcset = "img/logo-mobile-white@1x.png 1x, img/logo-mobile-white@2x.png 2x";
     sourceLogo.srcset = "img/logo-tablet-white@1x.png 1x, img/logo-tablet-white@2x.png 2x";
     webpMobile.srcset = "img/logo-mobile-white@1x.webp 1x, img/logo-mobile-white@2x.webp 2x";
     webpTablet.srcset = "img/logo-tablet-white@1x.webp 1x, img/logo-tablet-white@2x.webp 2x";
