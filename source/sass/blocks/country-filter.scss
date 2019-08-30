@@ -42,10 +42,6 @@
     background-repeat: no-repeat;
     background-position: 0 0;
   }
-
-  &--desktop {
-    display: none;
-  }
 }
 
 .country-filter__button {
@@ -213,11 +209,6 @@
 
       width: 23px;
       height: 15px;
-    }
-
-    &--desktop {
-      display: inline-block;
-      margin-left: -5px;
     }
   }
 
