@@ -4,7 +4,6 @@
 <head>
   <meta charset="utf-8">
   <title>HTML Academy: Погнали</title>
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <link rel="preload" href="fonts/bloggersans.woff" as="font">
@@ -32,17 +31,17 @@
       <div class="header__scroll-wrap header__scroll-wrap--main header__scroll-wrap--nojs container">
         <a class="header__link">
           <picture>
-            <source type="image/webp" media="(min-width: 1440px)"
+            <source id="webp-desktop" type="image/webp" media="(min-width: 1440px)"
               srcset="img/logo-desktop-white@1x.webp 1x, img/logo-desktop-white@2x.webp 2x">
             <source id="webp-tablet" type="image/webp" media="(min-width: 768px)"
               srcset="img/logo-tablet-blue@1x.webp 1x, img/logo-tablet-blue@2x.webp 2x">
             <source id="webp-mobile" type="image/webp"
               srcset="img/logo-mobile-blue@1x.webp 1x, img/logo-mobile-blue@2x.webp 2x">
-            <source media="(min-width: 1440px)"
+            <source id="desktop-logo" media="(min-width: 1440px)"
               srcset="img/logo-desktop-white@1x.png 1x, img/logo-desktop-white@2x.png 2x">
             <source id="tablet-logo" media="(min-width: 768px)"
               srcset="img/logo-tablet-blue@1x.png 1x, img/logo-tablet-blue@2x.png 2x">
-            <img class="header__logo" srcset="/logo-mobile-blue@1x.png 1x, img/logo-mobile-blue@2x.png 2x" width="100"
+            <img class="header__logo" src="img/logo-mobile-blue@1x.png" srcset="img/logo-mobile-blue@2x.png 2x" width="100"
               height="19" alt="Логотип Погнали?">
           </picture>
         </a>
@@ -475,7 +474,7 @@
         </p>
         <form class="call-to-action__form" action="https://echo.htmlacademy.ru" method="POST">
           <label class="visually-hidden" for="cta-email">Email</label>
-          <input class="call-to-action__input" id="cta-email" type="email" name="cta-email" placeholder="E-mail">
+          <input class="call-to-action__input" id="cta-email" type="email" name="cta-email" placeholder="E-mail" required>
           <button class="button call-to-action__button" type="submit">
             <span class="call-to-action__button-label">Регистрация</span>
           </button>
@@ -518,7 +517,7 @@
       <div class="map__contacts-wrap">
         <div class="map__container container">
           <a class="map__contact" href="#">ул. Большая Конюшенная, 19/8</a>
-          <a class="button map__button" href="#">
+          <a class="button map__button" href="https://yandex.ru/maps/-/CGG5UHls">
             Проложить маршрут
             <svg class="map__button-icon" width="10" height="15">
               <use xlink:href="#triangle-arrow-right"></use>

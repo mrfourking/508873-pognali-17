@@ -145,11 +145,14 @@
 
       background-color: #ffffff;
     }
+
+    &--scrolled::before {
+      background-color: $bg-dark;
+    }
   }
 
   .main-menu__item {
     margin-right: 34px;
-    background-color: $bg-dark;
   }
 
   .main-menu__link {
