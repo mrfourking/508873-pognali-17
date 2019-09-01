@@ -16,6 +16,7 @@
 @media (min-width: $tablet-width) {
   .travelmates-list {
     display: flex;
+    flex-wrap: wrap;
     order: 2;
     justify-content: space-between;
     margin-bottom: 70px;
@@ -38,8 +39,8 @@
 
 @media (min-width: $desktop-width) {
   .travelmates-list {
-    float: right;
-    margin-top: 0;
+    width: 630px;
+    margin: 0;
     padding: 0;
   }
 

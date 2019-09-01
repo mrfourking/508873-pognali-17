@@ -277,9 +277,8 @@
 
 @media (min-width: $desktop-width) {
   .travelmates__container {
-    display: block;
-    overflow: hidden;
-    padding-top: 133px;
+    flex-direction: row;
+    flex-wrap: wrap;
 
     background-image: url("../../img/blue-back-tablet.png"),
       url("../../img/rogovaya-back-desktop@1x.png"),
@@ -305,6 +304,10 @@
     }
   }
 
+  .travelmates__intro-wrap {
+    margin-right: 190px;
+  }
+
   .travelmates__title {
     width: 50%;
     margin-bottom: 70px;
@@ -318,6 +321,7 @@
   .travelmates__button {
     display: block;
     width: 280px;
+    margin-top: -96px;
     margin-bottom: 134px;
 
     &--catalog {

@@ -129,8 +129,8 @@
 
 @media (min-width: $desktop-width) {
   .countries__container {
-    display: block;
-    overflow: hidden;
+    flex-direction: row;
+    flex-wrap: wrap;
 
     background-image: url("../../img/flags-back@1x.png"),
       url("../../img/blue-back-countries.png");
@@ -145,17 +145,20 @@
     }
   }
 
+  .countries__intro-wrap {
+    width: 350px;
+  }
+
   .countries__list {
-    float: left;
+    order: -1;
     width: 560px;
-    margin-left: 72px;
+    margin: 0;
+    margin-right: 175px;
   }
 
   .countries__title,
-  .countries__intro,
-  .countries__button {
-    margin-left: 60%;
-    margin-right: 15%;
+  .countries__intro {
+    margin: 0;
   }
 
   .countries__title {
@@ -167,8 +170,10 @@
   }
 
   .countries__button {
-    display: block;
     width: 277px;
+    margin-top: -86px;
+    margin-right: 310px;
     margin-bottom: 139px;
+    margin-left: auto;
   }
 }
