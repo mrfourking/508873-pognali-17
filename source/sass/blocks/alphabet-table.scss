@@ -88,6 +88,18 @@
       width: 60px;
       height: 70px;
       border-spacing: 15px;
+
+      border-radius: 5px;
+    }
+
+    &--form:hover {
+      border-color: #959bb2;
+    }
+
+    &--form:active {
+      color: #ffffff;
+
+      background-color: $title-dark;
     }
   }
 }

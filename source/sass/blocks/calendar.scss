@@ -30,11 +30,7 @@
   }
 
   &--choosen {
-    background-color: $title-dark;
-  }
-
-  &--current {
-    border: 2px solid $text-weekend;
+    background-color: #101d41;
   }
 }
 
@@ -86,6 +82,16 @@
     vertical-align: top;
 
     cursor: pointer;
+
+    &--active:hover {
+      background-color: $title-dark;
+
+      border: 2px solid $text-weekend;
+    }
+
+    &--active:hover .calendar__link {
+      color: #ffffff;
+    }
   }
 
   .calendar__link {

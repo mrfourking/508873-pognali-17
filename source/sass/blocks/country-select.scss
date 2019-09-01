@@ -152,7 +152,11 @@
   fill: rgba(#000000, 0.3);
 
   &--table {
-    fill: #ffffff;
+    fill: rgba(#ffffff, 0.3);
+  }
+
+  &--delete {
+    fill: rgba(#000000, 0.1);
   }
 }
 
@@ -338,10 +342,46 @@
   .country-select__select {
     width: 730px;
     margin-right: 85px;
+
+    &:hover {
+      border-color: #959bb2;
+    }
+
+    &:hover + .country-select__button > .country-filter__button-icon {
+      fill: rgba(#000000, 0.5);
+    }
+
+    &--disabled:hover {
+      background-color: #dfe3f0;
+    }
+
+    &--disabled:active {
+      opacity: 0.4;
+    }
   }
 
   .country-select__button {
     right: 300px;
+
+    &--delete:hover .country-select__button-icon--delete,
+    &--delete:focus .country-select__button-icon--delete {
+      fill: rgba(#000000, 0.3);
+    }
+
+    &--delete:active .country-select__button-icon--delete {
+      fill: rgba(#000000, 0.05);
+    }
+  }
+
+  .country-select__button-icon {
+    &--table:hover,
+    &--table:focus {
+      fill: #ffffff;
+    }
+
+    &--table:active {
+      fill: rgba(#ffffff, 0.1);
+    }
   }
 
   .country-select__table-wrap {

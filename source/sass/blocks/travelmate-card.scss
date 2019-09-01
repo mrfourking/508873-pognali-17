@@ -140,6 +140,14 @@
     border: 1px solid $filter-text-border;
     border-radius: 9px;
   }
+
+  &--editable:hover {
+    border-color: #aeb4cb;
+  }
+
+  &--editable:focus {
+    border-color: #161c35;
+  }
 }
 
 .travelmate-card__hashtag-link {
@@ -756,17 +764,6 @@
 
     &:active {
       opacity: 0.3;
-    }
-  }
-
-  .travelmate-card__hashtag-list {
-    &--editable:hover,
-    &--editable:focus {
-      border-color: #aeb4cb;
-    }
-
-    &--editable:active {
-      border-color: #161c35;
     }
   }
 

@@ -9,6 +9,10 @@
   font-weight: 600;
   color: $title-dark;
   text-transform: uppercase;
+
+  &--date {
+    position: relative;
+  }
 }
 
 .find-textfield__name {
@@ -21,42 +25,48 @@
 }
 
 .find-textfield__wrap {
+  position: relative;
+
   display: flex;
+  width: 100%;
 }
 
 .find-textfield__button {
+  position: absolute;
+  top: 1px;
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 43px;
-  height: 43px;
+  width: 41px;
+  height: 41px;
   padding: 0;
 
   background-color: transparent;
 
-  border: 1px solid $border-grey;
+  border: none;
+  border-radius: 5px;
 
   &--decrease {
-    border-right: none;
-    border-top-left-radius: 5px;
-    border-bottom-left-radius: 5px;
+    left: 1px;
   }
 
   &--increase {
-    border-left: none;
-    border-top-right-radius: 5px;
-    border-bottom-right-radius: 5px;
+    right: 1px;
   }
 
   &--date-decrease,
   &--date-increase {
+    width: 42px;
+    height: 42px;
+  }
+
+  &--date-decrease {
+    left: 0;
     justify-content: flex-start;
-    border-left: none;
-    border-right: none;
-    border-radius: 0;
   }
 
   &--date-increase {
+    right: 0;
     justify-content: flex-end;
   }
 }
@@ -66,7 +76,8 @@
 }
 
 .find-textfield__textfield {
-  width: 134px;
+  width: 100%;
+  padding: 12px 43px;
 
   font-size: 15px;
   line-height: 15px;
@@ -75,11 +86,20 @@
   text-align: center;
 
   border: 1px solid $border-grey;
-  border-left: none;
-  border-right: none;
-  border-radius: 0;
+  border-radius: 5px;
 
   appearance: none;
+
+  &--date {
+    border-left: none;
+    border-right: none;
+    border-radius: 0;
+  }
+
+  &::-webkit-outer-spin-button,
+  &::-webkit-inner-spin-button {
+    appearance: none;
+  }
 }
 
 @media (min-width: $tablet-width) {
@@ -114,8 +134,16 @@
   }
 
   .find-textfield__button {
-    width: 70px;
-    height: 70px;
+    width: 68px;
+    height: 68px;
+
+    &--date-decrease,
+    &--date-increase {
+      top: 25px;
+
+      width: 85px;
+      height: 85px;
+    }
   }
 
   .find-textfield__button-icon {
@@ -129,7 +157,7 @@
   }
 
   .find-textfield__textfield {
-    flex-grow: 1;
+    padding: 22px 60px;
 
     font-size: 20px;
     line-height: 20px;
@@ -168,24 +196,38 @@
   }
 
   .find-textfield__wrap {
-    width: auto;
+    width: 181px;
     margin-right: 39px;
   }
 
   .find-textfield__textfield {
-    width: 40px;
+    &:hover {
+      border-color: #959bb2;
+    }
 
-    &--date {
-      padding: 23px;
-      flex-grow: 1;
+    &:focus {
+      border-color: $bg-dark;
+    }
+
+    &--date:hover,
+    &--date:focus {
+      border-color: $border-grey;
     }
   }
 
   .find-textfield__button {
     &--date-decrease,
     &--date-increase {
-      width: 87px;
-      height: 87px;
+      top: 1px;
+    }
+
+    &:hover .find-textfield__button-icon,
+    &:focus .find-textfield__button-icon {
+      fill: rgba(#000000, 0.4);
+    }
+
+    &:active .find-textfield__button-icon {
+      fill: rgba(#000000, 0.1);
     }
   }
 }

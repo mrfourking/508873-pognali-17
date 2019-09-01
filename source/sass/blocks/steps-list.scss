@@ -471,5 +471,35 @@
 
   .steps-list__textarea {
     width: 730px;
+
+    &:hover {
+      border-color: #959bb2;
+    }
+
+    &:focus {
+      border-color: $bg-dark;
+    }
+  }
+
+  .steps-list__button {
+    &--back:hover,
+    &--back:focus {
+      color: rgba($title-dark, 0.7);
+
+      background: none;
+    }
+
+    &--back:hover::after,
+    &--back:focus::after {
+      opacity: 0.7;
+    }
+
+    &--back:active {
+      color: rgba($title-dark, 0.3);
+    }
+
+    &--back:active::after {
+      opacity: 0.3;
+    }
   }
 }

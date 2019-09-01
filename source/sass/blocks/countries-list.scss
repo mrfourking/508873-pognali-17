@@ -21,3 +21,16 @@
     line-height: 30px;
   }
 }
+
+@media (min-width: $desktop-width) {
+  .countries-list__link {
+    &:hover,
+    &:focus {
+      color: $title-dark;
+    }
+
+    &:active {
+      color: rgba($title-dark, 0.3);
+    }
+  }
+}
