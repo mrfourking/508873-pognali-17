@@ -64,7 +64,7 @@
 .travelmate-card__name {
   position: relative;
   margin: 0;
-  margin-bottom: 20px;
+  margin-bottom: 14px;
 
   font-size: 21px;
   line-height: 21px;
@@ -74,8 +74,8 @@
   &::before {
     content: "";
     position: absolute;
-    top: 6px;
-    left: -12px;
+    top: 8px;
+    left: -16px;
 
     width: 5px;
     height: 5px;
@@ -109,7 +109,8 @@
   justify-content: center;
   width: 190px;
   margin: 0;
-  margin-bottom: 20px;
+  margin-bottom: 19px;
+  margin-left: 5px;
   padding: 0;
 
   list-style: none;
@@ -210,6 +211,7 @@
 
 .travelmate-card__transport {
   margin-bottom: 22px;
+  margin-left: 12px;
 
   &--catalog {
     margin-left: 25px;
@@ -396,7 +398,8 @@
   display: flex;
   margin: 0;
   margin-top: -12px;
-  margin-bottom: 15px;
+  margin-bottom: 3px;
+  margin-left: 19px;
   padding: 0;
 
   list-style: none;
@@ -490,6 +493,7 @@
 
   .travelmate-card__name {
     position: relative;
+    margin-bottom: 21px;
 
     font-size: 24px;
     line-height: 24px;
@@ -522,6 +526,7 @@
 
   .travelmate-card__hashtag-list {
     width: 230px;
+    margin-bottom: 24px;
 
     font-size: 20px;
     line-height: 24px;
@@ -581,6 +586,8 @@
   }
 
   .travelmate-card__transport {
+    margin-bottom: 30px;
+
     &--catalog {
       flex-direction: column;
       margin: 0 auto;
@@ -588,6 +595,9 @@
   }
 
   .travelmate-card__level-wrap {
+    top: 18px;
+    left: 21px;
+
     &--catalog {
       margin-top: -10px;
       margin-right: 35px;
@@ -671,6 +681,8 @@
   }
 
   .travelmate-card__countries-list {
+    margin-bottom: 7px;
+
     &--catalog {
       flex-direction: row;
       margin-bottom: 0;
@@ -751,9 +763,11 @@
   }
 
   .travelmate-card__name {
+    margin-bottom: 19px;
+
     &::before {
       top: 9px;
-      left: -25px;
+      left: -21px;
       right: unset;
     }
 
@@ -765,6 +779,10 @@
     &:active {
       opacity: 0.3;
     }
+  }
+
+  .travelmate-card__hashtag-list {
+    margin-bottom: 24px;
   }
 
   .travelmate-card__section-label {
@@ -803,6 +821,9 @@
   }
 
   .travelmate-card__level-wrap {
+    top: 24px;
+    left: 24px;
+
     &--form {
       margin-top: 43px;
       margin-right: 55px;
@@ -878,6 +899,8 @@
 
   .travelmate-card__countries-list {
     position: relative;
+
+    margin-bottom: 12px;
 
     &--catalog {
       flex-direction: column;

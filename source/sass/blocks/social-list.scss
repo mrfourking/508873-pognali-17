@@ -54,3 +54,36 @@
     fill: rgba(#ffffff, 0.3);
   }
 }
+
+@media (min-width: $tablet-width) {
+  .social-list__link {
+    &--facebook {
+      padding: 16px 23px;
+    }
+
+    &--vkontakte {
+      padding: 22px 15px;
+    }
+
+    &--instagram {
+      padding: 18px;
+    }
+  }
+
+  .social-list__icon {
+    &--facebook {
+      width: 14px;
+      height: 28px;
+    }
+
+    &--vkontakte {
+      width: 31px;
+      height: 16px;
+    }
+
+    &--instagram {
+      width: 24px;
+      height: 24px;
+    }
+  }
+}

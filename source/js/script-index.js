@@ -109,6 +109,7 @@ window.addEventListener("scroll", function () {
     }
 
     if (window.screen.availWidth >= 1440) {
+      headerWrap[0].style.background = "transparent";
       for (var i = 0; i < mainMenuLink.length; i++) {
         mainMenuLink[i].style.color = "white";
       }

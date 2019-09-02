@@ -15,14 +15,13 @@
   display: flex;
   flex-direction: column;
 
-  padding-top: 73px;
+  padding-top: 70px;
 
-  background-color: $bg-dark-light;
   background-image: url("../../img/blue-back-mobile.png"),
     url("../../img/rogovaya-back-mobile@1x.png"),
     url("../../img/smolov-back-desktop@1x.png");
   background-repeat: no-repeat;
-  background-position: 0% 5%, 0% 23%, 80% 5%;
+  background-position: 0% 3%, -4% 25%, 86% 3%;
 
   @media (min-resolution: $retina-dpi),
     (min-resolution: $retina-dppx) {
@@ -41,28 +40,24 @@
   }
 }
 
-.travelmates__title {
-  margin-bottom: 25px;
+.travelmates__intro-wrap {
+  margin-left: 25px;
+}
 
-  &--main {
-    margin-left: 25px;
-  }
+.travelmates__title {
+  margin-bottom: 20px;
 }
 
 .travelmates__intro {
-  margin-bottom: 25px;
-
-  &--main {
-    margin: 25px;
-    margin-top: 0;
-  }
+  margin-right: 30px;
+  margin-bottom: 21px;
 }
 
 .travelmates__button {
   position: relative;
   order: 2;
   margin-bottom: 30px;
-  padding: 15px 80px 15px 34px;
+  padding: 16px 80px 16px 24px;
 
   text-transform: none;
 
@@ -72,7 +67,7 @@
     content: "";
     position: absolute;
     top: 24px;
-    right: 25px;
+    right: 23px;
 
     width: 10px;
     height: 14px;
@@ -170,14 +165,14 @@
   }
 
   .travelmates__container {
-    padding-top: 143px;
+    padding-top: 137px;
 
     background-image: url("../../img/blue-back-tablet.png"),
       url("../../img/rogovaya-back-desktop@1x.png"),
       url("../../img/smolov-back-desktop@1x.png");
     background-repeat: no-repeat;
     background-size: auto;
-    background-position: 7% 8%, 93% 9%, 7% 35%;
+    background-position: 7% 8%, 84% 8%, 6% 39%;
 
     @media (min-resolution: $retina-dpi),
       (min-resolution: $retina-dppx) {
@@ -193,16 +188,21 @@
     }
   }
 
-  .travelmates__title {
+  .travelmates__intro-wrap {
     margin-left: 35px;
+  }
+
+  .travelmates__title {
+    margin-bottom: 60px;
   }
 
   .travelmates__intro {
     width: 430px;
-    margin-left: 35px;
+    margin-bottom: 40px;
 
     &:last-child {
       width: 400px;
+      margin-bottom: 28px;
     }
   }
 
@@ -212,7 +212,7 @@
 
   .travelmates__button {
     margin: 0 35px 88px;
-    padding: 30px 50px 32px 35px;
+    padding: 28px 50px 28px 34px;
 
     font-size: 24px;
     line-height: 24px;
@@ -279,13 +279,14 @@
   .travelmates__container {
     flex-direction: row;
     flex-wrap: wrap;
+    padding-top: 126px;
 
     background-image: url("../../img/blue-back-tablet.png"),
       url("../../img/rogovaya-back-desktop@1x.png"),
       url("../../img/smolov-back-desktop@1x.png");
     background-repeat: no-repeat;
     background-size: auto;
-    background-position: 4% 13%, 14% 90%, 41% 22%;
+    background-position: 5% 13%, 17% 83%, 42% 22%;
 
     @media (min-resolution: $retina-dpi),
       (min-resolution: $retina-dppx) {
@@ -306,23 +307,24 @@
 
   .travelmates__intro-wrap {
     margin-right: 190px;
+    margin-left: 69px;
   }
 
   .travelmates__title {
-    width: 50%;
-    margin-bottom: 70px;
+    margin-bottom: 57px;
   }
 
   .travelmates__intro {
-    width: 440px;
-    margin-bottom: 50px;
+    margin: 0;
+    margin-bottom: 39px;
   }
 
   .travelmates__button {
     display: block;
     width: 280px;
-    margin-top: -96px;
+    margin-top: -91px;
     margin-bottom: 134px;
+    margin-left: 70px;
 
     &--catalog {
       margin: 0 auto;

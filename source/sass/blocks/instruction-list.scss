@@ -19,7 +19,7 @@
 .instruction-list__item {
   position: relative;
   margin-top: -12px;
-  padding: 25px 95px 40px 25px;
+  padding: 20px 95px 36px 25px;
 
   background-color: $title-orange;
 
@@ -40,13 +40,14 @@
 
   &:last-child {
     background-color: $bg-button;
+    padding-bottom: 23px;
   }
 }
 
 .instruction-list__counter {
   position: absolute;
-  top: 25px;
-  right: 22px;
+  top: 21px;
+  right: 21px;
 
   font-size: 18px;
   line-height: 18px;
@@ -129,10 +130,10 @@
     display: block;
     margin: 0;
     width: 315px;
-    padding: 30px 110px 30px 34px;
 
     &:first-child {
       width: 345px;
+      padding: 28px 110px 31px 33px;
 
       border-radius: 18px;
     }
@@ -141,6 +142,7 @@
       width: 375px;
       margin: 0;
       margin-left: -30px;
+      padding: 27px 110px 31px 30px;
 
       border-radius: 18px;
     }
@@ -149,7 +151,7 @@
       width: 375px;
       margin: 0;
       margin-left: -30px;
-      padding: 30px 150px 30px 34px;
+      padding: 27px 153px 31px 31px;
 
       border-radius: 18px;
     }
@@ -157,7 +159,7 @@
     &:last-child {
       margin: 0;
       margin-left: -30px;
-      padding: 30px 110px 30px 31px;
+      padding: 28px 110px 31px 30px;
 
       border-radius: 18px;
     }

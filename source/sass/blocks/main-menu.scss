@@ -109,11 +109,11 @@
     display: flex;
     flex-direction: row;
     align-items: flex-end;
-    width: 1140px;
+    width: 1105px;
     margin: 0;
     margin-right: auto;
     padding: 0;
-    padding-left: 149px;
+    padding-left: 147px;
     padding-right: 530px;
 
     font-size: 20px;
@@ -138,7 +138,7 @@
     &::before {
       content: "";
       position: absolute;
-      top: 10px;
+      top: 13px;
       left: -105px;
 
       width: 60px;
@@ -153,7 +153,7 @@
   }
 
   .main-menu__item {
-    margin-right: 34px;
+    margin-right: 33px;
   }
 
   .main-menu__link {

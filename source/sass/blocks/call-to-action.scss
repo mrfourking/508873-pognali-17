@@ -13,8 +13,8 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-top: 72px;
-  padding-bottom: 29px;
+  padding-top: 70px;
+  padding-bottom: 28px;
 }
 
 .call-to-action__title {
@@ -31,12 +31,12 @@
 .call-to-action__form {
   display: flex;
   align-items: flex-start;
-  margin-bottom: 30px;
+  margin-bottom: 28px;
 }
 
 .call-to-action__input {
   width: 237px;
-  padding: 20px 52px 19px 25px;
+  padding: 21px 52px 20px 25px;
 
   font-size: 18px;
   line-height: 18px;
@@ -48,8 +48,8 @@
 
 .call-to-action__button {
   position: relative;
-  margin-left: -27px;
-  padding: 30px;
+  margin-left: -28px;
+  padding: 31px;
 
   border: none;
   border-radius: 8px;
@@ -59,8 +59,8 @@
     position: absolute;
     top: 50%;
     right: 50%;
-    margin-top: -8px;
-    margin-right: -5px;
+    margin-top: -6px;
+    margin-right: -8px;
 
     width: 10px;
     height: 15px;
@@ -76,9 +76,7 @@
 }
 
 .call-to-action__text-wrap {
-  margin: 25px;
-  margin-top: 0;
-  margin-bottom: 35px;
+  margin: 0 25px 18px;
 
   text-align: center;
 }
@@ -90,6 +88,8 @@
 }
 
 .call-to-action__contacts {
+  align-items: flex-start;
+  width: 100%;
   margin: 0;
 }
 
@@ -107,7 +107,7 @@
   }
 
   .call-to-action__container {
-    padding-top: 75px;
+    padding-top: 71px;
     padding-bottom: 60px;
   }
 
@@ -121,13 +121,13 @@
 
   .call-to-action__form {
     width: 100%;
-    margin-bottom: 60px;
+    margin-bottom: 57px;
     padding: 0 35px;
   }
 
   .call-to-action__input {
     flex-grow: 1;
-    padding: 27px 35px;
+    padding: 26px 35px;
 
     font-size: 24px;
     line-height: 24px;
@@ -144,11 +144,16 @@
     border-radius: 18px;
     border-top-left-radius: 0;
     border-bottom-left-radius: 0;
+
+    &::before {
+      margin-top: -6px;
+      margin-right: -4px;
+    }
   }
 
   .call-to-action__text-wrap {
     display: flex;
-    margin-bottom: 40px;
+    margin: 0 25px 40px 35px;
   }
 
   .call-to-action__text {
@@ -156,15 +161,18 @@
   }
 
   .call-to-action__contacts {
-    align-self: flex-start;
-    margin-left: 125px;
+    margin-left: 70px;
   }
 }
 
 @media (min-width: $desktop-width) {
-  .call-to-action {
-    padding-top: 110px;
+  .call-to-action__container {
+    padding-top: 102px;
     padding-bottom: 105px;
+  }
+
+  .call-to-action__title {
+    margin-bottom: 56px;
   }
 
   .call-to-action__intro {
@@ -172,11 +180,13 @@
   }
 
   .call-to-action__form {
-    margin-bottom: 70px;
+    margin-bottom: 65px;
     padding: 0 75px;
   }
 
   .call-to-action__input {
+    padding: 26px 31px;
+
     &:hover,
     &:focus {
       background-color: $bg-light;
@@ -194,11 +204,11 @@
   }
 
   .call-to-action__button {
-    padding: 25px 152px 25px 37px;
+    padding: 25px 159px 25px 36px;
 
     &::after {
-      top: 40px;
-      right: 46px;
+      top: 39px;
+      right: 44px;
     }
   }
 
@@ -207,10 +217,12 @@
   }
 
   .call-to-action__text-wrap {
-    margin-bottom: 80px;
+    margin-bottom: 45px;
   }
 
   .call-to-action__text {
+    margin-right: 5px;
+
     &--nodesktop {
       display: none;
     }
@@ -222,8 +234,7 @@
 
   .call-to-action__contacts {
     flex-direction: row;
-    justify-content: space-around;
-    margin-left: 225px;
+    margin-left: 450px;
   }
 
   .call-to-action__contacts-link {
