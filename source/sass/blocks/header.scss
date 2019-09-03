@@ -4,7 +4,7 @@
 
   background-color: $bg-dark;
 
-  @include section-border-radius();
+  @include section-border-radius(20px);
 
   &--main {
     @include section-border-radius(0);
@@ -75,6 +75,11 @@
   margin-right: 145px;
   padding-top: 27px;
   padding-bottom: 22px;
+
+  &--secondary {
+    padding-top: 19px;
+    padding-bottom: 14px;
+  }
 }
 
 .header__menu-button {
@@ -133,7 +138,7 @@
   &--secondary {
     position: relative;
     width: auto;
-    margin: 34px auto 0 25px;
+    margin: 18px auto 3px 25px;
     padding-bottom: 9px;
 
     text-align: left;
@@ -141,8 +146,9 @@
 
   &--secondary::after {
     content: "";
+    z-index: 10;
     position: absolute;
-    bottom: -2px;
+    bottom: -5px;
     left: 0;
 
     width: 100%;
@@ -258,7 +264,7 @@
     line-height: 70px;
 
     &--secondary {
-      margin: 86px 0 0 75px;
+      margin: 85px 0 0 75px;
       padding-bottom: 63px;
     }
 
@@ -300,7 +306,7 @@
   }
 
   .header__container {
-    padding-top: 110px;
+    padding-top: 118px;
 
     &--main {
       background-image: url("../../img/traveller-illustration-desktop@1x.png"),
@@ -362,7 +368,7 @@
   .header__title {
     order: 2;
     width: 400px;
-    margin-top: 95px;
+    margin-top: 89px;
     margin-right: auto;
     margin-left: 128px;
     margin-bottom: 335px;

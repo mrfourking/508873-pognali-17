@@ -33,7 +33,7 @@
 
   &--catalog {
     padding-top: 28px;
-    padding-bottom: 285px;
+    padding-bottom: 296px;
 
     background-color: $bg-light;
     background-image: none;
@@ -79,7 +79,8 @@
 
   &--catalog {
     order: 0;
-    padding: 15px 34px 15px 80px;
+    margin-bottom: 11px;
+    padding: 13px 34px 15px 92px;
 
     text-transform: uppercase;
   }
@@ -94,7 +95,7 @@
     content: "";
     position: absolute;
     top: 15px;
-    left: 50px;
+    left: 60px;
 
     width: 18px;
     height: 18px;
@@ -183,7 +184,8 @@
     }
 
     &--catalog {
-      padding-top: 40px;
+      padding-top: 10px;
+      padding-bottom: 216px;
       background: none;
     }
   }
@@ -226,21 +228,31 @@
 
     &--catalog {
       margin: 0;
-      margin-bottom: 50px;
+      margin-bottom: 52px;
+      margin-left: 40px;
       padding: 0;
 
+      font-size: 20px;
+      line-height: 30px;
       text-align: center;
     }
 
     &--catalog::before {
-      top: 0;
-      left: 230px;
+      top: 4px;
+      left: 207px;
+
+      width: 27px;
+      height: 27px;
     }
 
     &--back,
     &--forward {
       margin: 0;
-      padding: 25px 15px;
+      padding: 25px 16px;
+    }
+
+    &--back {
+      margin-right: 10px;
     }
 
     &--back::after,
@@ -255,7 +267,7 @@
   .travelmates__pagination {
     align-items: center;
     width: 100%;
-    padding: 25px 35px 25px 28px;
+    padding: 25px 25px 25px 28px;
 
     background-color: #ffffff;
 
@@ -300,6 +312,7 @@
       display: flex;
       margin-right: 85px;
       padding-top: 0;
+      padding-bottom: 230px;
 
       background: none;
     }
@@ -327,12 +340,14 @@
     margin-left: 70px;
 
     &--catalog {
-      margin: 0 auto;
-      margin-bottom: 80px;
+      margin: 0;
+      margin-left: 323px;
+      margin-bottom: 69px;
     }
 
     &--catalog::before {
-      left: 30px;
+      top: 1px;
+      left: 23px;
     }
 
     &--back,
@@ -340,6 +355,10 @@
       width: auto;
       margin: 0;
       padding: 25px 15px;
+    }
+
+    &--back {
+      margin-right: 10px;
     }
 
     &--catalog:hover,
@@ -359,6 +378,8 @@
   }
 
   .travelmates__pagination-link {
+    margin-right: -1px;
+
     &:hover,
     &:focus {
       color: rgba($bg-dark, 0.6);
@@ -368,5 +389,9 @@
       color: $bg-dark;
       background-color: $bg-button;
     }
+  }
+
+  .travelmates__pagination-buttons {
+    margin-right: 10px;
   }
 }

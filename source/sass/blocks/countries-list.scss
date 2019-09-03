@@ -23,6 +23,10 @@
 }
 
 @media (min-width: $desktop-width) {
+  .countries-list__item {
+    margin-bottom: 1px;
+  }
+
   .countries-list__link {
     &:hover,
     &:focus {

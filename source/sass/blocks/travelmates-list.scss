@@ -1,14 +1,14 @@
 .travelmates-list {
   order: 1;
   margin: 0;
-  margin-top: 35px;
-  margin-bottom: 10px;
+  margin-top: 39px;
+  margin-bottom: 11px;
   padding: 0;
 
   list-style: none;
 
   &--catalog {
-    margin-top: 0;
+    margin: 0;
     order: 0;
   }
 }
@@ -19,14 +19,14 @@
     flex-wrap: wrap;
     order: 2;
     justify-content: space-between;
-    margin-top: 30px;
+    margin-top: 31px;
     margin-bottom: 72px;
     padding: 0 35px;
 
     &--catalog {
       flex-direction: column;
       order: 0;
-      margin-bottom: 30px;
+      margin-bottom: 1px;
       padding: 0;
     }
   }
@@ -47,6 +47,8 @@
 
     &--catalog {
       width: 100%;
+      margin-bottom: 34px;
+      padding: 0;
     }
   }
 

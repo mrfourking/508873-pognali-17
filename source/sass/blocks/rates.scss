@@ -59,7 +59,7 @@
 
 .rates__list {
   margin: 0;
-  margin-bottom: 30px;
+  margin-bottom: 27px;
   margin-left: 25px;
   padding: 0;
   padding-right: 45px;
@@ -78,7 +78,7 @@
   display: flex;
   flex-direction: column;
   margin-top: -1px;
-  padding: 10px 0;
+  padding: 11px 0;
 
   border-top: 1px solid #e1e3e9;
   border-bottom: 1px solid #e1e3e9;
@@ -203,7 +203,7 @@
   .rates__list {
     width: 100%;
     margin: 0;
-    margin-bottom: 40px;
+    margin-bottom: 34px;
     padding: 0;
     padding-right: 35px;
     padding-left: 90px;
@@ -220,7 +220,7 @@
   .rates__item {
     flex-direction: row;
     justify-content: space-between;
-    padding: 15px 0;
+    padding: 16px 0;
   }
 
   .rates__counter {
@@ -312,11 +312,16 @@
   }
 
   .rates__list {
+    margin-bottom: 38px;
     padding: 0 345px 0 162px;
 
     &--business {
       padding: 0;
     }
+  }
+
+  .rates__item {
+    padding: 15px 0;
   }
 
   .rates__button {

@@ -2,21 +2,27 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  margin-bottom: 21px;
+  margin-bottom: 18px;
 
   font-size: 16px;
   line-height: 16px;
   font-weight: 600;
   color: $title-dark;
+  letter-spacing: 1px;
   text-transform: uppercase;
+
+  &:nth-child(2) {
+    margin-bottom: 23px;
+  }
 
   &--date {
     position: relative;
+    margin-bottom: 15px;
   }
 }
 
 .find-textfield__name {
-  margin-bottom: 12px;
+  margin-bottom: 10px;
 }
 
 .find-textfield__short {
@@ -91,6 +97,12 @@
   appearance: none;
 
   &--date {
+    padding: 9px 44px;
+
+    font-size: 20px;
+    line-height: 20px;
+    font-weight: 700;
+
     border-left: none;
     border-right: none;
     border-radius: 0;
@@ -108,14 +120,20 @@
     margin-bottom: 35px;
     padding-top: 25px;
 
+    letter-spacing: 2px;
+
     border-top: 1px solid $bg-plan-add;
 
     &:first-child {
       order: -1;
     }
 
+    &:nth-child(2) {
+      margin-bottom: 0;
+    }
+
     &--date {
-      margin-top: 24px;
+      margin-top: 11px;
       margin-bottom: 31px;
       border: none;
     }
@@ -123,7 +141,7 @@
 
   .find-textfield__name,
   .find-textfield__short {
-    margin-bottom: 28px;
+    margin-bottom: 25px;
 
     font-size: 20px;
     line-height: 20px;
@@ -134,15 +152,23 @@
   }
 
   .find-textfield__button {
-    width: 68px;
+    width: 59px;
     height: 68px;
 
     &--date-decrease,
     &--date-increase {
-      top: 25px;
+      top: 26px;
 
       width: 85px;
       height: 85px;
+    }
+
+    &--date-decrease {
+      left: 15px;
+    }
+
+    &--date-increase {
+      right: 15px;
     }
   }
 
@@ -173,26 +199,29 @@
 
 @media (min-width: $desktop-width) {
   .find-textfield {
+    justify-content: flex-start;
     align-items: center;
-    width: 485px;
-    margin-bottom: 14px;
+    width: 500px;
+    margin-bottom: 15px;
     padding: 0;
     border: none;
 
     &--date {
       width: 100%;
+      margin-bottom: 0;
     }
   }
 
   .find-textfield__name {
-    width: 190px;
+    width: 200px;
     margin: 0;
-    margin-right: 32px;
+    margin-right: 20px;
   }
 
   .find-textfield__short {
     order: 2;
     margin: 0;
+    margin-right: auto;
   }
 
   .find-textfield__wrap {
@@ -219,6 +248,14 @@
     &--date-decrease,
     &--date-increase {
       top: 1px;
+    }
+
+    &--date-decrease {
+      left: 0;
+    }
+
+    &--date-increase {
+      right: 0;
     }
 
     &:hover .find-textfield__button-icon,

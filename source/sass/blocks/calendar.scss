@@ -10,7 +10,7 @@
 
 .calendar__item {
   width: 32px;
-  height: 32px;
+  height: 31px;
 
   font: inherit;
   text-align: center;
@@ -54,7 +54,7 @@
 @media (min-width: $tablet-width) {
   .calendar__item {
     width: 76px;
-    height: 70px;
+    height: 69px;
 
     font-size: 20px;
     line-height: 20px;
@@ -76,12 +76,16 @@
   .calendar__item {
     width: 144px;
     height: 72px;
-    padding: 15px;
+    padding: 14px;
 
     text-align: left;
     vertical-align: top;
 
     cursor: pointer;
+
+    &--title {
+      height: 32px;
+    }
 
     &--active:hover {
       background-color: $title-dark;
@@ -103,8 +107,10 @@
   .calendar__choosen-label {
     display: block;
     margin: 0;
-    margin-top: 2px;
+    margin-top: 6px;
+    margin-left: 2px;
 
+    letter-spacing: 1px;
     text-transform: none;
   }
 }

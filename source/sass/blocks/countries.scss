@@ -10,13 +10,13 @@
 .countries__container {
   display: flex;
   flex-direction: column;
-  padding-top: 71px;
-  padding-bottom: 30px;
+  padding-top: 69px;
+  padding-bottom: 31px;
 }
 
 .countries__intro-wrap {
   margin-left: 25px;
-  margin-bottom: 60px;
+  margin-bottom: 63px;
 }
 
 .countries__title {
@@ -55,7 +55,7 @@
 .countries__button {
   position: relative;
   order: 2;
-  padding: 16px 80px 16px 25px;
+  padding: 16px 80px 16px 24px;
 
   text-transform: none;
 
@@ -82,7 +82,7 @@
   }
 
   .countries__container {
-    padding-top: 68px;
+    padding-top: 72px;
 
     background-image: url("../../img/flags-back@1x.png"),
       url("../../img/blue-back-countries.png");
@@ -178,5 +178,9 @@
     margin-right: 240px;
     margin-bottom: 110px;
     margin-left: auto;
+
+    &::after {
+      right: 37px;
+    }
   }
 }

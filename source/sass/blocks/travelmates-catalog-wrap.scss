@@ -5,7 +5,13 @@
 }
 
 .travelmates-catalog-wrap__container {
-  padding-top: 25px;
+  padding-top: 24px;
+}
+
+@media (min-width: $tablet-width) {
+  .travelmates-catalog-wrap__container {
+    padding-top: 44px;
+  }
 }
 
 @media (min-width: $desktop-width) {
@@ -13,6 +19,6 @@
     display: flex;
     flex-direction: row-reverse;
     align-items: flex-start;
-    padding-top: 77px;
+    padding-top: 112px;
   }
 }

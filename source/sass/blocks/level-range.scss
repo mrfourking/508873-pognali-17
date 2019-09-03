@@ -37,7 +37,7 @@
   cursor: pointer;
 
   &--left {
-    right: 67%;
+    right: 65%;
   }
 
   &--right {
@@ -47,7 +47,8 @@
 
 @media (min-width: $tablet-width) {
   .level-range {
-    width: 282px;
+    align-self: center;
+    width: 275px;
   }
 
   .level-range__scale {
@@ -55,19 +56,34 @@
   }
 
   .level-range__filled-scale {
+    width: 74%;
     height: 3px;
+  }
+
+  .level-range__slider {
+    top: -7px;
+
+    width: 13px;
+    height: 13px;
+
+    &--left {
+      left: 23%;
+    }
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .level-range__filled-scale {
+    width: 67%;
   }
 
   .level-range__slider {
     top: -5px;
 
-    width: 13px;
-    height: 13px;
-  }
-}
+    &--left {
+      left: 31%;
+    }
 
-@media (min-width: $desktop-width) {
-  .level-range__slider {
     &:hover,
     &:focus {
       transform: scale(1.5);
