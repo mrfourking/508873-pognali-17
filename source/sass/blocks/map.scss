@@ -37,7 +37,7 @@
     height: 45px;
 
     background-color: $bg-contacts;
-    background-image: url("../../img/contacts-location.svg");
+    background-image: url("../img/contacts-location.svg");
     background-repeat: no-repeat;
     background-position: 50% 51%;
     background-size: 14px 22px;
@@ -75,7 +75,7 @@
   left: 0;
 
   width: 100%;
-  height: auto;
+  height: 171vw;
 }
 
 @media (min-width: $tablet-width) {

@@ -35,7 +35,7 @@
     width: 8px;
     height: 4px;
 
-    background-image: url("../../img/dropdown.svg");
+    background-image: url("../img/dropdown.svg");
     background-repeat: no-repeat;
     background-position: 0 0;
   }
@@ -90,7 +90,7 @@
 
 .filter__checkbox {
   &:checked + .filter__input-name::before {
-    background-image: url("../../img/tick.svg");
+    background-image: url("../img/tick.svg");
     background-repeat: no-repeat;
     background-position: 50% 50%;
     background-size: 9px 9px;

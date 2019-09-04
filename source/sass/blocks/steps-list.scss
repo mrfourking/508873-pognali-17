@@ -136,7 +136,7 @@
 
 .steps-list__checkbox {
   &:checked + .steps-list__checkbox-name::before {
-    background-image: url("../../img/tick.svg");
+    background-image: url("../img/tick.svg");
     background-repeat: no-repeat;
     background-position: 50% 50%;
     background-size: 9px 9px;
@@ -209,7 +209,7 @@
     width: 17px;
     height: 287px;
 
-    background-image: url("../../img/steps-line-mobile.png");
+    background-image: url("../img/steps-line-mobile.png");
     background-repeat: no-repeat;
     background-position: 0 0;
   }
@@ -366,7 +366,7 @@
       right: 37px;
       width: 10px;
       height: 14px;
-      background-image: url("../../img/triangle-arrow-right.svg");
+      background-image: url("../img/triangle-arrow-right.svg");
       background-repeat: no-repeat;
       background-position: 0 0;
     }
@@ -378,7 +378,7 @@
     &--back::after {
       right: unset;
       left: 5px;
-      background-image: url("../../img/triangle-arrow-left.svg");
+      background-image: url("../img/triangle-arrow-left.svg");
     }
   }
 
@@ -399,7 +399,7 @@
       width: 16px;
       height: 276px;
 
-      background-image: url("../../img/steps-line-tablet.png");
+      background-image: url("../img/steps-line-tablet.png");
       background-repeat: no-repeat;
       background-position: 0 0;
     }
