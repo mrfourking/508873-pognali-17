@@ -2,13 +2,13 @@
   order: 1;
   margin: 0;
   margin-top: 35px;
-  margin-bottom: 10px;
+  margin-bottom: 11px;
   padding: 0;
 
   list-style: none;
 
   &--catalog {
-    margin-top: 0;
+    margin: 0;
     order: 0;
   }
 }
@@ -16,15 +16,17 @@
 @media (min-width: $tablet-width) {
   .travelmates-list {
     display: flex;
+    flex-wrap: wrap;
     order: 2;
     justify-content: space-between;
-    margin-bottom: 70px;
+    margin-top: 31px;
+    margin-bottom: 72px;
     padding: 0 35px;
 
     &--catalog {
       flex-direction: column;
       order: 0;
-      margin-bottom: 30px;
+      margin-bottom: 1px;
       padding: 0;
     }
   }
@@ -38,9 +40,16 @@
 
 @media (min-width: $desktop-width) {
   .travelmates-list {
-    float: right;
-    margin-top: 0;
+    width: 630px;
+    margin: 0;
     padding: 0;
+    padding-top: 8px;
+
+    &--catalog {
+      width: 100%;
+      margin-bottom: 34px;
+      padding: 0;
+    }
   }
 
   .travelmates-list__item {

@@ -27,7 +27,7 @@
   justify-content: space-between;
   align-items: baseline;
   margin-top: -10px;
-  padding: 25px;
+  padding: 24px 25px 20px 23px;
 
   background-color: #ffffff;
 
@@ -69,6 +69,7 @@
 
 .country__call {
   margin: 0;
+  margin-left: 1px;
 }
 
 .country__call,
@@ -92,7 +93,7 @@
   }
 
   .country__icon {
-    top: 31px;
+    top: 16px;
     left: 397px;
 
     width: 70px;
@@ -101,28 +102,51 @@
 
   .country__wrap {
     flex-direction: column;
+    padding: 39px 25px 19px 30px;
   }
 
   .country__name {
+    margin-bottom: -13px;
     font-size: 24px;
     line-height: 24px;
   }
 
   .country__call {
+    margin-left: 1px;
+
     font-size: 20px;
     line-height: 20px;
   }
 
   .country__counter {
     order: 2;
+    padding-left: 29px;
 
     font-size: 20px;
     line-height: 30px;
+
+    &::before {
+      top: 4px;
+      left: 0;
+
+      width: 20px;
+      height: 20px;
+    }
   }
 }
 
 @media (min-width: $desktop-width) {
   .country__icon {
-    left: 342px;
+    top: 24px;
+    left: 339px;
+  }
+
+  .country__wrap {
+    align-items: flex-start;
+    padding-top: 31px;
+  }
+
+  .country__counter {
+    padding-left: 31px;
   }
 }

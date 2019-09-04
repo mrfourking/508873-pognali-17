@@ -1,15 +1,18 @@
 .plans {
   margin-bottom: -25px;
-  padding-top: 30px;
-  padding-bottom: 45px;
 
   background-color: $bg-plans;
 
   @include section-top-border-radius(25px);
 }
 
+.plans__container {
+  padding-top: 28px;
+  padding-bottom: 44px;
+}
+
 .plans__title {
-  margin-bottom: 35px;
+  margin-bottom: 30px;
 }
 
 .plans__list {
@@ -26,13 +29,17 @@
 }
 
 @media (min-width: $tablet-width) {
-  .plans {
-    padding-top: 65px;
-    padding-bottom: 90px;
+  .plans__container {
+    padding-top: 52px;
+    padding-bottom: 88px;
   }
 
   .plans__title {
-    margin-bottom: 55px;
+    margin-bottom: 54px;
+    margin-left: 35px;
+
+    font-size: 36px;
+    line-height: 36px;
   }
 
   .plans__list {
@@ -45,8 +52,21 @@
     @include section-top-border-radius(50px);
   }
 
-  .plans__title,
+  .plans__container {
+    padding-bottom: 75px;
+  }
+
+  .plans__title {
+    margin-bottom: 52px;
+    margin-left: 70px;
+  }
+
   .plans__list {
+    margin: 0;
     margin-left: 65px;
+  }
+
+  .plans__item {
+    margin-bottom: 15px;
   }
 }

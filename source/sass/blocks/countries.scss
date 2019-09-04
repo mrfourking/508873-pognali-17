@@ -1,29 +1,37 @@
 .countries {
-  display: flex;
-  flex-direction: column;
-  padding-top: 73px;
-  padding-bottom: 30px;
+  position: relative;
 
   background-color: $bg-light;
 
   @include section-border-radius();
+  @include outer-fill($bg-dark-light);
+}
+
+.countries__container {
+  display: flex;
+  flex-direction: column;
+  padding-top: 69px;
+  padding-bottom: 31px;
+}
+
+.countries__intro-wrap {
+  margin-left: 25px;
+  margin-bottom: 63px;
 }
 
 .countries__title {
-  margin-bottom: 25px;
-  margin-left: 25px;
+  margin-bottom: 20px;
 }
 
 .countries__intro {
   margin-right: 50px;
-  margin-bottom: 65px;
-  margin-left: 25px;
 }
 
 .countries__list {
   position: relative;
   order: 1;
   margin: 0;
+  margin-bottom: 16px;
   padding: 0;
   list-style: none;
 
@@ -47,7 +55,7 @@
 .countries__button {
   position: relative;
   order: 2;
-  padding: 15px 80px 15px 34px;
+  padding: 16px 80px 16px 24px;
 
   text-transform: none;
 
@@ -57,7 +65,7 @@
     content: "";
     position: absolute;
     top: 24px;
-    right: 25px;
+    right: 23px;
 
     width: 10px;
     height: 14px;
@@ -70,42 +78,47 @@
 
 @media (min-width: $tablet-width) {
   .countries {
+    @include section-border-radius(60px);
+  }
+
+  .countries__container {
+
     background-image: url("../../img/flags-back@1x.png"),
       url("../../img/blue-back-countries.png");
     background-repeat: no-repeat;
-    background-position: 95% 20%, 6% 40%;
+    background-position: 92% 16%, 6% 43%;
 
     @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
       background-image: url("../../img/flags-back@2x.png"),
         url("../../img/blue-back-countries.png");
       background-size: 289px auto, 141px auto;
     }
-
-    @include section-border-radius(60px);
   }
 
-  .countries__title,
-  .countries__intro,
-  .countries__list,
-  .countries__button {
-    margin-right: 35px;
-    margin-left: 35px;
+  .countries__intro-wrap {
+    margin-bottom: 108px;
+    margin-left: 33px;
+  }
+
+  .countries__title {
+    margin-bottom: 60px;
   }
 
   .countries__intro {
-    margin-right: 300px;
+    margin-right: 310px;
   }
 
   .countries__list {
-    margin-bottom: 33px;
+    margin: 0 35px 36px;
 
     &::after {
-      background: linear-gradient(to bottom, rgba(237, 239, 246, 0) 60%, #edeff6 100%);
+      background: linear-gradient(to bottom, rgba(237, 239, 246, 0) 80%, #edeff6 98%);
     }
   }
 
   .countries__button {
-    padding: 30px 50px 32px 35px;
+    margin: 0 35px 50px;
+    padding: 29px 50px 28px 33px;
     font-size: 24px;
     line-height: 24px;
 
@@ -119,15 +132,17 @@
 }
 
 @media (min-width: $desktop-width) {
-  .countries {
-    display: block;
-    overflow: hidden;
+  .countries__container {
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding-top: 162px;
+    padding-bottom: 30px;
 
     background-image: url("../../img/flags-back@1x.png"),
       url("../../img/blue-back-countries.png");
     background-repeat: no-repeat;
     background-size: auto;
-    background-position: 95% 20%, 3% 5%;
+    background-position: 95% 51%, 60px 15%;
 
     @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
       background-image: url("../../img/flags-back@2x.png"),
@@ -136,30 +151,36 @@
     }
   }
 
-  .countries__list {
-    float: left;
-    width: 560px;
-    margin-left: 72px;
+  .countries__intro-wrap {
+    width: 350px;
+    margin: 0;
   }
 
-  .countries__title,
-  .countries__intro,
-  .countries__button {
-    margin-left: 60%;
-    margin-right: 15%;
+  .countries__list {
+    order: -1;
+    width: 560px;
+    margin: 0;
+    margin-right: 171px;
+    margin-left: 70px;
   }
 
   .countries__title {
-    margin-bottom: 75px;
+    margin-bottom: 60px;
   }
 
   .countries__intro {
-    margin-bottom: 105px;
+    margin-right: 0;
   }
 
   .countries__button {
-    display: block;
-    width: 277px;
-    margin-bottom: 139px;
+    width: 275px;
+    margin-top: -81px;
+    margin-right: 241px;
+    margin-bottom: 110px;
+    margin-left: auto;
+
+    &::after {
+      right: 37px;
+    }
   }
 }

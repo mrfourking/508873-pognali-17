@@ -2,7 +2,7 @@
   width: 270px;
 
   @include section-padding(22px);
-  padding-top: 27px;
+  padding-top: 24px;
 
   background-color: $bg-button;
 
@@ -10,7 +10,7 @@
 }
 
 .travelmate-filter__title {
-  margin-bottom: 20px;
+  margin-bottom: 22px;
 
   font-size: 23px;
   line-height: 23px;
@@ -24,7 +24,7 @@
   }
 
   .travelmate-filter__title {
-    margin-bottom: 38px;
+    margin-bottom: 39px;
 
     font-size: 30px;
     line-height: 30px;
@@ -33,7 +33,12 @@
 
 @media (min-width: $desktop-width) {
   .travelmate-filter {
+    flex-shrink: 0;
     width: 285px;
     padding: 47px;
+  }
+
+  .travelmate-filter__title {
+    margin-bottom: 23px;
   }
 }

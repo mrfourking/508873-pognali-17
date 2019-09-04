@@ -2,17 +2,27 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  margin-bottom: 21px;
+  margin-bottom: 18px;
 
   font-size: 16px;
   line-height: 16px;
   font-weight: 600;
   color: $title-dark;
+  letter-spacing: 1px;
   text-transform: uppercase;
+
+  &:nth-child(2) {
+    margin-bottom: 23px;
+  }
+
+  &--date {
+    position: relative;
+    margin-bottom: 15px;
+  }
 }
 
 .find-textfield__name {
-  margin-bottom: 12px;
+  margin-bottom: 10px;
 }
 
 .find-textfield__short {
@@ -21,48 +31,59 @@
 }
 
 .find-textfield__wrap {
+  position: relative;
+
   display: flex;
+  width: 100%;
 }
 
 .find-textfield__button {
+  position: absolute;
+  top: 1px;
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 43px;
-  height: 43px;
+  width: 41px;
+  height: 41px;
   padding: 0;
 
   background-color: transparent;
 
-  border: 1px solid $border-grey;
+  border: none;
+  border-radius: 5px;
 
   &--decrease {
-    border-right: none;
-    border-top-left-radius: 5px;
-    border-bottom-left-radius: 5px;
+    left: 1px;
   }
 
   &--increase {
-    border-left: none;
-    border-top-right-radius: 5px;
-    border-bottom-right-radius: 5px;
+    right: 1px;
   }
 
   &--date-decrease,
   &--date-increase {
+    width: 42px;
+    height: 42px;
+  }
+
+  &--date-decrease {
+    left: 0;
     justify-content: flex-start;
-    border-left: none;
-    border-right: none;
-    border-radius: 0;
   }
 
   &--date-increase {
+    right: 0;
     justify-content: flex-end;
   }
 }
 
+.find-textfield__button-icon {
+  fill: rgba(#606161, 0.3);
+}
+
 .find-textfield__textfield {
-  width: 134px;
+  width: 100%;
+  padding: 12px 43px;
 
   font-size: 15px;
   line-height: 15px;
@@ -71,11 +92,26 @@
   text-align: center;
 
   border: 1px solid $border-grey;
-  border-left: none;
-  border-right: none;
-  border-radius: 0;
+  border-radius: 5px;
 
   appearance: none;
+
+  &--date {
+    padding: 9px 44px;
+
+    font-size: 20px;
+    line-height: 20px;
+    font-weight: 700;
+
+    border-left: none;
+    border-right: none;
+    border-radius: 0;
+  }
+
+  &::-webkit-outer-spin-button,
+  &::-webkit-inner-spin-button {
+    appearance: none;
+  }
 }
 
 @media (min-width: $tablet-width) {
@@ -84,14 +120,20 @@
     margin-bottom: 35px;
     padding-top: 25px;
 
+    letter-spacing: 2px;
+
     border-top: 1px solid $bg-plan-add;
 
     &:first-child {
       order: -1;
     }
 
+    &:nth-child(2) {
+      margin-bottom: 0;
+    }
+
     &--date {
-      margin-top: 24px;
+      margin-top: 11px;
       margin-bottom: 31px;
       border: none;
     }
@@ -99,7 +141,7 @@
 
   .find-textfield__name,
   .find-textfield__short {
-    margin-bottom: 28px;
+    margin-bottom: 25px;
 
     font-size: 20px;
     line-height: 20px;
@@ -110,8 +152,24 @@
   }
 
   .find-textfield__button {
-    width: 70px;
-    height: 70px;
+    width: 59px;
+    height: 68px;
+
+    &--date-decrease,
+    &--date-increase {
+      top: 26px;
+
+      width: 85px;
+      height: 85px;
+    }
+
+    &--date-decrease {
+      left: 15px;
+    }
+
+    &--date-increase {
+      right: 15px;
+    }
   }
 
   .find-textfield__button-icon {
@@ -125,7 +183,7 @@
   }
 
   .find-textfield__textfield {
-    flex-grow: 1;
+    padding: 22px 60px;
 
     font-size: 20px;
     line-height: 20px;
@@ -141,47 +199,77 @@
 
 @media (min-width: $desktop-width) {
   .find-textfield {
+    justify-content: flex-start;
     align-items: center;
-    width: 485px;
-    margin-bottom: 14px;
+    width: 500px;
+    margin-bottom: 15px;
     padding: 0;
     border: none;
 
     &--date {
       width: 100%;
+      margin-bottom: 0;
     }
   }
 
   .find-textfield__name {
-    width: 190px;
+    width: 200px;
     margin: 0;
-    margin-right: 32px;
+    margin-right: 20px;
   }
 
   .find-textfield__short {
     order: 2;
     margin: 0;
+    margin-right: auto;
   }
 
   .find-textfield__wrap {
-    width: auto;
+    width: 181px;
     margin-right: 39px;
   }
 
   .find-textfield__textfield {
-    width: 40px;
+    &:hover {
+      border-color: #959bb2;
+    }
+
+    &:focus {
+      border-color: $bg-dark;
+    }
 
     &--date {
-      padding: 23px;
-      flex-grow: 1;
+      margin-bottom: 3px;
+      padding: 20px 60px 21px;
+    }
+
+    &--date:hover,
+    &--date:focus {
+      border-color: $border-grey;
     }
   }
 
   .find-textfield__button {
     &--date-decrease,
     &--date-increase {
-      width: 87px;
-      height: 87px;
+      top: 1px;
+    }
+
+    &--date-decrease {
+      left: 0;
+    }
+
+    &--date-increase {
+      right: 0;
+    }
+
+    &:hover .find-textfield__button-icon,
+    &:focus .find-textfield__button-icon {
+      fill: rgba(#000000, 0.4);
+    }
+
+    &:active .find-textfield__button-icon {
+      fill: rgba(#000000, 0.1);
     }
   }
 }

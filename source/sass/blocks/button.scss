@@ -13,7 +13,10 @@
   border-radius: 25px;
 
   &--phone {
-    padding: 12px 10px 11px 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 11px;
 
     background-color: $bg-button-orange;
 
@@ -21,7 +24,10 @@
   }
 
   &--mail {
-    padding: 12px 11px 11px 11px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 11px;
 
     border-radius: 50%;
   }
@@ -36,7 +42,7 @@
 
     &--phone,
     &--mail {
-      padding: 15px 16px;
+      padding: 16px;
     }
   }
 }

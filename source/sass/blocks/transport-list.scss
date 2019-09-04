@@ -11,7 +11,18 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-right: 15px;
+
+  &--avia {
+    margin-right: 17px;
+  }
+
+  &--bus {
+    margin-right: 13px;
+  }
+
+  &--bike {
+    margin-right: 10px;
+  }
 
   &--filter,
   &--form {
@@ -56,6 +67,8 @@
 }
 
 .transport-list__icon {
+  fill: $transport-icon;
+
   &--active {
     fill: $title-dark;
   }
@@ -88,6 +101,10 @@
 
     &--catalog {
       background-color: transparent;
+    }
+
+    &--catalog svg {
+      transform: scale(1.3);
     }
 
     &--form {

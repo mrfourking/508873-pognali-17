@@ -4,6 +4,11 @@
   align-items: flex-start;
 }
 
+.quote__content {
+  margin: 0;
+  margin-bottom: 18px;
+}
+
 .quote__author {
   font-weight: 700;
   font-style: normal;
@@ -11,7 +16,7 @@
 
 @media (min-width: $tablet-width) {
   .quote__content {
-    margin-bottom: 42px;
+    margin-bottom: 43px;
 
     font-size: 28px;
   }

@@ -10,7 +10,7 @@
 
 .calendar__item {
   width: 32px;
-  height: 32px;
+  height: 31px;
 
   font: inherit;
   text-align: center;
@@ -30,11 +30,7 @@
   }
 
   &--choosen {
-    background-color: $title-dark;
-  }
-
-  &--current {
-    border: 2px solid $text-weekend;
+    background-color: #101d41;
   }
 }
 
@@ -58,7 +54,7 @@
 @media (min-width: $tablet-width) {
   .calendar__item {
     width: 76px;
-    height: 70px;
+    height: 69px;
 
     font-size: 20px;
     line-height: 20px;
@@ -79,13 +75,27 @@
 @media (min-width: $desktop-width) {
   .calendar__item {
     width: 144px;
-    height: 72px;
-    padding: 15px;
+    height: 71px;
+    padding: 10px 15px;
 
     text-align: left;
     vertical-align: top;
 
     cursor: pointer;
+
+    &--title {
+      height: 52px;
+    }
+
+    &--active:hover {
+      background-color: $title-dark;
+
+      border: 2px solid $text-weekend;
+    }
+
+    &--active:hover .calendar__link {
+      color: #ffffff;
+    }
   }
 
   .calendar__link {
@@ -97,8 +107,10 @@
   .calendar__choosen-label {
     display: block;
     margin: 0;
-    margin-top: 2px;
+    margin-top: 8px;
+    margin-left: 2px;
 
+    letter-spacing: 1px;
     text-transform: none;
   }
 }

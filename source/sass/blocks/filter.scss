@@ -12,7 +12,7 @@
 
 .filter__wrap-button {
   position: relative;
-  padding: 13px 0;
+  padding: 9px 0 8px;
 
   font-size: 16px;
   line-height: 22px;
@@ -47,11 +47,18 @@
   align-content: flex-start;
   padding: 8px 0;
 
-  &--transport,
+  &--transport {
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-bottom: 15px;
+    padding: 6px 0 5px;
+  }
+
   &--level {
     flex-direction: row;
     flex-wrap: wrap;
-    margin-bottom: 11px;
+    margin-bottom: 0;
+    padding: 0;
   }
 
   &--nojs,
@@ -62,7 +69,7 @@
 
 .filter__input-name {
   position: relative;
-  margin-bottom: 12px;
+  margin-bottom: 15px;
   padding-left: 27px;
 
   &::before {
@@ -114,7 +121,7 @@
 
 .filter__textfield {
   width: 50%;
-  padding: 9px 15px;
+  padding: 8px 15px;
 
   font-size: 15px;
   line-height: 15px;
@@ -161,13 +168,13 @@
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: baseline;
-    padding-top: 38px;
+    padding-top: 32px;
 
     border-top: 1px solid rgba(#000000, 0.1);
   }
 
   .filter__wrap-button {
-    width: 120px;
+    width: 110px;
     padding: 0;
 
     font-size: 20px;
@@ -183,25 +190,29 @@
   .filter__wrap {
     display: flex;
     flex-direction: row;
+    padding: 0;
 
-    &--transport,
     &--level {
+      justify-content: space-between;
+      align-items: baseline;
       width: 485px;
       margin: 0;
+      margin-bottom: 72px;
       padding: 0;
     }
 
-    &--level {
-      // flex-wrap: nowrap;
-      justify-content: space-between;
-      align-items: baseline;
-      margin-bottom: 73px;
+    &--transport {
+      width: 498px;
+      margin: 0;
+      margin-bottom: 16px;
+      padding: 0;
     }
   }
 
   .filter__input-name {
     width: 151px;
-    margin-right: 13px;
+    margin-right: 20px;
+    margin-bottom: 25px;
     padding-left: 37px;
 
     font-size: 20px;
@@ -268,7 +279,7 @@
 
   .filter__wrap-button {
     width: 100%;
-    padding: 13px 0;
+    padding: 6px 0;
 
     &::after {
       display: block;
@@ -287,15 +298,20 @@
   .filter__wrap {
     display: none;
     flex-direction: column;
+    padding-top: 17px;
 
-    &--transport,
-    &--level {
+    &--transport {
       flex-direction: row;
       width: 100%;
+      margin-bottom: 23px;
+      padding-top: 12px;
     }
 
     &--level {
+      flex-direction: row;
+      width: 100%;
       margin-bottom: 43px;
+      padding-top: 8px;
     }
 
     &--nojs,
@@ -305,6 +321,8 @@
   }
 
   .filter__input-name {
+    margin-bottom: 20px;
+
     &:hover,
     &:focus {
       opacity: 0.6;
@@ -322,6 +340,8 @@
 
   .filter__textfield {
     width: 50%;
+
+    letter-spacing: 2px;
 
     &:hover,
     &:focus {

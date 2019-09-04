@@ -1,21 +1,26 @@
 .rates {
   position: relative;
+  width: 100%;
 
+  background-color: $bg-light;
+
+  @include section-border-radius();
+  @include outer-fill($bg-dark-light);
+}
+
+.rates__container {
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  padding-top: 53px;
+  padding-top: 50px;
 
   font-size: 16px;
   line-height: 22px;
   font-weight: 300;
   color: $text-dark;
 
-  background-color: $bg-light;
-
-  @include section-border-radius();
-
-  &::after {
+  &::before {
     content: "";
     position: absolute;
     top: 37px;
@@ -40,7 +45,7 @@
 .rates__title {
   width: 105px;
   margin-left: 25px;
-  margin-bottom: 49px;
+  margin-bottom: 45px;
 
   &--business {
     width: 100%;
@@ -54,8 +59,8 @@
 
 .rates__list {
   margin: 0;
-  margin-bottom: 30px;
-  margin-left: 25px;
+  margin-bottom: 27px;
+  margin-left: 24px;
   padding: 0;
   padding-right: 45px;
 
@@ -73,7 +78,7 @@
   display: flex;
   flex-direction: column;
   margin-top: -1px;
-  padding: 15px 0;
+  padding: 10px 0 12px;
 
   border-top: 1px solid #e1e3e9;
   border-bottom: 1px solid #e1e3e9;
@@ -89,8 +94,8 @@
 
 .rates__counter {
   position: absolute;
-  top: 3px;
-  right: -44px;
+  top: 4px;
+  right: -62px;
 
   display: flex;
   justify-content: center;
@@ -122,7 +127,7 @@
 }
 
 .rates__button {
-  margin-bottom: 40px;
+  margin-bottom: 37px;
   margin-left: 25px;
 
   &--close {
@@ -171,25 +176,28 @@
 
 @media (min-width: $tablet-width) {
   .rates {
-    padding-top: 76px;
+    @include section-border-radius(60px);
+  }
+
+  .rates__container {
+    padding-top: 69px;
 
     background-image: url("../../img/rates-list-back-tablet.png");
     background-repeat: no-repeat;
-    background-position: 94% 55%;
+    background-position: 93% 55%;
 
-    @include section-border-radius(60px);
-
-    &::after {
+    &::before {
       top: unset;
-      bottom: 48px;
-      right: 85px;
+      bottom: 47px;
+      right: 86px;
     }
   }
 
   .rates__title {
     align-self: center;
     width: auto;
-    margin-bottom: 77px;
+    margin-bottom: 79px;
+    margin-left: -7px;
   }
 
   .rates__list {
@@ -212,11 +220,11 @@
   .rates__item {
     flex-direction: row;
     justify-content: space-between;
-    padding: 20px 0;
+    padding: 16px 0;
   }
 
   .rates__counter {
-    top: -2px;
+    top: 0;
     left: -90px;
 
     width: 67px;
@@ -226,7 +234,7 @@
   .rates__button {
     position: relative;
     margin: 0;
-    margin-bottom: 67px;
+    margin-bottom: 65px;
     padding: 23px 0 23px 90px;
 
     font-size: 20px;
@@ -278,14 +286,14 @@
 }
 
 @media (min-width: $desktop-width) {
-  .rates {
-    padding-top: 110px;
+  .rates__container {
+    padding-top: 105px;
 
     background-image: url("../../img/rates-list-back-desktop.png");
     background-repeat: no-repeat;
-    background-position: 75% 50%;
+    background-position: 75% 52%;
 
-    &::after {
+    &::before {
       top: 285px;
       bottom: unset;
       right: 135px;
@@ -304,6 +312,7 @@
   }
 
   .rates__list {
+    margin-bottom: 37px;
     padding: 0 345px 0 162px;
 
     &--business {
@@ -311,9 +320,17 @@
     }
   }
 
+  .rates__item {
+    padding: 15px 0 16px;
+  }
+
+  .rates__item-title {
+    margin-right: auto;
+  }
+
   .rates__button {
     margin-bottom: 167px;
-    margin-left: 72px;
+    margin-left: 71px;
 
     &--close {
       margin: 0;

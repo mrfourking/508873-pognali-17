@@ -1,7 +1,9 @@
 .country-select {
   display: flex;
   flex-direction: column;
+  width: 100%;
   margin: 0;
+  margin-bottom: 4px;
   padding: 0;
 
   list-style: none;
@@ -62,13 +64,14 @@
   position: relative;
   flex-grow: 1;
   margin: 0;
-  padding: 11px;
-  padding-right: 0;
+  padding: 12px 0 11px 11px;
 
   font-size: 14px;
   line-height: 18px;
   font-weight: 600;
   color: $title-dark;
+  letter-spacing: 1px;
+  white-space: nowrap;
   text-transform: uppercase;
 
   background-color: transparent;
@@ -114,8 +117,8 @@
 
 .country-select__button {
   position: absolute;
-  top: 11px;
-  right: 60px;
+  top: 12px;
+  right: 62px;
 
   display: flex;
   justify-content: center;
@@ -131,11 +134,15 @@
 
   &--unselect,
   &--disabled {
-    right: 15px;
+    right: 12px;
+  }
+
+  &--disabled {
+    top: 11px;
   }
 
   &--delete {
-    top: -11px;
+    top: -10px;
     right: -11px;
 
     width: 21px;
@@ -152,18 +159,21 @@
   fill: rgba(#000000, 0.3);
 
   &--table {
-    fill: #ffffff;
+    fill: rgba(#ffffff, 0.3);
+  }
+
+  &--delete {
+    fill: rgba(#000000, 0.1);
   }
 }
 
 .country-select__table-wrap {
-  overflow: hidden;
   position: absolute;
   z-index: 10;
   top: 0;
   left: 0;
 
-  display: flex;
+  display: none;
   flex-wrap: wrap;
   width: 100%;
 
@@ -188,6 +198,8 @@
   background-color: $title-dark;
 
   border: none;
+
+  @include section-top-border-radius(9px);
 }
 
 .country-select__table {
@@ -219,6 +231,8 @@
   }
 
   .country-select__item {
+    margin-bottom: 17px;
+
     &::before {
       display: none;
     }
@@ -235,11 +249,12 @@
   .country-select__select {
     flex-grow: 0;
     width: 370px;
-    margin-right: 53px;
-    padding: 24px 27px;
+    margin-right: 51px;
+    padding: 23px 24px;
 
     font-size: 20px;
     line-height: 20px;
+    letter-spacing: 2px;
   }
 
   .country-select__image-wrap {
@@ -253,17 +268,21 @@
   .country-select__image {
     width: 70px;
     height: 47px;
+    margin-right: 89px;
   }
 
   .country-select__button {
-    top: 23px;
-    right: 192px;
+    top: 25px;
+    right: 188px;
 
     &--delete {
       position: static;
-      margin-left: auto;
 
       background-color: transparent;
+    }
+
+    &--last {
+      margin-left: auto;
     }
   }
 
@@ -273,6 +292,49 @@
     &--delete {
       transform: scale(2);
     }
+
+    &--table {
+      width: 18px;
+      height: 18px;
+    }
+  }
+
+  .country-select__table-wrap {
+    top: 70px;
+
+    width: 575px;
+
+    border: none;
+
+    box-shadow: 0 20px 50px 0 rgba(29, 46, 91, 0.1);
+  }
+
+  .country-select__table {
+    tbody {
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    width: 318px;
+    margin: 35px 25px;
+  }
+
+  .country-select__table-button {
+    position: absolute;
+    top: -70px;
+    left: 0;
+    width: 368px;
+    padding: 25px;
+
+    font-size: 20px;
+    line-height: 20px;
+  }
+
+  .country-select__list {
+    padding: 35px 25px;
+    padding-right: 60px;
+
+    border-left: 1px solid rgba($bg-plan-add, 0.5);
   }
 }
 
@@ -293,10 +355,70 @@
 
   .country-select__select {
     width: 730px;
-    margin-right: 85px;
+    margin-right: 86px;
+
+    &:hover {
+      border-color: #959bb2;
+    }
+
+    &:hover + .country-select__button > .country-filter__button-icon {
+      fill: rgba(#000000, 0.5);
+    }
+
+    &--disabled:hover {
+      background-color: #dfe3f0;
+    }
+
+    &--disabled:active {
+      opacity: 0.4;
+    }
   }
 
   .country-select__button {
-    right: 300px;
+    top: 24px;
+    right: 298px;
+
+    &--delete {
+      margin-right: 5px;
+    }
+
+    &--delete:hover .country-select__button-icon--delete,
+    &--delete:focus .country-select__button-icon--delete {
+      fill: rgba(#000000, 0.3);
+    }
+
+    &--delete:active .country-select__button-icon--delete {
+      fill: rgba(#000000, 0.05);
+    }
+  }
+
+  .country-select__button-icon {
+    &--table:hover,
+    &--table:focus {
+      fill: #ffffff;
+    }
+
+    &--table:active {
+      fill: rgba(#ffffff, 0.1);
+    }
+  }
+
+  .country-select__table-wrap {
+    align-items: flex-start;
+    width: 730px;
+  }
+
+  .country-select__table {
+    width: 465px;
+    margin: 0;
+
+    border-collapse: separate;
+    border-spacing: 15px;
+  }
+
+  .country-select__table-button {
+    position: relative;
+
+    width: 100%;
   }
 }
