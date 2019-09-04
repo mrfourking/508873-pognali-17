@@ -11,7 +11,18 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-right: 13px;
+
+  &--avia {
+    margin-right: 17px;
+  }
+
+  &--bus {
+    margin-right: 13px;
+  }
+
+  &--bike {
+    margin-right: 10px;
+  }
 
   &--filter,
   &--form {

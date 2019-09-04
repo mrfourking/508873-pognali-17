@@ -69,6 +69,7 @@
 
 .country__call {
   margin: 0;
+  margin-left: 1px;
 }
 
 .country__call,
@@ -111,6 +112,8 @@
   }
 
   .country__call {
+    margin-left: 1px;
+
     font-size: 20px;
     line-height: 20px;
   }
@@ -134,11 +137,15 @@
 
 @media (min-width: $desktop-width) {
   .country__icon {
-    top: 25px;
+    top: 24px;
     left: 339px;
   }
 
   .country__wrap {
     padding-top: 31px;
+  }
+
+  .country__counter {
+    padding-left: 31px;
   }
 }

@@ -50,7 +50,7 @@
 
 .travelmates__intro {
   margin-right: 30px;
-  margin-bottom: 21px;
+  margin-bottom: 23px;
 }
 
 .travelmates__button {
@@ -291,7 +291,7 @@
   .travelmates__container {
     flex-direction: row;
     flex-wrap: wrap;
-    padding-top: 126px;
+    padding-top: 125px;
 
     background-image: url("../../img/blue-back-tablet.png"),
       url("../../img/rogovaya-back-desktop@1x.png"),
@@ -319,23 +319,24 @@
   }
 
   .travelmates__intro-wrap {
-    margin-right: 190px;
+    margin-right: 189px;
     margin-left: 69px;
   }
 
   .travelmates__title {
-    margin-bottom: 57px;
+    margin-bottom: 58px;
   }
 
   .travelmates__intro {
     margin: 0;
     margin-bottom: 39px;
+    margin-left: 2px;
   }
 
   .travelmates__button {
     display: block;
     width: 280px;
-    margin-top: -91px;
+    margin-top: -89px;
     margin-bottom: 134px;
     margin-left: 70px;
 

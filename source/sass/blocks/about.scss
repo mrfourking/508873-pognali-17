@@ -45,7 +45,7 @@
   }
 
   .about__wrap {
-    padding: 97px 380px 89px 74px;
+    padding: 97px 380px 90px 74px;
 
     background-image: url("../../img/about-tablet@1x.png");
     background-position: 85% 25%;
@@ -55,8 +55,8 @@
       (min-resolution: $retina-dppx) {
       background-image: url("../../img/about-tablet@2x.png"),
         url("../../img/blue-back-about.png");
-      background-size: 370px auto, 684px auto;
-      background-position: 97% 54%, 50% 11%;
+      background-size: 373px auto, 684px auto;
+      background-position: 98% 54%, 50% 11%;
     }
   }
 
@@ -106,7 +106,7 @@
 
     background-image: url("../../img/about-desktop@1x.png");
     background-size: auto;
-    background-position: 60% 100%;
+    background-position: 50% 100%;
 
     @media (min-resolution: $retina-dpi),
       (min-resolution: $retina-dppx) {

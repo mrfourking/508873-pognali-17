@@ -133,7 +133,7 @@
     justify-content: space-between;
     align-items: baseline;
 
-    padding-top: 61px;
+    padding-top: 59px;
     padding-bottom: 61px;
   }
 
@@ -149,6 +149,7 @@
       height: 90px;
 
       background-size: 28px 43px;
+      background-position: 48% 55%;
     }
   }
 
@@ -156,7 +157,7 @@
     width: 324px;
     margin: 0;
     margin-right: 93px;
-    padding: 24px 33px;
+    padding: 25px 33px;
 
     &:hover,
     &:focus {
@@ -180,6 +181,6 @@
   }
 
   .map__iframe {
-    height: 572px;
+    height: 52vw;
   }
 }

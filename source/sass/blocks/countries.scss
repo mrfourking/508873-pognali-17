@@ -82,12 +82,11 @@
   }
 
   .countries__container {
-    padding-top: 72px;
 
     background-image: url("../../img/flags-back@1x.png"),
       url("../../img/blue-back-countries.png");
     background-repeat: no-repeat;
-    background-position: 91% 15%, 6% 43%;
+    background-position: 92% 16%, 6% 43%;
 
     @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
       background-image: url("../../img/flags-back@2x.png"),
@@ -102,7 +101,7 @@
   }
 
   .countries__title {
-    margin-bottom: 58px;
+    margin-bottom: 60px;
   }
 
   .countries__intro {
@@ -113,7 +112,7 @@
     margin: 0 35px 36px;
 
     &::after {
-      background: linear-gradient(to bottom, rgba(237, 239, 246, 0) 60%, #edeff6 100%);
+      background: linear-gradient(to bottom, rgba(237, 239, 246, 0) 80%, #edeff6 98%);
     }
   }
 
@@ -137,12 +136,13 @@
     flex-direction: row;
     flex-wrap: wrap;
     padding-top: 162px;
+    padding-bottom: 30px;
 
     background-image: url("../../img/flags-back@1x.png"),
       url("../../img/blue-back-countries.png");
     background-repeat: no-repeat;
     background-size: auto;
-    background-position: 95% 50%, 5% 15%;
+    background-position: 95% 51%, 60px 15%;
 
     @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
       background-image: url("../../img/flags-back@2x.png"),
@@ -173,9 +173,9 @@
   }
 
   .countries__button {
-    width: 277px;
-    margin-top: -82px;
-    margin-right: 240px;
+    width: 275px;
+    margin-top: -81px;
+    margin-right: 241px;
     margin-bottom: 110px;
     margin-left: auto;
 

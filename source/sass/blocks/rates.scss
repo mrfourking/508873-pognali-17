@@ -60,7 +60,7 @@
 .rates__list {
   margin: 0;
   margin-bottom: 27px;
-  margin-left: 25px;
+  margin-left: 24px;
   padding: 0;
   padding-right: 45px;
 
@@ -78,7 +78,7 @@
   display: flex;
   flex-direction: column;
   margin-top: -1px;
-  padding: 11px 0;
+  padding: 10px 0 12px;
 
   border-top: 1px solid #e1e3e9;
   border-bottom: 1px solid #e1e3e9;
@@ -312,7 +312,7 @@
   }
 
   .rates__list {
-    margin-bottom: 38px;
+    margin-bottom: 37px;
     padding: 0 345px 0 162px;
 
     &--business {
@@ -321,12 +321,12 @@
   }
 
   .rates__item {
-    padding: 15px 0;
+    padding: 15px 0 16px;
   }
 
   .rates__button {
     margin-bottom: 167px;
-    margin-left: 72px;
+    margin-left: 71px;
 
     &--close {
       margin: 0;

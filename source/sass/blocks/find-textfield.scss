@@ -238,6 +238,11 @@
       border-color: $bg-dark;
     }
 
+    &--date {
+      margin-bottom: 3px;
+      padding: 20px 60px 21px;
+    }
+
     &--date:hover,
     &--date:focus {
       border-color: $border-grey;

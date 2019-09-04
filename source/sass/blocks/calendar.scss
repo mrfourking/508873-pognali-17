@@ -75,8 +75,8 @@
 @media (min-width: $desktop-width) {
   .calendar__item {
     width: 144px;
-    height: 72px;
-    padding: 14px;
+    height: 71px;
+    padding: 10px 15px;
 
     text-align: left;
     vertical-align: top;
@@ -84,7 +84,7 @@
     cursor: pointer;
 
     &--title {
-      height: 32px;
+      height: 52px;
     }
 
     &--active:hover {
@@ -107,7 +107,7 @@
   .calendar__choosen-label {
     display: block;
     margin: 0;
-    margin-top: 6px;
+    margin-top: 8px;
     margin-left: 2px;
 
     letter-spacing: 1px;

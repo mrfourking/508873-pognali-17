@@ -204,20 +204,25 @@
   }
 
   .call-to-action__button {
-    padding: 25px 159px 25px 36px;
+    padding: 25.4px 150px 25px 36px;
 
     &::after {
       top: 39px;
-      right: 44px;
+      right: 42px;
     }
   }
 
   .call-to-action__button-label {
     display: inline;
+
+    font-size: 24px;
+    line-height: 24px;
+    text-transform: none;
   }
 
   .call-to-action__text-wrap {
     margin-bottom: 45px;
+    margin-left: 30px;
   }
 
   .call-to-action__text {
@@ -234,10 +239,10 @@
 
   .call-to-action__contacts {
     flex-direction: row;
-    margin-left: 450px;
+    padding-left: 190px;
   }
 
   .call-to-action__contacts-link {
-    margin-right: 110px;
+    margin-right: 112px;
   }
 }
