@@ -908,14 +908,12 @@
 
     &--catalog {
       top: 182px;
-      left: unset;
-      right: 44px;
+      left: 846px;
     }
 
     &--form {
       top: 105px;
-      left: unset;
-      right: 386px;
+      left: 955px;
     }
   }
 
@@ -945,8 +943,8 @@
   .travelmate-card__button {
     &--change-photo {
       width: auto;
-      margin-right: 117px;
-      padding: 9px 70px;
+      margin-right: 120px;
+      padding: 9px 68px;
 
       @include section-top-border-radius(0);
     }

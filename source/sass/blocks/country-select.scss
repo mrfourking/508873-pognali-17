@@ -268,6 +268,7 @@
   .country-select__image {
     width: 70px;
     height: 47px;
+    margin-right: 89px;
   }
 
   .country-select__button {
@@ -276,9 +277,12 @@
 
     &--delete {
       position: static;
-      margin-left: auto;
 
       background-color: transparent;
+    }
+
+    &--last {
+      margin-left: auto;
     }
   }
 

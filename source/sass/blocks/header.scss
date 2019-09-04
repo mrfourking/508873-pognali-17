@@ -301,6 +301,7 @@
     position: relative;
     display: block;
     margin-right: 40px;
+    margin-left: auto;
     padding: 29px 96px 0 0;
 
     &::after {
@@ -325,6 +326,7 @@
   }
 
   .header__container {
+    justify-content: flex-start;
     padding-top: 118px;
 
     &--main {
