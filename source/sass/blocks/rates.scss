@@ -29,14 +29,14 @@
     width: 99px;
     height: 99px;
 
-    background-image: url("../../img/rates@1x.png");
+    background-image: url("../img/rates@1x.png");
     background-repeat: no-repeat;
     background-position: 0 0;
     background-size: cover;
 
     @media (min-resolution: $retina-dpi),
       (min-resolution: $retina-dppx) {
-      background-image: url("../../img/rates@2x.png");
+      background-image: url("../img/rates@2x.png");
       background-size: cover;
     }
   }
@@ -182,7 +182,7 @@
   .rates__container {
     padding-top: 69px;
 
-    background-image: url("../../img/rates-list-back-tablet.png");
+    background-image: url("../img/rates-list-back-tablet.png");
     background-repeat: no-repeat;
     background-position: 93% 55%;
 
@@ -251,7 +251,7 @@
       height: 67px;
 
       background-color: $bg-light-grey;
-      background-image: url("../../img/business.svg");
+      background-image: url("../img/business.svg");
       background-repeat: no-repeat;
       background-position: 50% 50%;
       background-size: 17px 21px;
@@ -289,7 +289,7 @@
   .rates__container {
     padding-top: 105px;
 
-    background-image: url("../../img/rates-list-back-desktop.png");
+    background-image: url("../img/rates-list-back-desktop.png");
     background-repeat: no-repeat;
     background-position: 75% 52%;
 

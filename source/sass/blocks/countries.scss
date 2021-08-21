@@ -70,7 +70,7 @@
     width: 10px;
     height: 14px;
 
-    background-image: url("../../img/triangle-arrow-right.svg");
+    background-image: url("../img/triangle-arrow-right.svg");
     background-repeat: no-repeat;
     background-position: 0 0;
   }
@@ -83,14 +83,14 @@
 
   .countries__container {
 
-    background-image: url("../../img/flags-back@1x.png"),
-      url("../../img/blue-back-countries.png");
+    background-image: url("../img/flags-back@1x.png"),
+      url("../img/blue-back-countries.png");
     background-repeat: no-repeat;
     background-position: 92% 16%, 6% 43%;
 
     @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-      background-image: url("../../img/flags-back@2x.png"),
-        url("../../img/blue-back-countries.png");
+      background-image: url("../img/flags-back@2x.png"),
+        url("../img/blue-back-countries.png");
       background-size: 289px auto, 141px auto;
     }
   }
@@ -138,15 +138,15 @@
     padding-top: 162px;
     padding-bottom: 30px;
 
-    background-image: url("../../img/flags-back@1x.png"),
-      url("../../img/blue-back-countries.png");
+    background-image: url("../img/flags-back@1x.png"),
+      url("../img/blue-back-countries.png");
     background-repeat: no-repeat;
     background-size: auto;
     background-position: 95% 51%, 60px 15%;
 
     @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-      background-image: url("../../img/flags-back@2x.png"),
-        url("../../img/blue-back-countries.png");
+      background-image: url("../img/flags-back@2x.png"),
+        url("../img/blue-back-countries.png");
       background-size: 289px auto, 141px auto;
     }
   }
